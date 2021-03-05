@@ -1,5 +1,5 @@
+import Footer from '../components/Footer'
 import axios from 'axios';
-import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
 
@@ -45,6 +45,14 @@ const Noticia = ({ props }) => (
                 ))}
             </ul>
         </div>
+
+        <Footer
+            facebook="omariosouto"
+            twitter="omariosouto"
+            linkedin="omariosouto"
+            github="omariosouto"
+        />
+
     </div>
 );
 Noticia.getInitialProps = async () => {
