@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-export default function Piloto({ piloto }) {
+export default function Noticia({ noticia }) {
     const { isFallback } = useRouter();
 
     if (isFallback) {
@@ -11,13 +11,9 @@ export default function Piloto({ piloto }) {
 
     return (
         <div>
-            <h1>Nome: {piloto.name}</h1>
-            <p>Podiuns: {piloto.podiuns}</p>
-            <p>Maior colocação numa corrida: {piloto.highRaceFinish}</p>
-            <p>Maior colocação no podium: {piloto.highGridPosition}</p>
-            <p>Pole positions:{piloto.polePosition}</p>
-            <p>Voltas rápidas: {piloto.fastLaps}</p>
-            <p>Peso: {piloto.weight}</p>
+            <h1>Título: {noticia.title}</h1>
+            <h3>Conteúdo: {noticia.newsContent}</h3>
+            <h3>Autor: {noticia.author}</h3>
             <h3>
                 <Link href={`/`}>
                     <a>
@@ -30,11 +26,11 @@ export default function Piloto({ piloto }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL PILOTS
-    const response = await fetch(`http://localhost:3001/pilots`);
+    const response = await fetch(`http://localhost:3001/news`);
     const data = await response.json();
 
-    const paths = data.map(pilots => {
-        return { params: { _id: pilots._id } }
+    const paths = data.map(news => {
+        return { params: { _id: news._id } }
     });
 
     return {
@@ -45,13 +41,12 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
 
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILOT BY ID
     const { _id } = context.params;
-
-    const response = await fetch(`http://localhost:3001/pilots/${_id}`);
+    const response = await fetch(`http://localhost:3001/news/${_id}`);
     const data = await response.json();
 
     return {
         props: {
-            piloto: data,
+            noticia: data,
         },
         revalidate: 1000,
     }

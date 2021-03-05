@@ -1,5 +1,6 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Equipe({ equipe }) {
     const { isFallback } = useRouter();
@@ -15,6 +16,13 @@ export default function Equipe({ equipe }) {
             <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
             <p>Pole positions: {equipe.teamPolePositions}</p>
             <p>Voltas rápidas:{equipe.teamFastLaps}</p>
+            <h3>
+                <Link href={`/`}>
+                    <a>
+                        Voltar
+                    </a>
+                </Link>
+            </h3>
         </div>
     )
 }
@@ -43,6 +51,6 @@ export const getStaticProps: GetStaticProps = async (context) => { //FIND A TEAM
         props: {
             equipe: data,
         },
-        revalidate: 10,
+        revalidate: 1000,
     }
 }
