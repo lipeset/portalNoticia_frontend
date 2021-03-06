@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Footer from '../../components/Footer'
 
 export default function Equipe({ equipe }) {
     const { isFallback } = useRouter();
@@ -11,18 +12,29 @@ export default function Equipe({ equipe }) {
 
     return (
         <div>
-            <h1>Nome: {equipe.fullName}</h1>
-            <p>Títulos: {equipe.champCamp}</p>
-            <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
-            <p>Pole positions: {equipe.teamPolePositions}</p>
-            <p>Voltas rápidas:{equipe.teamFastLaps}</p>
-            <h3>
-                <Link href={`/`}>
-                    <a>
-                        Voltar
-                    </a>
-                </Link>
-            </h3>
+            <header className="headerContainer">
+                <img src="https://unavatar.now.sh/github/omariosouto" />
+                <h1>DevSoutinho's Blog</h1>
+            </header>
+            <section>
+                <h1>Nome: {equipe.fullName}</h1>
+                <p>Títulos: {equipe.champCamp}</p>
+                <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
+                <p>Pole positions: {equipe.teamPolePositions}</p>
+                <p>Voltas rápidas:{equipe.teamFastLaps}</p>
+                <h3>
+                    <Link href={`/`}>
+                        <a>Home</a>
+                    </Link>
+                </h3>
+            </section>
+            <Footer
+                facebook="omariosouto"
+                twitter="omariosouto"
+                linkedin="omariosouto"
+                github="omariosouto"
+            />
+
         </div>
     )
 }

@@ -1,23 +1,42 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import Footer from '../../components/Footer'
 
 export default function Equipe({ equipes }) {
     return (
-        <ul>
-            {equipes.map((teams) => (
-                <li key={teams._id}>
-                    <Link href={`/equipes/${teams._id}`}>
-                        <a>
-                            {teams.fullName}
-                        </a>
+        <div>
+            <header className="headerContainer">
+                <img src="https://unavatar.now.sh/github/omariosouto" />
+                <h1>DevSoutinho's Blog</h1>
+            </header>
+            <section>
+                <ul>
+                    {equipes.map((teams) => (
+                        <li key={teams._id}>
+                            <Link href={`/equipes/${teams._id}`}>
+                                <a>
+                                    {teams.fullName}
+                                </a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <h3>
+                    <Link href={`/`}>
+                        <a>Home</a>
                     </Link>
-                </li>
-            ))}
-        </ul>
+                </h3>
+            </section>
+            <Footer
+                facebook="omariosouto"
+                twitter="omariosouto"
+                linkedin="omariosouto"
+                github="omariosouto"
+            />
+        </div >
     )
 }
-
 export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch('http://localhost:3001/teams');
     const data = await response.json();

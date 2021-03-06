@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
 const FooterWrapper = styled.footer`
   margin-top: 32px;
   p {
@@ -64,7 +63,7 @@ function Footer(props) {
                             <a href={`${socialNetwork.url}/${props[socialNetwork.name]}`} target="_blank">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    viewBox={socialNetwork.svgViewBox}
+                                    viewBox={socialNetwork.svgPath}
                                 >
                                     <title>
                                         {socialNetwork.name}
@@ -77,7 +76,7 @@ function Footer(props) {
             </ul>
             <p>
                 Orgulhosamente feito durante a série Alura.js
-      </p>
+            </p>
             <p>
                 <a href="https://www.youtube.com/user/codigofontetv">Código Fonte</a>, <a href="https://alura.com.br">Alura</a> e <a href="https://youtube.com/c/DevSoutinho">DevSoutinho</a>
             </p>

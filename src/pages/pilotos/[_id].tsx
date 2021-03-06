@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Footer from '../../components/Footer';
 
 export default function Piloto({ piloto }) {
     const { isFallback } = useRouter();
@@ -11,20 +12,30 @@ export default function Piloto({ piloto }) {
 
     return (
         <div>
-            <h1>Nome: {piloto.name}</h1>
-            <p>Podiuns: {piloto.podiuns}</p>
-            <p>Maior colocação numa corrida: {piloto.highRaceFinish}</p>
-            <p>Maior colocação no podium: {piloto.highGridPosition}</p>
-            <p>Pole positions:{piloto.polePosition}</p>
-            <p>Voltas rápidas: {piloto.fastLaps}</p>
-            <p>Peso: {piloto.weight}</p>
-            <h3>
-                <Link href={`/`}>
-                    <a>
-                        Voltar
-                    </a>
-                </Link>
-            </h3>
+            <header className="headerContainer">
+                <img src="https://unavatar.now.sh/github/omariosouto" />
+                <h1>DevSoutinho's Blog</h1>
+            </header>
+            <section>
+                <h1>Nome: {piloto.name}</h1>
+                <p>Podiuns: {piloto.podiuns}</p>
+                <p>Maior colocação numa corrida: {piloto.highRaceFinish}</p>
+                <p>Maior colocação no podium: {piloto.highGridPosition}</p>
+                <p>Pole positions:{piloto.polePosition}</p>
+                <p>Voltas rápidas: {piloto.fastLaps}</p>
+                <p>Peso: {piloto.weight}</p>
+                <h3>
+                    <Link href={`/`}>
+                        <a>Home</a>
+                    </Link>
+                </h3>
+            </section>
+            <Footer
+                facebook="omariosouto"
+                twitter="omariosouto"
+                linkedin="omariosouto"
+                github="omariosouto"
+            />
         </div>
     )
 }
