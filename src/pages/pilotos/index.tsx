@@ -37,9 +37,8 @@ export default function Piloto({ piloto }) {
         </div>
     )
 }
-
 export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch('http://localhost:3001/pilots');
+    const response = await fetch('https://portalnoticia-backend.herokuapp.com/pilots');
     const data = await response.json();
 
     return {

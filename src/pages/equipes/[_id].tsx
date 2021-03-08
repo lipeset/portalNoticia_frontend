@@ -38,9 +38,8 @@ export default function Equipe({ equipe }) {
         </div>
     )
 }
-
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL TEAMS
-    const response = await fetch(`http://localhost:3001/teams`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/teams`);
     const data = await response.json();
 
     const paths = data.map(teams => {
@@ -56,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A TEAM BY ID
     const { _id } = context.params;
 
-    const response = await fetch(`http://localhost:3001/teams/${_id}`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/teams/${_id}`);
     const data = await response.json();
 
     return {

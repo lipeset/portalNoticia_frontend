@@ -39,9 +39,8 @@ export default function Piloto({ piloto }) {
         </div>
     )
 }
-
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL PILOTS
-    const response = await fetch(`http://localhost:3001/pilots`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/pilots`);
     const data = await response.json();
 
     const paths = data.map(pilots => {
@@ -57,7 +56,7 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILOT BY ID
     const { _id } = context.params;
 
-    const response = await fetch(`http://localhost:3001/pilots/${_id}`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/pilots/${_id}`);
     const data = await response.json();
 
     return {

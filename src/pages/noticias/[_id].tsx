@@ -35,9 +35,8 @@ export default function Noticia({ noticia }) {
         </div>
     )
 }
-
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL PILOTS
-    const response = await fetch(`http://localhost:3001/news`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/news`);
     const data = await response.json();
 
     const paths = data.map(news => {
@@ -52,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
 
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILOT BY ID
     const { _id } = context.params;
-    const response = await fetch(`http://localhost:3001/news/${_id}`);
+    const response = await fetch(`https://portalnoticia-backend.herokuapp.com/news/${_id}`);
     const data = await response.json();
 
     return {

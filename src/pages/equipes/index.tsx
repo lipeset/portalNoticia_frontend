@@ -38,7 +38,7 @@ export default function Equipe({ equipes }) {
     )
 }
 export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch('http://localhost:3001/teams');
+    const response = await fetch('https://portalnoticia-backend.herokuapp.com/teams');
     const data = await response.json();
 
     return {

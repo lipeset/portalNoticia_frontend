@@ -52,9 +52,9 @@ const Noticia = ({ props }) => (
     </div >
 );
 Noticia.getInitialProps = async () => {
-    const newsResponse = await axios.get('http://localhost:3001/news');
-    const pilotsResponse = await axios.get('http://localhost:3001/pilots');
-    const teamsResponse = await axios.get('http://localhost:3001/teams');
+    const newsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
+    const pilotsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/pilots');
+    const teamsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/teams');
     return {
         props: {
             noticias: newsResponse.data,
