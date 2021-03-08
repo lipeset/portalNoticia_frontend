@@ -3,9 +3,6 @@ import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
   margin-top: 32px;
-  footer {
-      background-color: coral;
-    }
   p {
     font-size: 12px;
     font-weight: bold;
@@ -18,7 +15,7 @@ const FooterWrapper = styled.footer`
     justify-content: center;
   }
   a {
-    color: #ff0000;
+    color: #EF4444;
   }
   li {
     margin-left: 15px;

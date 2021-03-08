@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Footer from '../../components/Footer'
+import Navbar from '../../components/Navbar'
 
 export default function Layout({
     children,
@@ -13,12 +14,13 @@ export default function Layout({
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="stylesheet" href="../../style.css" />
             </Head>
-            <header className="headerContainer">
+            {/* <header className="headerContainer">
                 <img src="https://unavatar.now.sh/github/omariosouto" />
                 <h1 className="text-4xl">DevSoutinho's Blog</h1>
                 <div className="bg-red-700">teste</div>
-            </header>
+            </header> */}
             <body>
+                <Navbar></Navbar>
 
                 {children}
 
