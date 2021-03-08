@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Footer from '../../components/Footer'
+import Layout from '../../components/Layout'
 
 export default function Equipe({ equipe }) {
     const { isFallback } = useRouter();
@@ -11,31 +11,22 @@ export default function Equipe({ equipe }) {
     }
 
     return (
-        <div>
-            <header className="headerContainer">
-                <img src="https://unavatar.now.sh/github/omariosouto" />
-                <h1>DevSoutinho's Blog</h1>
-            </header>
-            <section>
-                <h1>Nome: {equipe.fullName}</h1>
-                <p>Títulos: {equipe.champCamp}</p>
-                <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
-                <p>Pole positions: {equipe.teamPolePositions}</p>
-                <p>Voltas rápidas:{equipe.teamFastLaps}</p>
-                <h3>
-                    <Link href={`/`}>
-                        <a>Home</a>
-                    </Link>
-                </h3>
-            </section>
-            <Footer
-                facebook="omariosouto"
-                twitter="omariosouto"
-                linkedin="omariosouto"
-                github="omariosouto"
-            />
-
-        </div>
+        <Layout>
+            <div>
+                <section>
+                    <h1>Nome: {equipe.fullName}</h1>
+                    <p>Títulos: {equipe.champCamp}</p>
+                    <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
+                    <p>Pole positions: {equipe.teamPolePositions}</p>
+                    <p>Voltas rápidas:{equipe.teamFastLaps}</p>
+                    <h3>
+                        <Link href={`/`}>
+                            <button><a>Home</a></button>
+                        </Link>
+                    </h3>
+                </section>
+            </div>
+        </Layout>
     )
 }
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL TEAMS

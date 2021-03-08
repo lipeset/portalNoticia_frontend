@@ -2,14 +2,14 @@ import App from 'next/app'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
 const theme = {
-    colors: {
-        primary: '#0070f3',
-    },
+  colors: {
+    primary: '#0070f3',
+  },
 }
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --primary: #ff6a00;
+    --primary: #ff0000;
   }
   * {
     font-family: sans-serif;
@@ -28,15 +28,11 @@ const GlobalStyle = createGlobalStyle`
     max-width: 700px;
     margin: auto;
   }
-  h1,
-  h2,
-  h3,
   h4,
   h5,
   a {
-    color: var(--primary);
+    color: #0000ff;
   }
-  button,
   a {
     transition: opacity .3s;
     &:focus,
@@ -70,13 +66,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default class MyApp extends App {
-    render() {
-        const { Component, pageProps } = this.props
-        return (
-            <ThemeProvider theme={theme}>
-                <GlobalStyle />
-                <Component {...pageProps} />
-            </ThemeProvider>
-        )
-    }
+  render() {
+    const { Component, pageProps } = this.props
+    return (
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    )
+  }
 }

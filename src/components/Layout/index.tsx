@@ -23,10 +23,10 @@ export default function Layout({
             </body>
 
             <Footer
-                facebook="omariosouto"
-                twitter="omariosouto"
-                linkedin="omariosouto"
-                github="omariosouto"
+                youtube="channel/UCHzJjA6b8vBPU6zN3USXmJg"
+                instagram="pilotos_da_vila"
+                linkedin="felipe-lucas-643b3a140"
+                github="lipeset"
             />
         </div>
     )
