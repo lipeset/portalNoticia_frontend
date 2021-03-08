@@ -3,19 +3,22 @@ import Link from 'next/link';
 import React from 'react';
 import Layout from '../../components/Layout'
 
-export default function Equipe({ equipes }) {
+export default function Noticia({ noticias }) {
     return (
         <Layout>
             <div>
                 <section>
                     <ul>
-                        {equipes.map((teams) => (
-                            <li key={teams._id}>
-                                <Link href={`/equipes/${teams._id}`}>
+                        {noticias.map((news) => (
+                            <li key={news._id}>
+                                <Link href={`/noticias/${news._id}`}>
                                     <a><h3>
-                                        {teams.fullName}
+                                        {news.title}
                                     </h3></a>
                                 </Link>
+                                <p>
+                                    {news.abstract}
+                                </p>
                             </li>
                         ))}
                     </ul>
@@ -30,12 +33,12 @@ export default function Equipe({ equipes }) {
     )
 }
 export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch('https://portalnoticia-backend.herokuapp.com/teams');
+    const response = await fetch('https://portalnoticia-backend.herokuapp.com/news');
     const data = await response.json();
 
     return {
         props: {
-            equipes: data,
+            noticias: data,
         },
         revalidate: 1000
     }

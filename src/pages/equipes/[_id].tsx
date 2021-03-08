@@ -12,20 +12,21 @@ export default function Equipe({ equipe }) {
 
     return (
         <Layout>
-            <div>
-                <section>
-                    <h1>Nome: {equipe.fullName}</h1>
-                    <p>Títulos: {equipe.champCamp}</p>
-                    <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
-                    <p>Pole positions: {equipe.teamPolePositions}</p>
-                    <p>Voltas rápidas:{equipe.teamFastLaps}</p>
-                    <h3>
-                        <Link href={`/`}>
-                            <button><a>Home</a></button>
-                        </Link>
-                    </h3>
-                </section>
-            </div>
+            <section>
+                <h1>Nome: {equipe.fullName}</h1>
+                <p>Títulos: {equipe.champCamp}</p>
+                <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
+                <p>Pole positions: {equipe.teamPolePositions}</p>
+                <p>Voltas rápidas:{equipe.teamFastLaps}</p>
+                <h3>
+                    <Link href={`/`}>
+                        <button><a>Home</a></button>
+                    </Link>
+                    <Link href={`/equipes`}>
+                        <button><a>Todas as equipes</a></button>
+                    </Link>
+                </h3>
+            </section>
         </Layout>
     )
 }

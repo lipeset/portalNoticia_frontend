@@ -1,7 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Footer from '../../components/Footer';
+import Layout from '../../components/Layout';
 
 export default function Piloto({ piloto }) {
     const { isFallback } = useRouter();
@@ -11,11 +11,7 @@ export default function Piloto({ piloto }) {
     }
 
     return (
-        <div>
-            <header className="headerContainer">
-                <img src="https://unavatar.now.sh/github/omariosouto" />
-                <h1>DevSoutinho's Blog</h1>
-            </header>
+        <Layout>
             <section>
                 <h1>Nome: {piloto.name}</h1>
                 <p>Podiuns: {piloto.podiuns}</p>
@@ -26,17 +22,14 @@ export default function Piloto({ piloto }) {
                 <p>Peso: {piloto.weight}</p>
                 <h3>
                     <Link href={`/`}>
-                        <a>Home</a>
+                        <button><a>Home</a></button>
+                    </Link>
+                    <Link href={`/pilotos`}>
+                        <button><a>Todas os pilotos</a></button>
                     </Link>
                 </h3>
             </section>
-            <Footer
-                facebook="omariosouto"
-                twitter="omariosouto"
-                linkedin="omariosouto"
-                github="omariosouto"
-            />
-        </div>
+        </Layout>
     )
 }
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL PILOTS

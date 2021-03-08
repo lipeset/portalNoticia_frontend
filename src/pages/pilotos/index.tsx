@@ -15,16 +15,16 @@ export default function Piloto({ piloto }) {
                     {piloto.map((pilots) => (
                         <li key={pilots._id}>
                             <Link href={`/pilotos/${pilots._id}`}>
-                                <a>
+                                <a><h3>
                                     {pilots.name}
-                                </a>
+                                </h3></a>
                             </Link>
                         </li>
                     ))}
                 </ul>
                 <h3>
                     <Link href={`/`}>
-                        <a>Home</a>
+                        <button><a>Home</a></button>
                     </Link>
                 </h3>
             </section>
