@@ -16,6 +16,9 @@ const FooterWrapper = styled.footer`
   }
   a {
     color: #000000;
+    &:hover {
+      color: #ff0000;
+    }
   }
   li {
     margin-left: 15px;
