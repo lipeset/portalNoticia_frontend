@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
-  margin-top: 32px;
+  margin-top: 15px;
   p {
-    font-size: 14px;
+    color: #ffffff;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
   }
@@ -15,7 +16,7 @@ const FooterWrapper = styled.footer`
     justify-content: center;
   }
   a {
-    color: #000000;
+    color: #ffffff;
     &:hover {
       color: #ff0000;
     }
@@ -28,6 +29,8 @@ const FooterWrapper = styled.footer`
     }
   }
   svg {
+    display: flex;
+    justify-content: center;
     width: 35px;
     height: 35px;
     fill: currentColor;
@@ -61,32 +64,31 @@ function Footer(props) {
 
   return (
     <FooterWrapper>
-      <ul>
-        {socialNetworks
-          .filter((socialNetwork) => Boolean(props[socialNetwork.name]))
-          .map((socialNetwork) => (
-            <li key={socialNetwork.url}>
-              <a href={`${socialNetwork.url}/${props[socialNetwork.name]}`} className="classA" target="_blank">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox={socialNetwork.svgPath}>
-                  <title>
-                    {socialNetwork.name}
-                  </title>
-                  <g dangerouslySetInnerHTML={{ __html: socialNetwork.svgPath }} />
-                </svg>
-              </a>
-            </li>
-          ))}
-      </ul>
-      <p>
-        Nos sigam nas redes sociais! ;)
-      </p>
-      <p>
-        Desenvolvedor: <a href="https://www.instagram.com/f_lucas23" target="_blank">@f_lucas23</a>
-      </p>
+      <div className="bg-black">
+        <ul>
+          {socialNetworks
+            .filter((socialNetwork) => Boolean(props[socialNetwork.name]))
+            .map((socialNetwork) => (
+              <li key={socialNetwork.url}>
+                <a href={`${socialNetwork.url}/${props[socialNetwork.name]}`} className="classA" target="_blank">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox={socialNetwork.svgPath} className="mt-2 flex items-center">
+                    <title>
+                      {socialNetwork.name}
+                    </title>
+                    <g dangerouslySetInnerHTML={{ __html: socialNetwork.svgPath }} />
+                  </svg>
+                </a>
+              </li>
+            ))}
+        </ul>
+        <p className="align-middle">
+          Nos sigam nas redes sociais! ;)<br />
+          Desenvolvedor: <a href="https://www.instagram.com/f_lucas23" target="_blank">@f_lucas23</a>
+        </p>
+      </div>
     </FooterWrapper>
   );
 }
-
 export default Footer;
