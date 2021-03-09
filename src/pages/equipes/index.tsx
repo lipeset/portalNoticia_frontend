@@ -25,8 +25,8 @@ export default function Equipe({ equipes }) {
                         </Link>
                     </h3>
                 </section>
-            </div >
-        </Layout>
+            </div>
+        </Layout >
     )
 }
 export const getStaticProps: GetStaticProps = async () => {
@@ -37,6 +37,6 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             equipes: data,
         },
-        revalidate: 1000
+        revalidate: 10
     }
 };

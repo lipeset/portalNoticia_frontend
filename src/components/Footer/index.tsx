@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const FooterWrapper = styled.footer`
   margin-top: 32px;
   p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
   }
@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
     justify-content: center;
   }
   a {
-    color: #EF4444;
+    color: #000000;
   }
   li {
     margin-left: 15px;
@@ -63,7 +63,7 @@ function Footer(props) {
           .filter((socialNetwork) => Boolean(props[socialNetwork.name]))
           .map((socialNetwork) => (
             <li key={socialNetwork.url}>
-              <a href={`${socialNetwork.url}/${props[socialNetwork.name]}`} target="_blank">
+              <a href={`${socialNetwork.url}/${props[socialNetwork.name]}`} className="classA" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox={socialNetwork.svgPath}>
@@ -80,7 +80,7 @@ function Footer(props) {
         Nos sigam nas redes sociais! ;)
       </p>
       <p>
-        <a href="https://www.instagram.com/f_lucas23" target="_blank">Desenvolvedor: @f_lucas23</a>
+        Desenvolvedor: <a href="https://www.instagram.com/f_lucas23" target="_blank">@f_lucas23</a>
       </p>
     </FooterWrapper>
   );

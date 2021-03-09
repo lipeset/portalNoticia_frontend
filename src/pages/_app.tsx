@@ -8,20 +8,14 @@ const theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
-  a {
+  .classA {
     cursor: pointer;
     transition: opacity .3s;
     &:focus,
+    font-weight: bold;
+    text-decoration: none;
     &:hover {
       opacity: .5;
-    }
-  }
-  .postsContainer {
-  }
-  .postsContainer__post {
-    a {
-      font-weight: bold;
-      text-decoration: none;
     }
   }
 `;

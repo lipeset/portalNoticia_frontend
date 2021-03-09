@@ -28,7 +28,7 @@ export default function Noticia({ noticias }) {
                         </Link>
                     </h3>
                 </section>
-            </div >
+            </div>
         </Layout>
     )
 }
