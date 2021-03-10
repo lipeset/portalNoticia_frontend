@@ -4,12 +4,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { format } from 'date-fns';
 
-const Noticia = ({ props }) => {
-    return (
+const Noticia = ({ noticias, equipes }) => {
+     return (
         <Layout>
             <div className="container my-6 mx-auto px-4 md:px-12">
                 <div className="flex flex-wrap -mx-1 lg:-mx-4">
-                    {props.noticias.map(news => (
+                    {noticias.map(news => (
                         <div key={news._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
                             <article className="overflow-hidden rounded-lg shadow-lg">
                                 <header className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -24,8 +24,8 @@ const Noticia = ({ props }) => {
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
                                     <a className="classA flex items-center no-underline hover:text-red-500 hover:underline" href="#">
-                                        <img alt="Placeholder" className="block mr-2 rounded-full" />
-                                        <p>Autor: {news.author}<br />
+                                        <img key={news.author._id} alt="Placeholder" className="block mr-2 rounded-full" src={news.author.avatarUrl}/>
+                                        <p>Autor: {news.author.name}<br />
                                         Data: {format(new Date(news.newsDate), 'dd/MM/yyyy')}</p>
                                     </a>
                                 </footer>
@@ -38,15 +38,12 @@ const Noticia = ({ props }) => {
     )
 };
 Noticia.getInitialProps = async () => {
-    const newsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
-    const pilotsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/pilots');
-    const teamsResponse = await axios.get('https://portalnoticia-backend.herokuapp.com/teams');
-    return {
-        props: {
-            noticias: newsResponse.data,
-            pilotos: pilotsResponse.data,
-            equipes: teamsResponse.data,
-        },
+    const {data: noticias} = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
+    const {data: equipes} = await axios.get('https://portalnoticia-backend.herokuapp.com/teams');
+    
+    return {        
+        noticias,
+        equipes,
     }
 }
 export default Noticia;
