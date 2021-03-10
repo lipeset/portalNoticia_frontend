@@ -14,11 +14,6 @@ function Navbar() {
                     <a href="/pilotos" className="classA text-lg p-3 mr-5 hover:text-red-500">PILOTOS</a>
                     <a href="/equipes" className="classA text-lg p-3 mr-5 hover:text-red-500">EQUIPES</a>
                 </nav>
-                <button className="flex items-center bg-gray-500 hover:bg-red-500 py-1 px-3 focus:outline-none rounded text-xl mt-4 md:mt-0">Teste
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                </button>
             </div>
         </nav >
     );

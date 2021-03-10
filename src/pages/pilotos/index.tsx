@@ -7,24 +7,22 @@ export default function Piloto({ piloto }) {
     return (
         <Layout>
             <div>
-                <section>
-                    <ul>
-                        {piloto.map((pilots) => (
-                            <li key={pilots._id}>
-                                <Link href={`/pilotos/${pilots._id}`}>
-                                    <a><h3>
-                                        {pilots.name}
-                                    </h3></a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <h3>
-                        <Link href={`/`}>
-                            <button><a>Home</a></button>
-                        </Link>
-                    </h3>
-                </section>
+                <ul>
+                    {piloto.map((pilots) => (
+                        <li key={pilots._id}>
+                            <Link href={`/pilotos/${pilots._id}`}>
+                                <a><h3>
+                                    {pilots.name}
+                                </h3></a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <h3>
+                    <Link href={`/`}>
+                        <button><a>Home</a></button>
+                    </Link>
+                </h3>
             </div>
         </Layout>
     )

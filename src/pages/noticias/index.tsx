@@ -7,27 +7,25 @@ export default function Noticia({ noticias }) {
     return (
         <Layout>
             <div>
-                <section>
-                    <ul>
-                        {noticias.map((news) => (
-                            <li key={news._id}>
-                                <Link href={`/noticias/${news._id}`}>
-                                    <a><h3>
-                                        {news.title}
-                                    </h3></a>
-                                </Link>
-                                <p>
-                                    {news.abstract}
-                                </p>
-                            </li>
-                        ))}
-                    </ul>
-                    <h3>
-                        <Link href={`/`}>
-                            <button><a>Home</a></button>
-                        </Link>
-                    </h3>
-                </section>
+                <ul>
+                    {noticias.map((news) => (
+                        <li key={news._id}>
+                            <Link href={`/noticias/${news._id}`}>
+                                <a><h3>
+                                    {news.title}
+                                </h3></a>
+                            </Link>
+                            <p>
+                                {news.abstract}
+                            </p>
+                        </li>
+                    ))}
+                </ul>
+                <h3>
+                    <Link href={`/`}>
+                        <button><a>Home</a></button>
+                    </Link>
+                </h3>
             </div>
         </Layout>
     )

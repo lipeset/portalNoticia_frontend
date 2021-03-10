@@ -13,19 +13,17 @@ export default function Noticia({ noticia }) {
     return (
         <Layout>
             <div>
-                <section>
-                    <h1>Título: {noticia.title}</h1>
-                    <h3>Conteúdo: {noticia.newsContent}</h3>
-                    <h3>Autor: {noticia.author}</h3>
-                    <h3>
-                        <Link href={`/`}>
-                            <button><a>Home</a></button>
-                        </Link>
-                        <Link href={`/noticias`}>
-                            <button><a>Todas as notícias</a></button>
-                        </Link>
-                    </h3>
-                </section>
+                <h1>Título: {noticia.title}</h1>
+                <h3>Conteúdo: {noticia.newsContent}</h3>
+                <h3>Autor: {noticia.author}</h3>
+                <h3>
+                    <Link href={`/`}>
+                        <button><a>Home</a></button>
+                    </Link>
+                    <Link href={`/noticias`}>
+                        <button><a>Todas as notícias</a></button>
+                    </Link>
+                </h3>
             </div>
         </Layout>
     )

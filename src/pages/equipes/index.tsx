@@ -7,24 +7,22 @@ export default function Equipe({ equipes }) {
     return (
         <Layout>
             <div>
-                <section>
-                    <ul>
-                        {equipes.map((teams) => (
-                            <li key={teams._id}>
-                                <Link href={`/equipes/${teams._id}`}>
-                                    <a><h3>
-                                        {teams.fullName}
-                                    </h3></a>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <h3>
-                        <Link href={`/`}>
-                            <button><a>Home</a></button>
-                        </Link>
-                    </h3>
-                </section>
+                <ul>
+                    {equipes.map((teams) => (
+                        <li key={teams._id}>
+                            <Link href={`/equipes/${teams._id}`}>
+                                <a><h3>
+                                    {teams.fullName}
+                                </h3></a>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <h3>
+                    <Link href={`/`}>
+                        <button><a>Home</a></button>
+                    </Link>
+                </h3>
             </div>
         </Layout >
     )
