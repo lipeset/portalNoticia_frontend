@@ -4,8 +4,8 @@ import React from 'react';
 import Layout from '../components/Layout';
 import { format } from 'date-fns';
 
-const Noticia = ({ noticias, equipes }) => {
-     return (
+const Noticia = ({ noticias }) => {
+    return (
         <Layout>
             <div className="container my-6 mx-auto px-4 md:px-12">
                 <div className="flex flex-wrap -mx-1 lg:-mx-4">
@@ -24,7 +24,7 @@ const Noticia = ({ noticias, equipes }) => {
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
                                     <a className="classA flex items-center no-underline hover:text-red-500 hover:underline" href="#">
-                                        <img key={news.author._id} alt="Placeholder" className="block mr-2 rounded-full" src={news.author.avatarUrl}/>
+                                        <img key={news.author._id} alt="Placeholder" className="block mr-2 rounded-full" src={news.author.avatarUrl} />
                                         <p>Autor: {news.author.name}<br />
                                         Data: {format(new Date(news.newsDate), 'dd/MM/yyyy')}</p>
                                     </a>
@@ -38,12 +38,10 @@ const Noticia = ({ noticias, equipes }) => {
     )
 };
 Noticia.getInitialProps = async () => {
-    const {data: noticias} = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
-    const {data: equipes} = await axios.get('https://portalnoticia-backend.herokuapp.com/teams');
-    
-    return {        
+    const { data: noticias } = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
+
+    return {
         noticias,
-        equipes,
     }
 }
 export default Noticia;
