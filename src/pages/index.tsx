@@ -2,6 +2,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
+import { format } from 'date-fns';
 
 const Noticia = ({ props }) => {
     return (
@@ -23,9 +24,9 @@ const Noticia = ({ props }) => {
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
                                     <a className="classA flex items-center no-underline hover:text-red-500 hover:underline" href="#">
-                                        {/*<img alt="Placeholder" className="block rounded-full" src="https://picsum.photos/32/32/?random" />*/}
+                                        <img alt="Placeholder" className="block mr-2 rounded-full" />
                                         <p>Autor: {news.author}<br />
-                                        Data: {news.newsDate}</p>
+                                        Data: {format(new Date(news.newsDate), 'dd/MM/yyyy')}</p>
                                     </a>
                                 </footer>
                             </article>
@@ -45,7 +46,7 @@ Noticia.getInitialProps = async () => {
             noticias: newsResponse.data,
             pilotos: pilotsResponse.data,
             equipes: teamsResponse.data,
-        }
+        },
     }
 }
 export default Noticia;
