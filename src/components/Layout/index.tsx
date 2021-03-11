@@ -7,7 +7,7 @@ export default function Layout({
     title = 'Pilotos da Vila',
 }) {
     return (
-        <body>
+        <div>
             <Head>
                 <title>{title}</title>
                 <meta charSet="utf-8" />
@@ -24,6 +24,6 @@ export default function Layout({
                 linkedin="felipe-lucas-643b3a140"
                 github="lipeset"
             />
-        </body>
+        </div>
     )
 }

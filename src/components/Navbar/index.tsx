@@ -8,6 +8,7 @@ function Navbar() {
                     <img src="https://i.imgur.com/xC5MgVW.png" />
                 </a>
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                    <a href="#" className="classA text-lg p-3 mr-5 hover:text-red-500">MURAL</a>
                     <a href="#" className="classA text-lg p-3 mr-5 hover:text-red-500">VÍDEOS</a>
                     <a href="#" className="classA text-lg p-3 mr-5 hover:text-red-500">CALENDÁRIO</a>
                     <a href="#" className="classA text-lg p-3 mr-5 hover:text-red-500">CLASSIFICAÇÃO</a>
