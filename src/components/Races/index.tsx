@@ -4,7 +4,7 @@ function Races() {
     return (
         <div className="text-white bg-black grid grid-cols-6 justify-center body-font">
 
-            <div className="grid grid-rows-3 grid-flow-col justify-center "> {/*CORRIDA 1*/}
+            <div className="grid grid-rows-3 grid-flow-col justify-center"> {/*CORRIDA 1*/}
                 <div className="flex flex-wrap content-center justify-center border-r border-white">
                     <img className="mt-3 flex flex-wrap content-center justify-center"
                         src="https://static.wixstatic.com/media/af30c3_82b173caa21a411584f9b33a5982edfb~mv2_d_3543_2189_s_2.png/v1/crop/x_0,y_155,w_3543,h_2034/fill/w_148,h_80,al_c,q_85,usm_1.20_1.00_0.01/logo-kart%C3%B3dromo-internacional-impress%C3%A3o_.webp" />
