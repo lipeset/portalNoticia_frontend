@@ -2,7 +2,7 @@ import React from 'react';
 
 function Races() {
     return (
-        <div className="text-white bg-black grid grid-cols-6 justify-center body-font">
+        <div className="text-white bg-gray-900 grid grid-cols-6 justify-center body-font">
 
             <div className="grid grid-rows-3 grid-flow-col justify-center"> {/*CORRIDA 1*/}
                 <div className="flex flex-wrap content-center justify-center border-r border-white">
@@ -148,7 +148,7 @@ function Races() {
                 </div>
             </div>
 
-        </div >
+        </div>
     );
 }
 export default Races;

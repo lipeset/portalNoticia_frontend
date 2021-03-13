@@ -2327,7 +2327,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react@^16.6.0 || ^17", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@>= 16.8.0", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.1":
+"react@^16.6.0 || ^17", "react@^16.7.0", "react@^16.8.0 || ^17.0.0", "react@^16.9.0 || ^17", "react@>= 16.8.0", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -2741,7 +2741,23 @@
   "resolved" "https://registry.npmjs.org/strip-url-auth/-/strip-url-auth-1.0.1.tgz"
   "version" "1.0.1"
 
-"styled-components@^5.2.1", "styled-components@>= 2":
+"styled-base-components@^4.0.0":
+  "integrity" "sha512-1Ikyk279YnwyKnh5+Vlb6q1qfXZ+43xzAqMc4iB+LN7uM/ePJXlGME6gUw2P6DNq9lxRmQrYaWdKsfoiUN3oSQ=="
+  "resolved" "https://registry.npmjs.org/styled-base-components/-/styled-base-components-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "styled-base-components" "^4.0.0"
+    "styled-config" "^4.0.0"
+
+"styled-button-component@^4.0.0":
+  "integrity" "sha512-6I5kLFKhN4pU31fkDTCAZnLoS3gJJFVlDRnXMVFIDto+BEuSS7c6LT6oADhS9m8Fl+62atV9bYkOS2HDcTNMhg=="
+  "resolved" "https://registry.npmjs.org/styled-button-component/-/styled-button-component-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "styled-base-components" "^4.0.0"
+    "styled-config" "^4.0.0"
+
+"styled-components@^4.1.2", "styled-components@^5.2.1", "styled-components@>= 2":
   "integrity" "sha512-sBdgLWrCFTKtmZm/9x7jkIabjFNVzCUeKfoQsM6R3saImkUnjx0QYdLwJHBjY9ifEcmjDamJDVfknWm1yxZPxQ=="
   "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.2.1.tgz"
   "version" "5.2.1"
@@ -2756,6 +2772,19 @@
     "hoist-non-react-statics" "^3.0.0"
     "shallowequal" "^1.1.0"
     "supports-color" "^5.5.0"
+
+"styled-config@^4.0.0":
+  "integrity" "sha512-sQq5C1t5KtN0iMpF7lAuzh3fSpk8T0vFIh8XH7l+pOzD+w9+Wow6OPcgnZ+Q/ay6jtyhgUk6E8jMopv+dmUsVw=="
+  "resolved" "https://registry.npmjs.org/styled-config/-/styled-config-4.0.0.tgz"
+  "version" "4.0.0"
+
+"styled-dropdown-component@^4.0.0":
+  "integrity" "sha512-Mf+dz8+TC9XLCtIMeMFnms2i5FxAXJqsrHDL+TVtkdEPJZEud62uItv3pwkJYF0vpexVfHcbCeJUB0GAhVCzBQ=="
+  "resolved" "https://registry.npmjs.org/styled-dropdown-component/-/styled-dropdown-component-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "styled-base-components" "^4.0.0"
+    "styled-config" "^4.0.0"
 
 "styled-jsx@3.3.2":
   "integrity" "sha512-daAkGd5mqhbBhLd6jYAjYBa9LpxYCzsgo/f6qzPdFxVB8yoGbhxvzQgkC0pfmCVvW3JuAEBn0UzFLBfkHVZG1g=="

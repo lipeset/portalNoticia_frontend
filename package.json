@@ -17,7 +17,9 @@
     "react-dom": "17.0.1",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "styled-components": "^5.2.1"
+    "styled-button-component": "^4.0.0",
+    "styled-components": "^5.2.1",
+    "styled-dropdown-component": "^4.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.31",
