@@ -67,6 +67,11 @@ body {
 		'Segoe UI Emoji';
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
 /*
 Grouping content
 ================

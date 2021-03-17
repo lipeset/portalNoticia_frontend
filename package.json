@@ -11,13 +11,17 @@
   "dependencies": {
     "@trendmicro/react-dropdown": "^1.4.0",
     "axios": "^0.21.1",
+    "bootstrap": "^4.6.0",
     "date-fns": "^2.19.0",
     "modern-normalize": "^1.0.0",
     "next": "10.0.7",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "17.0.1",
+    "react-dropdown": "^1.9.2",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
+    "semantic-ui-react": "^2.0.3",
     "styled-button-component": "^4.0.0",
     "styled-components": "^5.2.1",
     "styled-dropdown-component": "^4.0.0"

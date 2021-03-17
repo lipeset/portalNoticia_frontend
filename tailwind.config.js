@@ -4,6 +4,9 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   presets: [],
   darkMode: false, // or 'media' or 'class'
+  variants: {
+    display: ['responsive', 'group-hover', 'group-focus'],
+  },
   theme: {
     screens: {
       sm: '640px',
