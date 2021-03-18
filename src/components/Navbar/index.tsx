@@ -124,7 +124,7 @@ class Navbar extends Component {
                                                     <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-yellow-300 hover:bg-black 
                                                     transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg">
-                                                        <p className="text-base text-white">Rodrio CARVALHO</p>
+                                                        <p className="text-base text-white">Rodrigo CARVALHO</p>
                                                     </div>
                                                 </a>
                                                 <a className="no-underline px-4" href="/pilotos/604928e38e3d16001f018291">
