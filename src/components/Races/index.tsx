@@ -24,7 +24,6 @@ function Races() {
                             <p className="italic">HORÁRIO: 19:30</p>
                         </div>
                     </div>
-
                 </div>
             </div>
 

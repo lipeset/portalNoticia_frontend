@@ -8,7 +8,7 @@ import { format } from 'date-fns';
 const Noticia = ({ reverse, maxNews }) => {
     return (
         <Layout>
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-2 grid-flow-col">
+            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-2 grid-flow-col mt-28">
                 <div className="container my-6 mx-auto md:px-12 border-red-500 border-t-8 border-r-8 rounded-r-3xl"> {/*notícia principal*/}
                     <div className="flex flex-wrap -mx-1 lg:-mx-10">
                         <div key={reverse[0]._id} className="my-1 px-1 w-full lg:my-4 lg:px-4">

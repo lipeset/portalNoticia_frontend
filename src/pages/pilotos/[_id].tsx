@@ -25,7 +25,7 @@ export default function Piloto({ piloto }) {
                         <button><a>Home</a></button>
                     </Link>
                     <Link href={`/pilotos`}>
-                        <button><a>Todas os pilotos</a></button>
+                        <button><a>Todos os pilotos</a></button>
                     </Link>
                 </h3>
             </div>
