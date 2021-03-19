@@ -8,19 +8,21 @@ import { format } from 'date-fns';
 const Noticia = ({ reverse, maxNews }) => {
     return (
         <Layout>
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-2 grid-flow-col mt-64 md:mt-28">
+            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-2 grid-flow-col -mt-2">
                 <div className="container my-6 mx-auto md:px-12 border-red-500 border-t-8 border-r-8 rounded-r-3xl"> {/*notícia principal*/}
                     <div className="flex flex-wrap -mx-1 lg:-mx-10">
                         <div key={reverse[0]._id} className="my-1 px-1 w-full lg:my-4 lg:px-4">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg">
-                                <a className="no-underline hover:text-red-500 text-black" href="#">
-                                    <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                        <h1 className="classA text-2xl">
-                                            {reverse[0].title}
-                                        </h1>
-                                    </header>
-                                    <img key={reverse._id} className="flex flex-none" src={reverse[0].newsUrl} />
-                                </a>
+                                <Link href={`/noticias/${reverse[0]._id}`}>
+                                    <a className="no-underline hover:text-red-500 text-black">
+                                        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                                            <h1 className="classA text-2xl">
+                                                {reverse[0].title}
+                                            </h1>
+                                        </header>
+                                        <img key={reverse._id} className="flex flex-none" src={reverse[0].newsUrl} />
+                                    </a>
+                                </Link>
                                 <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
                                     {reverse[0].abstract}
                                 </h3>
@@ -43,14 +45,16 @@ const Noticia = ({ reverse, maxNews }) => {
                             <div key={news._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-red-500 border-b-2 border-l-2 rounded-l-3xl px-2">
-                                    <a className="no-underline hover:text-red-500 text-black" href="#">
-                                        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                            <h1 className="classA text-2xl">
-                                                {news.title}
-                                            </h1>
-                                        </header>
-                                        <img key={news._id} className="flex flex-none" src={news.newsUrl} />
-                                    </a>
+                                    <Link href={`/noticias/${news._id}`}>
+                                        <a className="no-underline hover:text-red-500 text-black">
+                                            <header className="flex items-center justify-between leading-tight p-2 md:p-4">
+                                                <h1 className="classA text-2xl">
+                                                    {news.title}
+                                                </h1>
+                                            </header>
+                                            <img key={news._id} className="flex flex-none" src={news.newsUrl} />
+                                        </a>
+                                    </Link>
                                     <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
                                         {news.abstract}
                                     </h3>
