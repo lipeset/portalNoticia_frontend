@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $ PORT",
+    "start": "next start",
     "build-css": "tailwindcss build src/style.css -o public/style.css"
   },
   "dependencies": {
