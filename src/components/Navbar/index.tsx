@@ -69,7 +69,7 @@ class Navbar extends Component {
                                             </span>
                                         </button>
                                     </Dropbtn>
-                                    <div className="container hidden md:flex justify-end">
+                                    <div className="container hidden md:flex justify-center">
                                         <DropDownContent>
                                             <div className="container grid grid-cols-6 grid-flow-col mt-3 mb-3">
                                                 <div className="grid grid-rows-3"> {/*COLUNA 1*/}
