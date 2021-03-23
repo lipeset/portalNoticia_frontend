@@ -15,7 +15,7 @@ const StyledLi = styled.li`
 const Dropbtn = styled.div`
   display: inline-block;
   color: white;
-  padding: 14px 16px;
+  padding: 0px 11px;
   text-decoration: none;
 `;
 
@@ -40,7 +40,7 @@ class Navbar extends Component {
             <Teste>
                 <header className="lg:px-16 px-8 bg-black flex flex-wrap items-center py-4 shadow-md">
                     <div className="flex-1 flex justify-between items-center">
-                        <a className="flex items-center mb-4 md:mb-0" href="/">
+                        <a className="flex items-center" href="/">
                             <img src="https://i.imgur.com/xC5MgVW.png" />
                         </a>
                     </div>
