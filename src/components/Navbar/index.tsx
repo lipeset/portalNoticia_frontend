@@ -15,7 +15,7 @@ const StyledLi = styled.li`
 const Dropbtn = styled.div`
   display: inline-block;
   color: white;
-  padding: 0px 11px;
+  padding: 10px 11px;
   text-decoration: none;
 `;
 
