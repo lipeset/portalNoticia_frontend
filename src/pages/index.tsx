@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
 import Races from '../components/Races';
+import Classificacao from '../components/Classificacao';
 import { format } from 'date-fns';
 
 const Noticia = ({ reverse, maxNews }) => {
@@ -41,10 +42,10 @@ const Noticia = ({ reverse, maxNews }) => {
                     </div>
                 </div>
                 {/*DEMAIS NOTÍCIAS*/}
-                <div className="container my-6 mx-auto px-4 md:px-12"> 
+                <div className="container my-6 mx-auto px-4 md:px-12">
                     <div className="flex flex-wrap -mx-1 lg:-mx-4">
                         {/*PENÚLTIMA NOTÍCIA*/}
-                        <div key={reverse[1]._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2"> 
+                        <div key={reverse[1]._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                             border-red-500 border-b-2 border-l-2 rounded-l-3xl px-2">
                                 <Link href={`/noticias/${reverse[1]._id}`}>
@@ -73,7 +74,7 @@ const Noticia = ({ reverse, maxNews }) => {
                             </article>
                         </div>
                         {/*ANTEPENÚLTIMA NOTÍCIA*/}
-                        <div key={reverse[2]._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2"> 
+                        <div key={reverse[2]._id} className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                             border-red-500 border-b-2 border-l-2 rounded-l-3xl px-2">
                                 <Link href={`/noticias/${reverse[2]._id}`}>
@@ -90,19 +91,19 @@ const Noticia = ({ reverse, maxNews }) => {
                                     {reverse[2].abstract}
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                <Link href={`/pilotos/${reverse[2].author._id}`}>
-                                    <a className="classA flex items-center no-underline hover:text-red-500 hover:underline">
-                                        <img key={reverse[2].author._id} alt="Placeholder" className="block mr-2 rounded-full" src={reverse[2].author.avatarUrl} />
-                                        <p>Autor: {reverse[2].author.name}<br />
+                                    <Link href={`/pilotos/${reverse[2].author._id}`}>
+                                        <a className="classA flex items-center no-underline hover:text-red-500 hover:underline">
+                                            <img key={reverse[2].author._id} alt="Placeholder" className="block mr-2 rounded-full" src={reverse[2].author.avatarUrl} />
+                                            <p>Autor: {reverse[2].author.name}<br />
                                             Data: {format(new Date(reverse[2].newsDate), 'dd/MM/yyyy')}
-                                        </p>
-                                    </a>
-                                </Link>
+                                            </p>
+                                        </a>
+                                    </Link>
                                 </footer>
                             </article>
-                        </div>                        
+                        </div>
                         {/*OUTRAS DUAS*/}
-                        {maxNews.map(news => ( 
+                        {maxNews.map(news => (
                             <div key={news._id} className="my-1 hidden md:block px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-red-500 border-b-2 border-l-2 rounded-l-3xl px-2">
@@ -132,19 +133,25 @@ const Noticia = ({ reverse, maxNews }) => {
                                 </article>
                             </div>
                         ))}
-                        <a href="/noticias">
-                            <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none 
-                            rounded text-xl mt-4 md:mt-0 ">
-                                VER TODAS
-                                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                                    <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                </svg>
-                            </button>
-                        </a>
+                        {/* BOTÃO VER MAIS */}
+                        <div className="container mx-auto grid-flow-col max-w-full content-center">
+                            <div className="grid grid-flow-col justify-center md:justify-start bg-white">
+                                <a href="/noticias">
+                                    <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none 
+                                        rounded text-xl md:mt-0 ">
+                                        VER TODAS
+                                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                                        </svg>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <Races></Races>
+            <Classificacao></Classificacao>
         </Layout >
     )
 };

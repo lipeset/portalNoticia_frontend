@@ -45,10 +45,10 @@ function Races() {
                         src="https://i.imgur.com/TWQEVkz.png" />
                 </div>
             </div>
-            <div className="md:hidden grid grid-flow-col justify-center">
+            <div className="md:hidden grid grid-flow-col justify-center bg-white">
                 <a href="/calendario">
                     <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none 
-                        rounded text-xl mt-4 md:mt-0 ">VER CALENDÁRIO COMPLETO
+                        rounded text-xl md:mt-0 ">VER CALENDÁRIO COMPLETO
                             <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
