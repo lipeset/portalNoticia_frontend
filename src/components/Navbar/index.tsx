@@ -45,7 +45,7 @@ class Navbar extends Component {
                         </a>
                     </div>
                     <label htmlFor="menu-toggle" className="pointer-cursor md:hidden block">
-                        <svg className="fill-current text-white mr-7"
+                        <svg className="fill-current text-white mr-2"
                             xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                         </svg>
