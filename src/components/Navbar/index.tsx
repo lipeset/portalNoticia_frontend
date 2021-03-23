@@ -15,7 +15,6 @@ const StyledLi = styled.li`
 const Dropbtn = styled.div`
   display: inline-block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 `;
@@ -54,25 +53,28 @@ class Navbar extends Component {
                     <input className="hidden" type="checkbox" id="menu-toggle" />
                     <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
                         <nav>
-                            <ul className="md:flex grid grid-cols-4 items-center justify-between text-base text-white pt-4 md:pt-0">
+                            <ul className="md:flex grid grid-cols-2 items-center justify-between text-base text-white pt-4 md:pt-0">
                                 <a href="/noticias" className="classA text-lg p-3 mr-5 hover:text-red-500">NOTÍCIAS</a>
                                 <a href="/quem_somos" className="classA text-lg p-3 mr-5 hover:text-red-500">QUEM SOMOS</a>
                                 <a href="/mural" className="classA text-lg p-3 mr-5 hover:text-red-500">MURAL</a>
+                                <a href="/videos" className="classA text-lg p-3 mr-5 hover:text-red-500">VÍDEOS</a>
+                                <a href="/calendario" className="classA text-lg p-3 mr-5 hover:text-red-500">CALENDÁRIO</a>
+                                <a href="/classificacao" className="classA text-lg p-3 mr-5 hover:text-red-500">CLASSIFICAÇÃO</a>
                                 <DropDownLi className="static">
                                     <Dropbtn>
                                         <button className="flex items-center justify-center">
-                                            <a href="/pilotos" className="classA text-lg p-3 mr-5 hover:text-red-500">PILOTOS</a>
+                                            <a href="/pilotos" className="classA text-lg hover:text-red-500">PILOTOS</a>
                                             <span>
-                                                <svg className="fill-current h-4 w-4 hidden md:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <svg className="fill-current h-4 w-4 hidden md:block ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                                 </svg>
                                             </span>
                                         </button>
                                     </Dropbtn>
-                                    <div className="container hidden md:flex justify-center">
+                                    <div className="container hidden md:flex justify-end">
                                         <DropDownContent>
                                             <div className="container grid grid-cols-6 grid-flow-col mt-3 mb-3">
-                                                <div className="grid grid-rows-3"> {/*COLUNA 1*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/604928e38e3d16001f018290">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-black hover:bg-green-300 
@@ -96,7 +98,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 2*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/60492a568e3d16001f0182ae">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-red-900 hover:bg-black 
@@ -120,7 +122,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 3*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/60492a208e3d16001f0182aa">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-red-800 hover:bg-green-900 
@@ -144,7 +146,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 4*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/604929148e3d16001f018296">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-red-800 hover:bg-red-800 
@@ -168,7 +170,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 5*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/60492a9d8e3d16001f0182b3">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-white hover:bg-red-900 
@@ -192,7 +194,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 6*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/604929458e3d16001f01829a">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-white hover:bg-blue-300 
@@ -219,15 +221,12 @@ class Navbar extends Component {
                                         </DropDownContent>
                                     </div>
                                 </DropDownLi>
-                                <a href="/videos" className="classA text-lg p-3 mr-5 hover:text-red-500">VÍDEOS</a>
-                                <a href="/calendario" className="classA text-lg p-3 mr-5 hover:text-red-500">CALENDÁRIO</a>
-                                <a href="/classificacao" className="classA text-lg p-3 mr-5 hover:text-red-500">CLASSIFICAÇÃO</a>
                                 <DropDownLi className="static">
                                     <Dropbtn>
                                         <button className="flex items-center justify-center">
-                                            <a href="/equipes" className="classA text-lg p-3 mr-5 hover:text-red-500">EQUIPES</a>
+                                            <a href="/equipes" className="classA text-lg hover:text-red-500">EQUIPES</a>
                                             <span>
-                                                <svg className="fill-current h-4 w-4 hidden md:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <svg className="fill-current h-4 w-4 hidden md:block ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                                     <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                                 </svg>
                                             </span>
@@ -236,7 +235,7 @@ class Navbar extends Component {
                                     <div className="container hidden md:flex justify-end">
                                         <DropDownContent>
                                             <div className="container grid grid-cols-3 grid-flow-col mt-3 mb-3">
-                                                <div className="grid grid-rows-3"> {/*COLUNA 1*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/604928e38e3d16001f018290">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-red-800 hover:bg-red-800 
@@ -260,7 +259,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 2*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/60492a568e3d16001f0182ae">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-white hover:bg-blue-300 
@@ -284,7 +283,7 @@ class Navbar extends Component {
                                                     </a>
                                                 </div>
 
-                                                <div className="grid grid-rows-3"> {/*COLUNA 3*/}
+                                                <div className="grid grid-rows-3">
                                                     <a className="no-underline px-4" href="/pilotos/60492a208e3d16001f0182aa">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-b-2 border-r-2 rounded-r-3xl px-1 hover:border-yellow-300 hover:bg-black 
