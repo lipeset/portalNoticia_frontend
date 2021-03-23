@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "build-css": "tailwindcss build src/style.css -o public/style.css"
+    "build-css": "tailwindcss build src/style.css -o public/style.css",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@trendmicro/react-dropdown": "^1.4.0",
