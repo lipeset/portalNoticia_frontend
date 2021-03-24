@@ -1,8 +1,5 @@
 {
   "name": "my-app",
-  "engines": {
-    "node": "14.x"
-  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,7 +15,7 @@
     "bootstrap": "^4.6.0",
     "date-fns": "^2.19.0",
     "modern-normalize": "^1.0.0",
-    "next": "10.0.7",
+    "next": "^10.0.7",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "17.0.1",

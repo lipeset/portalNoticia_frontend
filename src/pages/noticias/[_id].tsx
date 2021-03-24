@@ -15,7 +15,7 @@ export default function Noticia({ noticia }) {
             <div>
                 <h1>Título: {noticia.title}</h1>
                 <h3>Conteúdo: {noticia.newsContent}</h3>
-                <h3>Autor: {noticia.author}</h3>
+                <h3>Autor: {noticia.author.name}</h3>
                 <h3>
                     <Link href={`/`}>
                         <button><a>Home</a></button>

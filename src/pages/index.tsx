@@ -103,7 +103,7 @@ const Noticia = ({ reverse, maxNews }) => {
                             </article>
                         </div>
                         {/*OUTRAS DUAS*/}
-                        {maxNews.map(news => (
+                        {maxNews.map((news) => (
                             <div key={news._id} className="my-1 hidden md:block px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-red-500 border-b-2 border-l-2 rounded-l-3xl px-2">
@@ -151,8 +151,6 @@ const Noticia = ({ reverse, maxNews }) => {
                 </div>
             </div>
             <Races />
-            {/* CLASSIFICAÇÃO */}
-
         </Layout >
     )
 };
