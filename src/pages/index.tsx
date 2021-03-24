@@ -6,7 +6,6 @@ import Races from '../components/Races';
 import { format } from 'date-fns';
 
 const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
-    console.log(maxNews, limiteClassificacao)
     return (
         <Layout>
             {/* NOTÍCIAS */}
@@ -216,10 +215,10 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
 
             {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES */}
             {limiteClassificacao.map((classif) => (
-                <div className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
+                <div key={classif.pilot._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
                     <div className="container my-2 mx-auto md:px-12 w-11/12 ">
                         <div className="flex justify-center -mx-1 md:-mx-4">
-                            <div key={classif.pilot._id} className="my-1 px-1 w-full">
+                            <div className="my-1 px-1 w-full">
                                 <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-5 bg-gray-100">
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
@@ -239,7 +238,6 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     </div>
                 </div>
             ))}
-
             <div className="flex justify-center text-5xl mt-2 md:mt-0">
                 <a href="/classificacao">
                     <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none rounded text-xl md:mt-0 ">
