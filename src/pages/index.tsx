@@ -5,7 +5,7 @@ import Layout from '../components/Layout';
 import Races from '../components/Races';
 import { format } from 'date-fns';
 
-const Noticia = ({ reverse, maxNews, classificacao }) => {
+const Noticia = ({ reverse, maxNews }) => {
     return (
         <Layout>
             {/* NOTÍCIAS */}
@@ -158,15 +158,13 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
 };
 Noticia.getInitialProps = async () => {
     const { data: noticias } = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
-    const { data: classificacao } = await axios.get('https://portalnoticia-backend.herokuapp.com/classification');
     const reverse = noticias.reverse();
     const reverseSlice = reverse.slice(3);
     const maxNews = reverseSlice.slice(0, 2);
 
     return {
         reverse,
-        maxNews,
-        classificacao
+        maxNews
     }
 }
 export default Noticia;
