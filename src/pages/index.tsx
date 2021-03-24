@@ -214,6 +214,8 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
                     </div>
                 </div>
             </div>
+
+            {/* FAZER A LISTA DE QUALIFICAÇÃO */}
         </Layout >
     )
 };
