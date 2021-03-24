@@ -5,7 +5,8 @@ import Layout from '../components/Layout';
 import Races from '../components/Races';
 import { format } from 'date-fns';
 
-const Noticia = ({ reverse, maxNews }) => {
+const Noticia = ({ reverse, maxNews, classificacao }) => {
+    console.log(classificacao)
     return (
         <Layout>
             {/* NOTÍCIAS */}
@@ -150,19 +151,83 @@ const Noticia = ({ reverse, maxNews }) => {
                     </div>
                 </div>
             </div>
+
+            {/* CALENDÁRIO */}
             <Races />
+
+            {/* GRID DE CLASSIFICAÇÃO */}
+
+            <h3 className="flex justify-center text-5xl mt-2 md:mt-0 italic">CLASSIFICAÇÃO</h3>
+            <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
+                <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
+                    <div className="flex justify-end -mx-1 md:-mx-4">
+                        <div key={classificacao[1].pilot._id} className="my-1 px-1 w-full">
+                            <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                                border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                <img key={classificacao[1].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/VLtf1DD.png" />
+                                <Link href={`/pilotos/${classificacao[1].pilot._id}`}>
+                                    <a className="no-underline hover:text-red-500 text-black">
+                                        <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                            {classificacao[1].pilot.name}<br />
+                                            Está em segundo com {classificacao[1].punctuation} pontos
+                                        </h3>
+                                    </a>
+                                </Link>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div className="container my-2 mx-auto md:px-12">
+                    <div className="flex justify-center -mx-1 md:-mx-4">
+                        <div key={classificacao[0].pilot._id} className="my-1 px-1 w-full">
+                            <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                                border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                <img key={classificacao[0].pilot._id} className="flex flex-none rounded-3xl" src={classificacao[0].pilot.gridUrl} />
+                                <Link href={`/pilotos/${classificacao[0].pilot._id}`}>
+                                    <a className="no-underline hover:text-red-500 text-black">
+                                        <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                            {classificacao[0].pilot.name}<br />
+                                            Está em primeiro com {classificacao[0].punctuation} pontos
+                                        </h3>
+                                    </a>
+                                </Link>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
+                    <div className="flex justify-start -mx-1 md:-mx-4">
+                        <div key={classificacao[2].pilot._id} className="my-1 px-1 w-full">
+                            <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                                border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                <img key={classificacao[2].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/fHUJyki.png" />
+                                <Link href={`/pilotos/${classificacao[2].pilot._id}`}>
+                                    <a className="no-underline hover:text-red-500 text-black">
+                                        <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                            {classificacao[2].pilot.name}<br />
+                                            Está em terceiro com {classificacao[2].punctuation} pontos
+                                        </h3>
+                                    </a>
+                                </Link>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Layout >
     )
 };
 Noticia.getInitialProps = async () => {
     const { data: noticias } = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
+    const { data: classificacao } = await axios.get('https://portalnoticia-backend.herokuapp.com/classification');
     const reverse = noticias.reverse();
     const reverseSlice = reverse.slice(3);
     const maxNews = reverseSlice.slice(0, 2);
 
     return {
         reverse,
-        maxNews
+        maxNews,
+        classificacao
     }
 }
 export default Noticia;
