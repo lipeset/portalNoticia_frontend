@@ -217,17 +217,17 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
             {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES */}
             {limiteClassificacao.map((classif) => (
                 <div className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
-                    <div className="container my-2 mx-auto md:px-12 w-11/12">
+                    <div className="container my-2 mx-auto md:px-12 w-11/12 ">
                         <div className="flex justify-center -mx-1 md:-mx-4">
                             <div key={classif.pilot._id} className="my-1 px-1 w-full">
-                                <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-5">
+                                <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-5 bg-gray-100">
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
                                             <header className="flex items-center justify-between leading-tight p-2 md:p-4">
                                                 <h1 className="classA text-1xl font-bold">
                                                     {classif.pilot.name}
                                                 </h1>
-                                                <h1 className="classA text-1xl font-bold">
+                                                <h1 className="classA text-1xl font-bold justify-end">
                                                     {classif.punctuation} PTS
                                                 </h1>
                                             </header>
@@ -239,6 +239,18 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     </div>
                 </div>
             ))}
+
+            <div className="flex justify-center text-5xl mt-2 md:mt-0">
+                <a href="/classificacao">
+                    <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none rounded text-xl md:mt-0 ">
+                        VER CLASSIFICAÇÃO COMPLETA
+                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+
         </Layout >
     )
 };
