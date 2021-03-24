@@ -3,7 +3,6 @@ import Link from 'next/link';
 import React from 'react';
 import Layout from '../components/Layout';
 import Races from '../components/Races';
-import Classificacao from '../components/Classificacao';
 import { format } from 'date-fns';
 
 const Noticia = ({ reverse, maxNews }) => {
@@ -150,8 +149,7 @@ const Noticia = ({ reverse, maxNews }) => {
                     </div>
                 </div>
             </div>
-            <Races></Races>
-            <Classificacao></Classificacao>
+            <Races />
         </Layout >
     )
 };
