@@ -5,8 +5,8 @@ import Layout from '../components/Layout';
 import Races from '../components/Races';
 import { format } from 'date-fns';
 
-const Noticia = ({ reverse, maxNews, classificacao }) => {
-    console.log(maxNews, classificacao)
+const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
+    console.log(maxNews, limiteClassificacao)
     return (
         <Layout>
             {/* NOTÍCIAS */}
@@ -160,15 +160,15 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
             <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
                 <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
                     <div className="flex justify-end -mx-1 md:-mx-4">
-                        <div key={classificacao[1].pilot._id} className="my-1 px-1 w-full">
+                        <div key={limiteClassificacao[1].pilot._id} className="my-1 px-1 w-full">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                <img key={classificacao[1].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/VLtf1DD.png" />
-                                <Link href={`/pilotos/${classificacao[1].pilot._id}`}>
+                                <img key={limiteClassificacao[1].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/VLtf1DD.png" />
+                                <Link href={`/pilotos/${limiteClassificacao[1].pilot._id}`}>
                                     <a className="no-underline hover:underline text-black">
                                         <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                            {classificacao[1].pilot.name}<br />
-                                            Está em segundo com {classificacao[1].punctuation} pontos
+                                            {limiteClassificacao[1].pilot.name}<br />
+                                            Está em segundo com {limiteClassificacao[1].punctuation} pontos
                                         </h3>
                                     </a>
                                 </Link>
@@ -178,15 +178,15 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
                 </div>
                 <div className="container my-2 mx-auto md:px-12">
                     <div className="flex justify-center -mx-1 md:-mx-4">
-                        <div key={classificacao[0].pilot._id} className="my-1 px-1 w-full">
+                        <div key={limiteClassificacao[0].pilot._id} className="my-1 px-1 w-full">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                <img key={classificacao[0].pilot._id} className="flex flex-none rounded-3xl" src={classificacao[0].pilot.gridUrl} />
-                                <Link href={`/pilotos/${classificacao[0].pilot._id}`}>
+                                <img key={limiteClassificacao[0].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacao[0].pilot.gridUrl} />
+                                <Link href={`/pilotos/${limiteClassificacao[0].pilot._id}`}>
                                     <a className="no-underline hover:underline text-black">
                                         <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                            {classificacao[0].pilot.name}<br />
-                                            Está em primeiro com {classificacao[0].punctuation} pontos
+                                            {limiteClassificacao[0].pilot.name}<br />
+                                            Está em primeiro com {limiteClassificacao[0].punctuation} pontos
                                         </h3>
                                     </a>
                                 </Link>
@@ -196,15 +196,15 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
                 </div>
                 <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
                     <div className="flex justify-start -mx-1 md:-mx-4">
-                        <div key={classificacao[2].pilot._id} className="my-1 px-1 w-full">
+                        <div key={limiteClassificacao[2].pilot._id} className="my-1 px-1 w-full">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                <img key={classificacao[2].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/fHUJyki.png" />
-                                <Link href={`/pilotos/${classificacao[2].pilot._id}`}>
+                                <img key={limiteClassificacao[2].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/fHUJyki.png" />
+                                <Link href={`/pilotos/${limiteClassificacao[2].pilot._id}`}>
                                     <a className="no-underline hover:underline text-black">
                                         <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                            {classificacao[2].pilot.name}<br />
-                                            Está em terceiro com {classificacao[2].punctuation} pontos
+                                            {limiteClassificacao[2].pilot.name}<br />
+                                            Está em terceiro com {limiteClassificacao[2].punctuation} pontos
                                         </h3>
                                     </a>
                                 </Link>
@@ -215,7 +215,7 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
             </div>
 
             {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES */}
-            {classificacao.map((classif) => (
+            {limiteClassificacao.map((classif) => (
                 <div className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
                     <div className="container my-2 mx-auto md:px-12 w-11/12">
                         <div className="flex justify-center -mx-1 md:-mx-4">
@@ -224,10 +224,10 @@ const Noticia = ({ reverse, maxNews, classificacao }) => {
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
                                             <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                                <h1 className="classA text-2xl font-bold">
+                                                <h1 className="classA text-1xl font-bold">
                                                     {classif.pilot.name}
                                                 </h1>
-                                                <h1 className="classA text-2xl font-bold">
+                                                <h1 className="classA text-1xl font-bold">
                                                     {classif.punctuation} PTS
                                                 </h1>
                                             </header>
@@ -248,11 +248,12 @@ Noticia.getInitialProps = async () => {
     const reverse = noticias.reverse();
     const reverseSlice = reverse.slice(3);
     const maxNews = reverseSlice.slice(0, 2);
+    const limiteClassificacao = classificacao.slice(0, 10)
 
     return {
         reverse,
         maxNews,
-        classificacao
+        limiteClassificacao
     }
 }
 export default Noticia;
