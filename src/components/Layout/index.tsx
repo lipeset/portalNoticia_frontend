@@ -13,6 +13,7 @@ export default function Layout({
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <link rel="stylesheet" href="../../style.css" />
+                <link rel="shortcut icon" href="https://i.imgur.com/YTPSRaw.png" />
             </Head>
             <Navbar></Navbar>
 
