@@ -4,6 +4,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Races from '../components/Races';
 import { format } from 'date-fns';
+import styled from "styled-components";
+
+const DivBox = styled.div`
+    width: 50px;
+    background-color: powderblue;
+`;
 
 const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
     return (
@@ -162,7 +168,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                         <div key={limiteClassificacao[1].pilot._id} className="my-1 px-1 w-full">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                <img key={limiteClassificacao[1].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/VLtf1DD.png" />
+                                <img key={limiteClassificacao[1].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacao[1].pilot.gridUrl} />
                                 <Link href={`/pilotos/${limiteClassificacao[1].pilot._id}`}>
                                     <a className="no-underline hover:underline text-black">
                                         <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
@@ -198,7 +204,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                         <div key={limiteClassificacao[2].pilot._id} className="my-1 px-1 w-full">
                             <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                <img key={limiteClassificacao[2].pilot._id} className="flex flex-none rounded-3xl" src="https://i.imgur.com/fHUJyki.png" />
+                                <img key={limiteClassificacao[2].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacao[2].pilot.gridUrl} />
                                 <Link href={`/pilotos/${limiteClassificacao[2].pilot._id}`}>
                                     <a className="no-underline hover:underline text-black">
                                         <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
@@ -223,13 +229,8 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
                                             <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                                <h1 className="classA text-1xl font-bold grid grid-cols-2">
-                                                    <div>
-                                                        {index + 1}
-                                                    </div>
-                                                    <div className="-ml-8">
-                                                        {classif.pilot.name}
-                                                    </div>
+                                                <h1 className="classA text-1xl font-bold">
+                                                    {index + 1} - {classif.pilot.name}
                                                 </h1>
                                                 <h1 className="classA text-1xl font-bold justify-end">
                                                     {classif.punctuation} PTS
@@ -284,7 +285,6 @@ Noticia.getInitialProps = async () => {
     }
     classificacao.sort(compare);
     const limiteClassificacao = classificacao.slice(0, 10)
-
     return {
         reverse,
         maxNews,
