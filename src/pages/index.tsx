@@ -243,6 +243,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     </div>
                 </div>
             ))}
+
             {/* BOTÃO VER CLASSIFICAÇÃO COMPLETA */}
             <div className="flex justify-center text-5xl mt-2 md:mt-0">
                 <a href="/classificacao">
