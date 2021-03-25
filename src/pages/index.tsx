@@ -214,7 +214,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
             </div>
 
             {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES */}
-            {limiteClassificacao.map((classif) => (
+            {limiteClassificacao.map((classif, index) => (
                 <div key={classif.pilot._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
                     <div className="container my-2 mx-auto md:px-12 w-11/12 ">
                         <div className="flex justify-center -mx-1 md:-mx-4">
@@ -223,8 +223,13 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
                                             <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                                <h1 className="classA text-1xl font-bold">
-                                                    {classif.pilot.name}
+                                                <h1 className="classA text-1xl font-bold grid grid-cols-2">
+                                                    <div>
+                                                        {index + 1}
+                                                    </div>
+                                                    <div className="-ml-8">
+                                                        {classif.pilot.name}
+                                                    </div>
                                                 </h1>
                                                 <h1 className="classA text-1xl font-bold justify-end">
                                                     {classif.punctuation} PTS
@@ -248,7 +253,6 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     </button>
                 </a>
             </div>
-
         </Layout >
     )
 };
