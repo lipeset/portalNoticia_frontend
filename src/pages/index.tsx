@@ -243,6 +243,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     </div>
                 </div>
             ))}
+            {/* BOTÃO VER CLASSIFICAÇÃO COMPLETA */}
             <div className="flex justify-center text-5xl mt-2 md:mt-0">
                 <a href="/classificacao">
                     <button className="flex items-center font-bold text-white bg-red-500 hover:bg-black py-1 px-3 focus:outline-none rounded text-xl md:mt-0 ">
@@ -262,6 +263,16 @@ Noticia.getInitialProps = async () => {
     const reverse = noticias.reverse();
     const reverseSlice = reverse.slice(3);
     const maxNews = reverseSlice.slice(0, 2);
+    function compare(a, b) {
+        if (a.punctuation > b.punctuation) {
+            return -1;
+        }
+        if (a.punctuation > b.punctuation) {
+            return 1;
+        }
+        return 0;
+    }
+    classificacao.sort(compare);
     const limiteClassificacao = classificacao.slice(0, 10)
 
     return {
