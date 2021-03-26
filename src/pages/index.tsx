@@ -4,14 +4,17 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Races from '../components/Races';
 import { format } from 'date-fns';
-import styled from "styled-components";
 
-const DivBox = styled.div`
-    width: 50px;
-    background-color: powderblue;
-`;
-
-const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
+const Noticia = ({ reverse, maxNews, limiteClassificacao, equipe }) => {
+    function matchName(id) {
+        for (var i = 0; i < 10; i++) {
+            if (id == equipe[i]._id) {
+                return equipe[i].alias
+            } else {
+                continue
+            }
+        }
+    };
     return (
         <Layout>
             {/* NOTÍCIAS */}
@@ -225,14 +228,20 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
                     <div className="container my-2 mx-auto md:px-12 w-11/12 ">
                         <div className="flex justify-center -mx-1 md:-mx-4">
                             <div className="my-1 px-1 w-full">
-                                <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-5 bg-gray-100">
+                                <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-4 bg-gray-100">
                                     <Link href={`/pilotos/${classif.pilot._id}`}>
                                         <a className="no-underline text-black">
-                                            <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                                <h1 className="classA text-1xl font-bold">
-                                                    {index + 1} - {classif.pilot.name}
+                                            <header className="grid grid-cols-3 md:grid-cols-4 leading-tight p-2 md:p-4">
+                                                <h1 className="classA text-1xl font-bold text-center -ml-16 md:-ml-72">
+                                                    {index + 1}
                                                 </h1>
-                                                <h1 className="classA text-1xl font-bold justify-end">
+                                                <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
+                                                    {classif.pilot.name}
+                                                </h1>
+                                                <h1 className="classA text-xs -ml-96 font-bold hidden md:block">
+                                                    {matchName(classif.pilot.team)}
+                                                </h1>
+                                                <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
                                                     {classif.punctuation} PTS
                                                 </h1>
                                             </header>
@@ -271,9 +280,12 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao }) => {
 Noticia.getInitialProps = async () => {
     const { data: noticias } = await axios.get('https://portalnoticia-backend.herokuapp.com/news');
     const { data: classificacao } = await axios.get('https://portalnoticia-backend.herokuapp.com/classification');
+    const { data: equipe } = await axios.get('https://portalnoticia-backend.herokuapp.com/teams');
+
     const reverse = noticias.reverse();
     const reverseSlice = reverse.slice(3);
     const maxNews = reverseSlice.slice(0, 2);
+
     function compare(a, b) {
         if (a.punctuation > b.punctuation) {
             return -1;
@@ -284,11 +296,14 @@ Noticia.getInitialProps = async () => {
         return 0;
     }
     classificacao.sort(compare);
+
     const limiteClassificacao = classificacao.slice(0, 10)
+
     return {
         reverse,
         maxNews,
-        limiteClassificacao
+        limiteClassificacao,
+        equipe
     }
 }
 export default Noticia;
