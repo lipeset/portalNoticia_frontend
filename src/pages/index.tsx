@@ -238,7 +238,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacao, equipe }) => {
                                                 <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
                                                     {classif.pilot.name}
                                                 </h1>
-                                                <h1 className="classA text-xs -ml-96 font-bold hidden md:block">
+                                                <h1 className="classA text-xs font-bold text-center -ml-64 hidden md:block">
                                                     {matchName(classif.pilot.team)}
                                                 </h1>
                                                 <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
