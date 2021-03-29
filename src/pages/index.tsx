@@ -18,10 +18,9 @@ const theme = createMuiTheme({
         },
         secondary: {
             main: "#991C1C"
-        },
+        }
     }
 });
-
 
 const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassificacaoEquipes, equipe }) => {
     function matchName(id) {
