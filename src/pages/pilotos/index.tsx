@@ -26,7 +26,7 @@ const Piloto = ({ pilotos }) => {
                 {pilotos.map((pilots) => (
                     <div key={pilots._id} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
                         <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-black border-b-2 border-r-2 rounded-r-3xl px-2">
+                                border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                             <Link href={`/pilotos/${pilots._id}`}>
                                 <a className="no-underline text-black">
                                     <header className="flex items-center justify-between leading-tight p-2 md:p-4">
