@@ -220,57 +220,89 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <Tab label="EQUIPES" className="classA p-3 mr-5 hover:text-red-500" {...a11yProps(1)} />
                     </Tabs>
                 </AppBar>
-                <TabPanel value={value} index={0}>
-                    {/* GRID DE CLASSIFICAÇÃO - FOTOS PILOTOS */}
-                    <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
-                        <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
-                            <div className="flex justify-end -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoPilotos[1].pilot._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+            </ThemeProvider>
+            <TabPanel value={value} index={0}>
+                {/* GRID DE CLASSIFICAÇÃO - FOTOS PILOTOS */}
+                <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
+                    <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
+                        <div className="flex justify-end -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoPilotos[1].pilot._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                     border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoPilotos[1].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[1].pilot.gridUrl} />
-                                        <Link href={`/pilotos/${limiteClassificacaoPilotos[1].pilot._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoPilotos[1].pilot.name}<br />
+                                    <img key={limiteClassificacaoPilotos[1].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[1].pilot.gridUrl} />
+                                    <Link href={`/pilotos/${limiteClassificacaoPilotos[1].pilot._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoPilotos[1].pilot.name}<br />
                                                     Está em segundo com {limiteClassificacaoPilotos[1].punctuation} pontos
                                                 </h3>
-                                            </a>
-                                        </Link>
-                                    </article>
-                                </div>
+                                        </a>
+                                    </Link>
+                                </article>
                             </div>
                         </div>
-                        <div className="container my-2 mx-auto md:px-12">
-                            <div className="flex justify-center -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoPilotos[0].pilot._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                    </div>
+                    <div className="container my-2 mx-auto md:px-12">
+                        <div className="flex justify-center -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoPilotos[0].pilot._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoPilotos[0].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[0].pilot.gridUrl} />
-                                        <Link href={`/pilotos/${limiteClassificacaoPilotos[0].pilot._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoPilotos[0].pilot.name}<br />
+                                    <img key={limiteClassificacaoPilotos[0].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[0].pilot.gridUrl} />
+                                    <Link href={`/pilotos/${limiteClassificacaoPilotos[0].pilot._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoPilotos[0].pilot.name}<br />
                                                     Está em primeiro com {limiteClassificacaoPilotos[0].punctuation} pontos
                                                 </h3>
-                                            </a>
-                                        </Link>
-                                    </article>
-                                </div>
+                                        </a>
+                                    </Link>
+                                </article>
                             </div>
                         </div>
-                        <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
-                            <div className="flex justify-start -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoPilotos[2].pilot._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                    </div>
+                    <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
+                        <div className="flex justify-start -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoPilotos[2].pilot._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoPilotos[2].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[2].pilot.gridUrl} />
-                                        <Link href={`/pilotos/${limiteClassificacaoPilotos[2].pilot._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoPilotos[2].pilot.name}<br />
+                                    <img key={limiteClassificacaoPilotos[2].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[2].pilot.gridUrl} />
+                                    <Link href={`/pilotos/${limiteClassificacaoPilotos[2].pilot._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoPilotos[2].pilot.name}<br />
                                                     Está em terceiro com {limiteClassificacaoPilotos[2].punctuation} pontos
                                                 </h3>
+                                        </a>
+                                    </Link>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES PILOTOS */}
+                {limiteClassificacaoPilotos.map((classif, index) => (
+                    <div key={classif.pilot._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
+                        <div className="container my-2 mx-auto md:px-12 w-11/12 ">
+                            <div className="flex justify-center -mx-1 md:-mx-4">
+                                <div className="my-1 px-1 w-full">
+                                    <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-4 bg-gray-100">
+                                        <Link href={`/pilotos/${classif.pilot._id}`}>
+                                            <a className="no-underline text-black">
+                                                <header className="grid grid-cols-3 md:grid-cols-4 leading-tight p-2 md:p-4">
+                                                    <h1 className="classA text-1xl font-bold text-center -ml-16 md:-ml-72">
+                                                        {index + 1}
+                                                    </h1>
+                                                    <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
+                                                        {classif.pilot.name}
+                                                    </h1>
+                                                    <h1 className="classA text-xs font-bold text-center -ml-64 hidden md:block">
+                                                        {matchName(classif.pilot.team)}
+                                                    </h1>
+                                                    <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
+                                                        {classif.punctuation} PTS
+                                                        </h1>
+                                                </header>
                                             </a>
                                         </Link>
                                     </article>
@@ -278,91 +310,89 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                             </div>
                         </div>
                     </div>
+                ))}
+            </TabPanel>
 
-                    {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES PILOTOS */}
-                    {limiteClassificacaoPilotos.map((classif, index) => (
-                        <div key={classif.pilot._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
-                            <div className="container my-2 mx-auto md:px-12 w-11/12 ">
-                                <div className="flex justify-center -mx-1 md:-mx-4">
-                                    <div className="my-1 px-1 w-full">
-                                        <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-4 bg-gray-100">
-                                            <Link href={`/pilotos/${classif.pilot._id}`}>
-                                                <a className="no-underline text-black">
-                                                    <header className="grid grid-cols-3 md:grid-cols-4 leading-tight p-2 md:p-4">
-                                                        <h1 className="classA text-1xl font-bold text-center -ml-16 md:-ml-72">
-                                                            {index + 1}
-                                                        </h1>
-                                                        <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
-                                                            {classif.pilot.name}
-                                                        </h1>
-                                                        <h1 className="classA text-xs font-bold text-center -ml-64 hidden md:block">
-                                                            {matchName(classif.pilot.team)}
-                                                        </h1>
-                                                        <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
-                                                            {classif.punctuation} PTS
-                                                        </h1>
-                                                    </header>
-                                                </a>
-                                            </Link>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </TabPanel>
-
-                <TabPanel value={value} index={1}>
-                    {/* GRID DE CLASSIFICAÇÃO - FOTOS EQUIPES */}
-                    <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
-                        <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
-                            <div className="flex justify-end -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoEquipes[1].team._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+            <TabPanel value={value} index={1}>
+                {/* GRID DE CLASSIFICAÇÃO - FOTOS EQUIPES */}
+                <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
+                    <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -mr-14">
+                        <div className="flex justify-end -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoEquipes[1].team._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                     border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoEquipes[1].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[1].team.gridUrl} />
-                                        <Link href={`/equipes/${limiteClassificacaoEquipes[1].team._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoEquipes[1].team.alias}<br />
+                                    <img key={limiteClassificacaoEquipes[1].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[1].team.gridUrl} />
+                                    <Link href={`/equipes/${limiteClassificacaoEquipes[1].team._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoEquipes[1].team.alias}<br />
                                                     Está em segundo com {limiteClassificacaoEquipes[1].punctuation} pontos
                                                 </h3>
-                                            </a>
-                                        </Link>
-                                    </article>
-                                </div>
+                                        </a>
+                                    </Link>
+                                </article>
                             </div>
                         </div>
-                        <div className="container my-2 mx-auto md:px-12">
-                            <div className="flex justify-center -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoEquipes[0].team._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                    </div>
+                    <div className="container my-2 mx-auto md:px-12">
+                        <div className="flex justify-center -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoEquipes[0].team._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoEquipes[0].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[0].team.gridUrl} />
-                                        <Link href={`/equipes/${limiteClassificacaoEquipes[0].team._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoEquipes[0].team.alias}<br />
+                                    <img key={limiteClassificacaoEquipes[0].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[0].team.gridUrl} />
+                                    <Link href={`/equipes/${limiteClassificacaoEquipes[0].team._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoEquipes[0].team.alias}<br />
                                                     Está em primeiro com {limiteClassificacaoEquipes[0].punctuation} pontos
                                                 </h3>
-                                            </a>
-                                        </Link>
-                                    </article>
-                                </div>
+                                        </a>
+                                    </Link>
+                                </article>
                             </div>
                         </div>
-                        <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
-                            <div className="flex justify-start -mx-1 md:-mx-4">
-                                <div key={limiteClassificacaoEquipes[2].team._id} className="my-1 px-1 w-full">
-                                    <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
+                    </div>
+                    <div className="hidden md:block container my-2 mx-auto md:px-12 w-11/12 -ml-14">
+                        <div className="flex justify-start -mx-1 md:-mx-4">
+                            <div key={limiteClassificacaoEquipes[2].team._id} className="my-1 px-1 w-full">
+                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
-                                        <img key={limiteClassificacaoEquipes[2].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[2].team.gridUrl} />
-                                        <Link href={`/equipes/${limiteClassificacaoEquipes[2].team._id}`}>
-                                            <a className="no-underline hover:underline text-black">
-                                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                    {limiteClassificacaoEquipes[2].team.alias}<br />
+                                    <img key={limiteClassificacaoEquipes[2].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[2].team.gridUrl} />
+                                    <Link href={`/equipes/${limiteClassificacaoEquipes[2].team._id}`}>
+                                        <a className="no-underline hover:underline text-black">
+                                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                                {limiteClassificacaoEquipes[2].team.alias}<br />
                                                     Está em terceiro com {limiteClassificacaoEquipes[2].punctuation} pontos
                                                 </h3>
+                                        </a>
+                                    </Link>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES EQUIPES */}
+                {limiteClassificacaoEquipes.map((classif, index) => (
+                    <div key={classif.team._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
+                        <div className="container my-2 mx-auto md:px-12 w-11/12 ">
+                            <div className="flex justify-center -mx-1 md:-mx-4">
+                                <div className="my-1 px-1 w-full">
+                                    <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-4 bg-gray-100">
+                                        <Link href={`/equipes/${classif.team._id}`}>
+                                            <a className="no-underline text-black">
+                                                <header className="grid grid-cols-3 md:grid-cols-4 leading-tight p-2 md:p-4">
+                                                    <h1 className="classA text-1xl font-bold text-center -ml-16 md:-ml-72">
+                                                        {index + 1}
+                                                    </h1>
+                                                    <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
+                                                        {classif.team.alias}
+                                                    </h1>
+                                                    <h1 className="hidden md:block"></h1>
+                                                    <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
+                                                        {classif.punctuation} PTS
+                                                        </h1>
+                                                </header>
                                             </a>
                                         </Link>
                                     </article>
@@ -370,38 +400,9 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                             </div>
                         </div>
                     </div>
+                ))}
+            </TabPanel>
 
-                    {/* GRID DE CLASSIFICAÇÃO - INFORMAÇÕES EQUIPES */}
-                    {limiteClassificacaoEquipes.map((classif, index) => (
-                        <div key={classif.team._id} className="container mx-auto px-4 md:px-12 md:grid grid-flow-col">
-                            <div className="container my-2 mx-auto md:px-12 w-11/12 ">
-                                <div className="flex justify-center -mx-1 md:-mx-4">
-                                    <div className="my-1 px-1 w-full">
-                                        <article className="overflow-hidden rounded-lg shadow-lg rounded-l-3xl rounded-r-3xl px-2 hover:bg-gray-400 -mt-1 md:-mt-4 bg-gray-100">
-                                            <Link href={`/equipes/${classif.team._id}`}>
-                                                <a className="no-underline text-black">
-                                                    <header className="grid grid-cols-3 md:grid-cols-4 leading-tight p-2 md:p-4">
-                                                        <h1 className="classA text-1xl font-bold text-center -ml-16 md:-ml-72">
-                                                            {index + 1}
-                                                        </h1>
-                                                        <h1 className="classA text-1xl font-bold -ml-14 md:-ml-64">
-                                                            {classif.team.alias}
-                                                        </h1>
-                                                        <h1 className="hidden md:block"></h1>
-                                                        <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
-                                                            {classif.punctuation} PTS
-                                                        </h1>
-                                                    </header>
-                                                </a>
-                                            </Link>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </TabPanel>
-            </ThemeProvider>
 
             {/* BOTÃO VER CLASSIFICAÇÃO COMPLETA */}
             <div className="flex justify-center text-5xl mt-2 md:mt-0">
