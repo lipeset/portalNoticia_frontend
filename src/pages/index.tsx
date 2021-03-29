@@ -221,6 +221,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                     </Tabs>
                 </AppBar>
             </ThemeProvider>
+
             <TabPanel value={value} index={0}>
                 {/* GRID DE CLASSIFICAÇÃO - FOTOS PILOTOS */}
                 <div className="container mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-flow-col">
@@ -299,7 +300,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                                     <h1 className="classA text-xs font-bold text-center -ml-64 hidden md:block">
                                                         {matchName(classif.pilot.team)}
                                                     </h1>
-                                                    <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
+                                                    <h1 className="classA text-1xl ml-8 md:ml-52 font-bold justify-end">
                                                         {classif.punctuation} PTS
                                                         </h1>
                                                 </header>
@@ -389,7 +390,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                                         {classif.team.alias}
                                                     </h1>
                                                     <h1 className="hidden md:block"></h1>
-                                                    <h1 className="classA text-1xl ml-12 md:ml-52 font-bold justify-end">
+                                                    <h1 className="classA text-1xl ml-8 md:ml-52 font-bold justify-end">
                                                         {classif.punctuation} PTS
                                                         </h1>
                                                 </header>
