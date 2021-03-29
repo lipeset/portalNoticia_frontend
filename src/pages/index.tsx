@@ -19,7 +19,13 @@ const theme = createMuiTheme({
         secondary: {
             main: "#991C1C"
         },
-    }
+    },
+    typography: {
+        fontSize: 18,
+        fontFamily: [
+            'Inherit',
+        ].join(','),
+    },
 });
 
 
@@ -217,8 +223,8 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
             <ThemeProvider theme={theme}>
                 <AppBar position="relative" color="primary">
                     <Tabs value={value} onChange={handleChange} centered>
-                        <Tab label="PILOTOS" className="classA text-6xl p-3 mr-5 hover:text-red-500" {...a11yProps(0)} />
-                        <Tab label="EQUIPES" className="classA text-6xl p-3 mr-5 hover:text-red-500" {...a11yProps(1)} />
+                        <Tab label="PILOTOS" className="classA p-3 mr-5 hover:text-red-500" {...a11yProps(0)} />
+                        <Tab label="EQUIPES" className="classA p-3 mr-5 hover:text-red-500" {...a11yProps(1)} />
                     </Tabs>
                 </AppBar>
                 <TabPanel value={value} index={0}>
