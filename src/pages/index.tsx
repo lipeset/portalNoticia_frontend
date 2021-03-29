@@ -47,7 +47,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                 aria-labelledby={`simple-tab-${index}`}
                 {...other}>
                 {value === index && (
-                    <Box p={3}>
+                    <Box>
                         <Typography>{children}</Typography>
                     </Box>
                 )}
