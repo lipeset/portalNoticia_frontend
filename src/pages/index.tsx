@@ -21,7 +21,6 @@ const theme = createMuiTheme({
         },
     },
     typography: {
-        fontSize: 18,
         fontFamily: [
             'Inherit',
         ].join(','),
