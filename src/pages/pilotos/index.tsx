@@ -21,9 +21,8 @@ const Piloto = ({ pilotos }) => {
                 </div>
             </div>
 
+            {/* PILOTOS */}
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-rows-6 grid-flow-col -mt-2 items-center">
-
-                {/*OUTRAS DUAS*/}
                 {pilotos.map((pilots) => (
                     <div key={pilots._id} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
                         <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
@@ -55,7 +54,6 @@ const Piloto = ({ pilotos }) => {
                     </div>
                 ))}
             </div>
-
         </Layout >
     )
 }
