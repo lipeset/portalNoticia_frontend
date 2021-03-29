@@ -19,12 +19,7 @@ const theme = createMuiTheme({
         secondary: {
             main: "#991C1C"
         },
-    },
-    typography: {
-        fontFamily: [
-            'Inherit',
-        ].join(','),
-    },
+    }
 });
 
 
