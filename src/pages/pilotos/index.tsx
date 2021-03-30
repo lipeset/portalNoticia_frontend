@@ -10,7 +10,7 @@ const Piloto = ({ pilotos }) => {
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
                 <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl">
                     <div className="rounded-lg shadow-lg">
-                        <h1 className="flex leading-tight p-2 md:p-4 text-6xl font-bold">
+                        <h1 className="flex leading-tight p-2 md:p-4 text-5xl md:text-6xl font-bold">
                             PV - PILOTOS DE 2021
                         </h1>
                     </div>
