@@ -7,7 +7,6 @@ export default function Piloto({ piloto }) {
     if (isFallback) {
         return <p>Carregando...</p>;
     }
-
     return (
         <Layout>
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
