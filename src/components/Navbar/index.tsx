@@ -74,7 +74,7 @@ class Navbar extends Component {
                                         <DropDownContent>
                                             <div className="container grid grid-cols-6 grid-flow-col mt-3 mb-3">
                                                 <div className="grid grid-rows-3">
-                                                    <a className="no-underline px-4" href="pilotos/606101223245cc0004337957">
+                                                    <a className="no-underline px-4" href="/pilotos/606101223245cc0004337957">
                                                         <div className="container my-1 mx-auto md:px-4 flex items-center justify-between leading-tight p-2 md:p-4 
                                                     border-gray-600 border-t-2 border-r-2 rounded-r-3xl px-1 hover:border-black hover:bg-green-300 
                                                     transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg">

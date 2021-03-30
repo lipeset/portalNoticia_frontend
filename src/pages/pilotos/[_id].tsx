@@ -1,6 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 export default function Piloto({ piloto }) {
@@ -11,39 +10,39 @@ export default function Piloto({ piloto }) {
 
     return (
         <Layout>
-
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-1 grid-flow-col -mt-2">
-                {/*NOTÍCIA PRINCIPAL*/}
-                <div className="container my-6 mx-auto md:px-12 border-red-500 border-t-8 border-r-8 rounded-r-3xl">
-                    <div className="flex flex-wrap -mx-1 lg:-mx-10">
-                        <div key={piloto._id} className="my-1 px-1 w-full lg:my-4 lg:px-4">
-                            <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg">
-                                <Link href={`/noticias/${piloto._id}`}>
-                                    <a className="no-underline hover:text-red-500 text-black">
-                                        <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                            <h1 className="classA text-2xl">
-                                                {piloto.title}
-                                            </h1>
-                                        </header>
-                                        <img key={piloto._id} className="flex flex-none" src={piloto.profileUrl} />
-                                    </a>
-                                </Link>
-                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                    {piloto.abstract}
-                                </h3>
-                                <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                    <Link href={`/pilotos/${piloto._id}`}>
-                                        <a className="classA flex items-center no-underline hover:text-red-500 hover:underline">
-                                            <p>Autor: {piloto.name}<br /></p>
-                                        </a>
-                                    </Link>
-                                </footer>
-                            </article>
+            <div className="container my-4 mx-auto px-4 md:px-12 md:grid grid-cols-2 grid-flow-col border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                <div>
+                    <img className="rounded-2xl my-4 md:w-11/12" src={piloto.profileUrl} />
+                    <h1 className="-mt-5 mb-4 text-5xl md:text-6xl">{piloto.name}</h1>
+                </div>
+                <div className="justify-between md:grid grid-rows-2">
+                    <div className="hidden md:flex justify-center">
+                        <img className="rounded-2xl my-4 w-3/5" src={piloto.team.gridUrl} />
+                    </div>
+                    <div className="grid grid-cols-2 text-lg md:text-xl">
+                        <div className="font-bold">
+                            <h1>EQUIPE:</h1>
+                            <h1>PODIUNS:</h1>
+                            <h1>MELHOR CHEGADA:</h1>
+                            <h1>MELHOR LARGADA:</h1>
+                            <h1>POLE POSITIONS:</h1>
+                            <h1>VOLTAS RÁPIDAS:</h1>
+                            <h1>PESO:</h1>
+                        </div>
+                        <div className="flex justify-end">
+                            <div>
+                                <h1>{piloto.team.alias}</h1>
+                                <h1>{piloto.podiuns}</h1>
+                                <h1>{piloto.highRaceFinish}</h1>
+                                <h1>{piloto.highGridPosition}</h1>
+                                <h1>{piloto.polePosition}</h1>
+                                <h1>{piloto.fastLaps}</h1>
+                                <h1>{piloto.weight} KG</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </Layout>
     )
 }

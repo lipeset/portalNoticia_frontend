@@ -7,20 +7,15 @@ const Piloto = ({ pilotos }) => {
     return (
         <Layout>
             {/* CABEÇALHO */}
-            <div className="container my-6 mx-auto md:px-12 border-black border-t-8 border-r-8 rounded-r-3xl">
-                <div className="flex flex-wrap -mx-1 lg:-mx-10">
-                    <div className="my-1 px-1 w-full lg:my-4 lg:px-4">
-                        <article className="rounded-lg shadow-lg">
-                            <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                <h1 className="text-5xl font-bold">
-                                    PV - PILOTOS OFICIAIS 2021
-                                    </h1>
-                            </header>
-                        </article>
+            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
+                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl">
+                    <div className="rounded-lg shadow-lg">
+                        <h1 className="flex leading-tight p-2 md:p-4 text-6xl font-bold">
+                            PV - PILOTOS DE 2021
+                        </h1>
                     </div>
                 </div>
             </div>
-
             {/* PILOTOS */}
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-3 grid-rows-6 grid-flow-col -mt-2 items-center">
                 {pilotos.map((pilots) => (
@@ -40,11 +35,6 @@ const Piloto = ({ pilotos }) => {
                                         </div>
                                     </header>
                                     <img key={pilots._id} className="flex flex-none" src={pilots.profileUrl} />
-                                    <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                        <h1 className="text-lg">
-                                            Melhor colocação no campeonato: {pilots.highRaceFinish}
-                                        </h1>
-                                    </footer>
                                 </a>
                             </Link>
                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
