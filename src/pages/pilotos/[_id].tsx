@@ -14,7 +14,7 @@ export default function Piloto({ piloto }) {
                 <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg md:grid grid-cols-2">
                     <div className="ml-3 md:ml-0">
                         <img className="rounded-2xl my-4 md:w-11/12" src={piloto.profileUrl} />
-                        <h1 className="-mt-5 mb-4 text-4xl md:text-6xl">{piloto.name}</h1>
+                        <h1 className="my-4 text-4xl md:text-6xl">{piloto.name}</h1>
                     </div>
                     <div className="justify-between md:grid grid-rows-2">
                         <div className="hidden md:flex justify-center">
