@@ -83,7 +83,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <img key={reverse._id} className="flex flex-none" src={reverse[0].newsUrl} />
                                     </a>
                                 </Link>
-                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                <h3 className="flex items-center text-justify leading-tight p-2 md:p-4" >
                                     {reverse[0].abstract}
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -116,7 +116,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <img key={reverse[1]._id} className="flex flex-none" src={reverse[1].newsUrl} />
                                     </a>
                                 </Link>
-                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                <h3 className="flex items-center text-justify leading-tight p-2 md:p-4" >
                                     {reverse[1].abstract}
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -145,7 +145,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <img key={reverse[2]._id} className="flex flex-none" src={reverse[2].newsUrl} />
                                     </a>
                                 </Link>
-                                <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                <h3 className="flex items-center text-justify leading-tight p-2 md:p-4" >
                                     {reverse[2].abstract}
                                 </h3>
                                 <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -175,7 +175,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                             <img key={news._id} className="flex flex-none" src={news.newsUrl} />
                                         </a>
                                     </Link>
-                                    <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
+                                    <h3 className="flex items-center text-justify leading-tight p-2 md:p-4" >
                                         {news.abstract}
                                     </h3>
                                     <footer className="flex items-center justify-between leading-tight p-2 md:p-4">
