@@ -2,30 +2,37 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
+import React from "react";
 
 export default function Noticia({ noticia }) {
     const { isFallback } = useRouter();
-
     if (isFallback) {
         return <p>Carregando...</p>;
     }
+    function videoConstruct(videoUrl) {
+        if (videoUrl) {
+            return <div className="flex justify-center max-w-full mt-4 pb-4">
+                <iframe className="rounded-3xl shadow-lg" width="560" height="315" src={noticia.newsVideoUrl}
+                    title="Pilotos da Vila" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                </iframe>
+            </div>
+        } else {
+            return ''
+        }
+    };
+
 
     return (
         <Layout>
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
                 <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
-                    <div className="ml-3 md:ml-0 bg-gray-100">
+                    <div className="ml-3 md:ml-0">
                         <h1 className="text-center my-4 text-4xl md:text-6xl">{noticia.title}</h1>
-                        <h3 className="my-4 text-justify text-xl">{noticia.newsContent}</h3>
-                        <div className="flex justify-center max-w-full mt-4 pb-4">
-                            <iframe className="rounded-3xl shadow-lg" width="560" height="315" src={noticia.newsVideoUrl}
-                                title="Pilotos da Vila" frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen>
-                            </iframe>
-                        </div>
-
+                        <h3 className="my-4 text-justify text-xl px-4">{noticia.newsContent}</h3>
                     </div>
+                    {videoConstruct(noticia.newsVideoUrl)}
                 </div>
             </div>
             <div>
