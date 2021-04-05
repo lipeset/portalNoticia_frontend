@@ -12,10 +12,22 @@ export default function Noticia({ noticia }) {
 
     return (
         <Layout>
+            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
+                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                    <div className="ml-3 md:ml-0 bg-gray-100">
+                        <h1 className="my-4 text-4xl md:text-6xl">{noticia.title}</h1>
+                        <h3 className="my-4 text-justify text-xl">{noticia.newsContent}</h3>
+                        <div className="flex justify-center max-w-full mt-4 pb-4">
+                            <iframe className="rounded-3xl shadow-lg" width="560" height="315" src={noticia.newsVideoUrl}
+                                title="Pilotos da Vila" frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div>
-                <h1>Título: {noticia.title}</h1>
-                <h3>Conteúdo: {noticia.newsContent}</h3>
-                <h3>Autor: {noticia.author.name}</h3>
                 <h3>
                     <Link href={`/`}>
                         <button><a>Home</a></button>
@@ -41,7 +53,6 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
         fallback: true,
     }
 }
-
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILOT BY ID
     const { _id } = context.params;
     const response = await fetch(`https://portalnoticia-backend.herokuapp.com/news/${_id}`);
