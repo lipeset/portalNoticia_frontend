@@ -14,15 +14,15 @@ export default function Mural({ picUrl }) {
                         </p>
                         <p className="my-4 text-center text-xl px-4">
                             Lembrando que todas as fotos aqui publicadas, foram feitas pelo excelente profissional <strong>João Rosatelli (
-                                <a href="https://www.instagram.com/jlrosatelli/" className="underline" target="_blank">@jlrosatelli</a>)</strong>! Sigam ele no Instagram!!
+                            <a href="https://www.instagram.com/jlrosatelli/" className="underline" target="_blank">@jlrosatelli</a>)</strong>! Sigam ele no Instagram!!
                         </p>
                     </div>
                     <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-4 -mt-2 items-center">
-                        {picUrl[0].muralPics.map((pics) => (
-                            <div key={pics._id} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
+                        {picUrl[0].muralPics.reverse().map((pics) => (
+                            <div key={pics} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                 border-black border-t-2 border-r-2 rounded-r-3xl px-2">
-                                    <a className="no-underline text-black">
+                                    <a className="no-underline">
                                         <img key={pics._id} className="flex flex-none" src={pics} />
                                     </a>
                                 </article>
