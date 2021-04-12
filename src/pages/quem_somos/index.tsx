@@ -19,9 +19,10 @@ export default function QuemSomos() {
                         <h1 className="text-center my-4 text-4xl md:text-6xl">UM POUCO SOBRE NÓS</h1>
                         <Teste className="my-4 text-justify text-xl px-4">
                             <p>
-                                Em meados de agosto de 2020, os pilotos que hoje compõem a equipe Mercedes foram convidados a participar de uma festa realizada no
-                                Kartódromo Aldeia da Serra. Acompanhados por um dos pilotos que hoje faz parte da equipe Red Bull,
-                                rapidamente a adrenalina que cerca esse esporte tomou conta dos pilotos e contagiou o restante do grupo.
+                                Em meados de agosto de 2020, os pilotos que hoje compõem a equipe <a href="equipes/606101223245cc0004337956" className="underline" target="_blank">Mercedes</a> foram
+                                convidados a participar de uma festa realizada no Kartódromo Aldeia da Serra. Acompanhados por um dos pilotos que hoje faz parte da
+                                equipe <a href="equipes/606101933245cc000433795b" className="underline" target="_blank">Red Bull</a>, rapidamente a adrenalina que cerca esse esporte
+                                tomou conta dos pilotos e contagiou o restante do grupo.
                             </p><br />
                             <p>
                                 Deste momento em diante, nos reunimos diversas vezes nos principais kartódromos da grande São Paulo e nos principais kartódromos dos arredores
@@ -29,10 +30,12 @@ export default function QuemSomos() {
                                 grandioso como é agora) começou a tomar forma.
                             </p><br />
                             <p>
-                                Inicialmente, formado pelas equipes Mercedes, Red Bull, Ferrari e Williams, o campeonato foi oficialmente “aberto”. Não demorou muito até que
-                                outros amigos se interessassem pelo campeonato. De imediato, juntou-se a nós a equipe Renault! Daí em diante, apenas cresceu o nosso grid e
-                                nosso nível de competição... com a entrada das equipes McLaren, Aston Martin e Haas acontecendo praticamente ao mesmo tempo e logo depois a
-                                equipe Alfa Romeo também montando nossa linha de largada, começamos a montar a estrutura do nosso campeonato.
+                                Inicialmente, formado pelas equipes <a href="equipes/606101223245cc0004337956" className="underline" target="_blank">Mercedes</a>, <a href="equipes/606101933245cc000433795b" className="underline" target="_blank">Red Bull</a>, <a href="equipes/606100bb3245cc0004337951" className="underline" target="_blank">Ferrari</a> e <a href="equipes/6061007b3245cc000433794c" className="underline" target="_blank">Williams</a>, o
+                                campeonato foi oficialmente “aberto”. Não demorou muito até que outros amigos se interessassem pelo campeonato. De imediato, juntou-se a nós a
+                                equipe <a href="equipes/6060fdc43245cc0004337938" className="underline" target="_blank">Renault</a>! Daí em diante, apenas cresceu o nosso grid e
+                                nosso nível de competição... com a entrada das equipes <a href="equipes/6061002b3245cc0004337947" className="underline" target="_blank">McLaren</a>, <a href="equipes/6060ffc83245cc0004337942" className="underline" target="_blank">Aston Martin</a> e <a href="equipes/606101dc3245cc0004337960" className="underline" target="_blank">Haas</a> acontecendo
+                                praticamente ao mesmo tempo e logo depois a equipe <a href="equipes/6060ff743245cc000433793d" className="underline" target="_blank">Alfa Romeo</a> também montando nossa linha de largada,
+                                começamos a montar a estrutura do nosso campeonato.
                             </p><br />
                             <p>
                                 Com nossa primeira prova marcada para fevereiro de 2021, nos preparamos bastante nos meses anteriores, como uma pré-temporada, onde tivemos
@@ -40,18 +43,18 @@ export default function QuemSomos() {
                             </p><br />
                             <p>
                                 Como uma estrutura precisa de alicerces para se manter em pé, nosso campeonato também conta com uma diretoria que gerencia e toma as decisões para
-                                que o campeonato aconteça da forma mais competitiva e prazerosa para todos os pilotos. O conselho da diretoria (apelidado de FIA rsrs) é composto por:
-                                Felipe (Williams); Klaus (Ferrari); Bruno (McLaren); Rodrigo (Renault) e Alexandre (Haas).
+                                que o campeonato aconteça da forma mais competitiva e prazerosa para todos os pilotos. O conselho da diretoria (apelidado de FIA rsrs) é composto por: <a href="pilotos/6061007b3245cc000433794d" className="underline" target="_blank">Felipe (Williams)</a>; <a href="pilotos/606100bb3245cc0004337953" className="underline" target="_blank">Klaus (Ferrari)</a>; <a href="pilotos/6061002b3245cc0004337948" className="underline" target="_blank">Bruno (McLaren)</a>; <a href="pilotos/6060fdc43245cc0004337939" className="underline" target="_blank">Rodrigo (Renault)</a> e <a href="pilotos/606101dc3245cc0004337961" className="underline" target="_blank">Alexandre (Haas)</a>.
                             </p><br />
                             <p>
                                 E por fim, mas não menos importante, temos a nossa divisão de publicidade, marketing e propaganda. Está divisão que por ora, é gerenciada única e
-                                exclusivamente por “Davi (Mercedes)”, é responsável por trazer todo conteúdo em vídeo e gerenciar as contas do YouTube e Instagram do PILOTOS DA VILA. Como
-                                apresentadoras estão: Lais Poquiviqui e Nathalyn Ferraz, que fazem a cobertura do que acontece no campeonato.
+                                exclusivamente por “<a href="pilotos/606101223245cc0004337957" className="underline" target="_blank">Davi (Mercedes)</a>”, é responsável por trazer todo
+                                conteúdo em vídeo e gerenciar as contas do YouTube e Instagram do PILOTOS DA VILA. Como apresentadoras estão: Lais Poquiviqui e Nathalyn Ferraz,
+                                que fazem a cobertura do que acontece no campeonato.
                             </p><br />
                             <p>
                                 Esse foi um breve resumo do que cerca o nosso campeonato e espero que você, que ainda não nos conhece, tenha se interessado e desejado ficar mais por dentro
-                                do nosso campeonato!! Caso você queira participar como piloto, será avisado pelo Instagram (@pilotos_da_vila) quando as inscrições abrirem (lembrando que
-                                nosso campeonato é formado por duplas, se você não tiver parceiro, poderá se inscrever e esperar até que tenha uma dupla).
+                                do nosso campeonato!! Caso você queira participar como piloto, será avisado pelo Instagram (<a href="https://www.instagram.com/pilotos_da_vila/" className="underline" target="_blank">@pilotos_da_vila</a>)
+                                quando as inscrições abrirem (lembrando que nosso campeonato é formado por duplas, se você não tiver parceiro, poderá se inscrever e esperar até que tenha uma dupla).
                             </p><br />
                             <p>
                                 Se você não nos conhecia, muito obrigado por chegar até aqui! Seja muito bem-vindo! Se você já nos conhece, seja igualmente bem recebido e não esqueça de
