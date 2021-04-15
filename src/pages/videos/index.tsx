@@ -22,7 +22,7 @@ export default function Videos({ videos }) {
                     <div className="container my-6 md:grid grid-cols-2">
                         {videos.reverse().map((video) => (
                             <div key={video._id} className="px-2 my-2">
-                                <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
+                                <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2 pb-2">
                                     <div className="grid-rows-2">
                                         <h1 className="text-2xl font-bold mt-3">
                                             {video.title}

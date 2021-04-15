@@ -60,7 +60,7 @@ export default function QuemSomos() {
                                 Se você não nos conhecia, muito obrigado por chegar até aqui! Seja muito bem-vindo! Se você já nos conhece, seja igualmente bem recebido e não esqueça de
                                 nos seguir nas redes sociais! Obrigado!!!
                             </p><br />
-                            <img src="https://i.imgur.com/xL8vBOZ.jpg"></img>
+                            <img className="mb-3" src="https://i.imgur.com/xL8vBOZ.jpg"></img>
                         </Teste>
                     </div>
                 </div>
