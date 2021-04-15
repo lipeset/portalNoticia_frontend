@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from '../../components/Layout';
 
 export default function Mural({ picUrl }) {
-    console.log(picUrl)
     return (
         <Layout>
             <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
