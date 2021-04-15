@@ -34,12 +34,9 @@ const Piloto = ({ pilotos }) => {
                                             </h1>
                                         </div>
                                     </header>
-                                    <img key={pilots._id} className="flex flex-none" src={pilots.profileUrl} />
+                                    <img key={pilots._id} className="flex flex-none mb-6" src={pilots.profileUrl} />
                                 </a>
                             </Link>
-                            <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                {pilots.abstract}
-                            </h3>
                         </article>
                     </div>
                 ))}

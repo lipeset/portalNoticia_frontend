@@ -53,6 +53,7 @@ class Navbar extends Component {
                     <div className="hidden md:flex md:items-center md:w-auto w-full" id="menu">
                         <nav>
                             <ul className="md:flex grid grid-cols-2 items-center justify-between text-base text-white pt-4 md:pt-0">
+                                <a href="/" className="hidden md:block classA text-lg p-3 mr-5 hover:text-red-500">HOME</a>
                                 <a href="/noticias" className="classA text-lg p-3 mr-5 hover:text-red-500">NOTÍCIAS</a>
                                 <a href="/quem_somos" className="classA text-lg p-3 mr-5 hover:text-red-500">QUEM SOMOS</a>
                                 <a href="/mural" className="classA text-lg p-3 mr-5 hover:text-red-500">MURAL</a>

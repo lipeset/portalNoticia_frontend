@@ -1,25 +1,41 @@
-import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import React from 'react';
 import Layout from '../../components/Layout';
 
-export default function Piloto({ piloto }) {
+export default function Calendario() {
     return (
         <Layout>
-            <div>
-                <h1>CALENDÁRIO FUNCIONANDO</h1>
+            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
+                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                    <div>
+                        <h1 className="text-center my-4 text-4xl md:text-6xl">CALENDÁRIO DA PRIMEIRA TEMPORADA</h1>
+                        <p className="my-4 text-center text-xl">
+                            Aqui você pode conferir o nosso calendário da primeira temporada. Lembrando que esta temporada é composta por apenas <strong>seis</strong> provas!
+                        </p>
+                    </div>
+                    <div className="container my-6 md:grid grid-cols-3 items-center">
+                        <div className="flex justify-center my-1">
+                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/NnvOIlJ.png" />
+                        </div>
+                        <div className="flex justify-center my-1">
+                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/AWm2noq.png" />
+                        </div>
+                        <div className="flex justify-center my-1">
+                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/NRcTfQt.png" />
+                        </div>
+                        <div className="flex justify-center my-1">
+                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/XK4uNTt.png" />
+                        </div>
+                        <div className="flex justify-center my-1">
+                            {/* <img className="flex flex-none rounded-lg" src="https://i.imgur.com/AWm2noq.png" /> */}
+                            <p className="text-center text-3xl">SERÁ EM <strong>INTERLAGOS</strong><br />
+                            PORÉM A DATA ESTÁ INDEFINIDA</p>
+                        </div>
+                        <div className="flex justify-center my-1">
+                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/TWQEVkz.png" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     )
 }
-export const getStaticProps: GetStaticProps = async () => {
-    const response = await fetch('https://portalnoticia-backend.herokuapp.com/pilots');
-    const data = await response.json();
-
-    return {
-        props: {
-            piloto: data,
-        },
-        revalidate: 1000
-    }
-};

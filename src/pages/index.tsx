@@ -418,7 +418,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
 
             {/* VÍDEO INTRODUÇÃO */}
             <div className="flex justify-center max-w-full mt-4">
-                <iframe className="rounded-3xl shadow-lg" width="560" height="315" src="https://www.youtube.com/embed/0dRzxpC0ggI"
+                <iframe className="rounded-3xl shadow-lg" width="960" height="540" src="https://www.youtube.com/embed/lF1ClCGFJHU"
                     title="Pilotos da Vila" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
