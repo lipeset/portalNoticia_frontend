@@ -18,7 +18,7 @@ function Races() {
             <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 2*/}
                 <div className="flex flex-wrap content-center justify-center">
                     <img className="flex flex-wrap content-center justify-center"
-                        src="https://i.imgur.com/C97Oe3a.png" />
+                        src="https://i.imgur.com/AWm2noq.png" />
                 </div>
             </div>
             <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 3*/}
