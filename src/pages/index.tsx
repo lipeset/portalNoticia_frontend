@@ -417,12 +417,13 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
             </div>
 
             {/* VÍDEO INTRODUÇÃO */}
-            <div className="flex justify-center max-w-full mt-4">
-                <iframe className="rounded-3xl shadow-lg" width="960" height="540" src="https://www.youtube.com/embed/lF1ClCGFJHU"
-                    title="Pilotos da Vila" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen>
-                </iframe>
+            <div className="flex justify-center">
+                <div className="video-container mt-3 flex justify-center max-w-4xl">
+                    <iframe className="rounded-3xl shadow-lg" src="https://www.youtube.com/embed/lF1ClCGFJHU"
+                        title="Pilotos da Vila" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+                    </iframe>
+                </div>
             </div>
         </Layout>
     )
