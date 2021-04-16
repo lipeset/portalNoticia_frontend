@@ -5,7 +5,7 @@ export default function Calendario() {
     return (
         <Layout>
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
-                <div className="container my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
                     <div>
                         <h1 className="text-center my-4 text-4xl md:text-6xl">CALENDÁRIO DA PRIMEIRA TEMPORADA</h1>
                         <p className="text-center text-xl">
