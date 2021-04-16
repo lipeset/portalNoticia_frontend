@@ -14,16 +14,16 @@ export default function Calendario() {
                     </div>
                     <div className="my-4 md:grid grid-cols-3 items-center">
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/NnvOIlJ.png" />
+                            <img className="rounded-lg" src="https://i.imgur.com/NnvOIlJ.png" />
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/AWm2noq.png" />
+                            <img className="rounded-lg" src="https://i.imgur.com/AWm2noq.png" />
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/NRcTfQt.png" />
+                            <img className="rounded-lg" src="https://i.imgur.com/NRcTfQt.png" />
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/XK4uNTt.png" />
+                            <img className="rounded-lg" src="https://i.imgur.com/XK4uNTt.png" />
                         </div>
                         <div className="flex justify-center my-1">
                             {/* <img className="flex flex-none rounded-lg" src="https://i.imgur.com/AWm2noq.png" /> */}
@@ -31,7 +31,7 @@ export default function Calendario() {
                             PORÉM A DATA ESTÁ INDEFINIDA</p>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg mb-4 md:mb-0" src="https://i.imgur.com/TWQEVkz.png" />
+                            <img className="rounded-lg mb-4 md:mb-0" src="https://i.imgur.com/TWQEVkz.png" />
                         </div>
                     </div>
                 </div>
