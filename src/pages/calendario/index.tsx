@@ -4,11 +4,11 @@ import Layout from '../../components/Layout';
 export default function Calendario() {
     return (
         <Layout>
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
-                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+            <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
+                <div className="container my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
                     <div>
                         <h1 className="text-center my-4 text-4xl md:text-6xl">CALENDÁRIO DA PRIMEIRA TEMPORADA</h1>
-                        <p className="my-4 text-center text-xl">
+                        <p className="text-center text-xl">
                             Aqui você pode conferir o nosso calendário da primeira temporada. Lembrando que esta temporada é composta por apenas <strong>seis</strong> provas!
                         </p>
                     </div>
@@ -31,7 +31,7 @@ export default function Calendario() {
                             PORÉM A DATA ESTÁ INDEFINIDA</p>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/TWQEVkz.png" />
+                            <img className="flex flex-none rounded-lg mb-4 md:mb-0" src="https://i.imgur.com/TWQEVkz.png" />
                         </div>
                     </div>
                 </div>
