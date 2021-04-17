@@ -28,7 +28,7 @@ const Classificacao = ({ pilotos, equipe }) => {
                                     <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                                         <header className="p-2 md:p-4">
                                             <div className="grid-rows-2">
-                                                <Link href={`/pilotos/${pilots._id}`}>
+                                                <Link href={`/pilotos/${pilots.pilot._id}`}>
                                                     <a className="underline text-black">
                                                         <h1 className="text-xl font-bold">
                                                             {pilots.pilot.name}
@@ -42,33 +42,15 @@ const Classificacao = ({ pilotos, equipe }) => {
                                                         </h1>
                                                     </a>
                                                 </Link>
+                                                <h1 className="text-3xl font-bold">Com {pilots.punctuation} pontos</h1>
                                             </div>
                                         </header>
-                                        <img key={pilots._id} className="flex flex-auto rounded-3xl" src={pilots.pilot.profileUrl} />
+                                        <img key={pilots._id} className="flex flex-auto rounded-3xl mb-4" src={pilots.pilot.gridUrl} />
                                     </article>
                                 </div>
                             </div>
                         ))}
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
