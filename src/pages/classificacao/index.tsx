@@ -51,7 +51,7 @@ const Classificacao = ({ pilotos, equipe }) => {
                         ))}
                     </div>
                     <h1 className="text-center mt-4 -mb-3 text-4xl">O RESTANTE DO GRID</h1>
-                    <div className="my-4 md:grid grid-cols-4 items-center">
+                    <div className="my-4 md:grid grid-cols-4 items-center pb-0.5">
                         {pilotos.slice(3).map((pilots) => (
                             <div className="px-4 md:px-12 -mt-2 mb-4">
                                 <div key={pilots._id} className="my-1 lg:my-4">
