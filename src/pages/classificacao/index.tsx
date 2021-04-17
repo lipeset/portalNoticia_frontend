@@ -21,7 +21,6 @@ const Classificacao = ({ pilotos, equipe }) => {
                     <p className="text-center text-xl">Confira aqui a tabela completa de classificação!</p>
                     <h1 className="text-center mt-4 -mb-3 text-4xl">NOSSO TOP 3</h1>
                     <div className="my-4 md:grid grid-cols-3 items-center">
-
                         {pilotos.slice(0, 3).map((pilots) => (
                             <div className="px-4 md:px-12 -mt-2 mb-4">
                                 <div key={pilots._id} className="my-1 lg:my-4">
@@ -51,9 +50,37 @@ const Classificacao = ({ pilotos, equipe }) => {
                             </div>
                         ))}
                     </div>
-
-
-
+                    <h1 className="text-center mt-4 -mb-3 text-4xl">O RESTANTE DO GRID</h1>
+                    <div className="my-4 md:grid grid-cols-4 items-center">
+                        {pilotos.slice(3).map((pilots) => (
+                            <div className="px-4 md:px-12 -mt-2 mb-4">
+                                <div key={pilots._id} className="my-1 lg:my-4">
+                                    <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
+                                        <header className="p-2 md:p-4">
+                                            <div className="grid-rows-2">
+                                                <Link href={`/pilotos/${pilots.pilot._id}`}>
+                                                    <a className="underline text-black">
+                                                        <h1 className="text-xl font-bold">
+                                                            {pilots.pilot.name}
+                                                        </h1>
+                                                    </a>
+                                                </Link>
+                                                <Link href={`/equipes/${pilots.pilot.team}`}>
+                                                    <a className="underline text-black">
+                                                        <h1 className="text-xl">
+                                                            {matchName(pilots.pilot.team)}
+                                                        </h1>
+                                                    </a>
+                                                </Link>
+                                                <h1 className="text-3xl font-bold">Com {pilots.punctuation} pontos</h1>
+                                            </div>
+                                        </header>
+                                        <img key={pilots._id} className="flex flex-auto rounded-3xl mb-4" src={pilots.pilot.profileUrl} />
+                                    </article>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Layout>
