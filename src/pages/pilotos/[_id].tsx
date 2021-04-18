@@ -27,6 +27,7 @@ export default function Piloto({ piloto }) {
                                 <h1>MELHOR LARGADA:</h1>
                                 <h1>POLE POSITIONS:</h1>
                                 <h1>VOLTAS RÁPIDAS:</h1>
+                                <h1>MV ALDEIA:</h1>
                                 <h1>PESO:</h1>
                             </div>
                             <div className="flex justify-end mr-4">
@@ -37,6 +38,7 @@ export default function Piloto({ piloto }) {
                                     <h1>{piloto.highGridPosition}</h1>
                                     <h1>{piloto.polePosition}</h1>
                                     <h1>{piloto.fastLaps}</h1>
+                                    <h1>{piloto.bestAldeiaLap}</h1>
                                     <h1>{piloto.weight} KG</h1>
                                 </div>
                             </div>
