@@ -9,12 +9,14 @@ const DivBg = styled.div`
 function Races() {
     return (
         <DivBg className="container mx-auto md:grid grid-cols-6 grid-flow-col mt-28 max-w-full content-center">
-            <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 1*/}
-                <div className="flex flex-wrap content-center justify-center">
-                    <img className="flex flex-wrap content-center justify-center"
-                        src="https://i.imgur.com/NnvOIlJ.png" />
+            <a href="/calendario/primeira_etapa">
+                <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 1*/}
+                    <div className="flex flex-wrap content-center justify-center">
+                        <img className="flex flex-wrap content-center justify-center"
+                            src="https://i.imgur.com/NnvOIlJ.png" />
+                    </div>
                 </div>
-            </div>
+            </a>
             <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 2*/}
                 <div className="flex flex-wrap content-center justify-center">
                     <img className="flex flex-wrap content-center justify-center"

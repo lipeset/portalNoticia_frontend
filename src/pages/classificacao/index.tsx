@@ -22,8 +22,8 @@ const Classificacao = ({ pilotos, equipe }) => {
                     <h1 className="text-center mt-4 -mb-3 text-4xl">NOSSO TOP 3</h1>
                     <div className="my-4 md:grid grid-cols-3 items-center">
                         {pilotos.slice(0, 3).map((pilots) => (
-                            <div className="px-4 md:px-12 -mt-2 mb-4">
-                                <div key={pilots._id} className="my-1 lg:my-4">
+                            <div key={pilots._id} className="px-4 md:px-12 -mt-2 mb-4">
+                                <div className="my-1 lg:my-4">
                                     <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                                         <header className="p-2 md:p-4">
                                             <div className="grid-rows-2">

@@ -12,12 +12,16 @@ export default function Calendario() {
                         esta temporada é composta por apenas <strong>seis</strong> provas!
                     </p>
                     <div className="my-4 md:grid grid-cols-3 items-center">
-                        <div className="flex justify-center my-1">
-                            <img className="rounded-lg" src="https://i.imgur.com/NnvOIlJ.png" />
-                        </div>
-                        <div className="flex justify-center my-1">
-                            <img className="rounded-lg" src="https://i.imgur.com/AWm2noq.png" />
-                        </div>
+                        <a href="/calendario/primeira_etapa">
+                            <div className="flex justify-center my-1">
+                                <img className="rounded-lg" src="https://i.imgur.com/NnvOIlJ.png" />
+                            </div>
+                        </a>
+                        <a href="/calendario/segunda_etapa">
+                            <div className="flex justify-center my-1">
+                                <img className="rounded-lg" src="https://i.imgur.com/AWm2noq.png" />
+                            </div>
+                        </a>
                         <div className="flex justify-center my-1">
                             <img className="rounded-lg" src="https://i.imgur.com/NRcTfQt.png" />
                         </div>
