@@ -109,9 +109,6 @@ const Corrida = ({ reorder_piloto, reorder_equipe, primeira_etapa }) => {
                     ))}
                 </div>
             </div>
-
-
-
             {reorder_equipe.map((equipe) => (
                 <h1 key={equipe._id}>{equipe.alias}</h1>
             ))}
