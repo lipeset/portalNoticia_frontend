@@ -265,7 +265,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <div className="flex justify-start -mx-1 md:-mx-4">
                             <div key={limiteClassificacaoPilotos[2].pilot._id} className="my-1 px-1 w-full">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                border-black hover:border-yellow-300 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                     <img key={limiteClassificacaoPilotos[2].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[2].pilot.gridUrl} />
                                     <Link href={`/pilotos/${limiteClassificacaoPilotos[2].pilot._id}`}>
                                         <a className="no-underline hover:underline text-black">
@@ -357,14 +357,14 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <div className="flex justify-start -mx-1 md:-mx-4">
                             <div key={limiteClassificacaoEquipes[2].team._id} className="my-1 px-1 w-full">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                border-black hover:border-yellow-300 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                     <img key={limiteClassificacaoEquipes[2].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[2].team.gridUrl} />
                                     <Link href={`/equipes/${limiteClassificacaoEquipes[2].team._id}`}>
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
                                                 {limiteClassificacaoEquipes[2].team.alias}<br />
-                                                    Está em terceiro com {limiteClassificacaoEquipes[2].punctuation} pontos
-                                                </h3>
+                                                Está em terceiro com {limiteClassificacaoEquipes[2].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
