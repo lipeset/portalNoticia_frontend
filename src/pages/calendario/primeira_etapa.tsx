@@ -23,7 +23,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, primeira_etapa }) => {
                     {/* TOP 3 */}
                     <h1 className="text-center my-4 text-2xl md:text-4xl">Os três primeiros colocados:</h1>
                     <div className="mx-auto md:grid grid-cols-3 grid-flow-col">
-                        <div className="hidden md:block my-2 mx-auto md:px-12 w-11/12">
+                        <div className="my-2 mx-auto md:px-12 w-11/12">
                             <div className="flex justify-end -mx-1 md:-mx-4 my-1">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                     border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
@@ -57,7 +57,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, primeira_etapa }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden md:block my-2 mx-auto md:px-12 w-11/12">
+                        <div className="my-2 mx-auto md:px-12 w-11/12">
                             <div className="flex justify-end -mx-1 md:-mx-4 my-1">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
                                     border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
