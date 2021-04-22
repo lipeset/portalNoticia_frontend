@@ -171,7 +171,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                     <h1 className="classA font-bold text-center -ml-72 hidden md:block">
                                                         {matchName(piloto.team)}
                                                     </h1>
-                                                    <h1 className="classA text-1xl ml-16 md:ml-64 font-bold">
+                                                    <h1 className="classA text-1xl ml-12 md:ml-64 font-bold">
                                                         {piloto.secondGpPoints} PTS
                                                     </h1>
                                                 </header>
@@ -256,7 +256,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                     <h1 className="classA text-1xl font-bold -ml-16 md:-ml-96">
                                                         <h1>{equipe.alias}</h1>
                                                     </h1>
-                                                    <h1 className="classA text-1xl font-bold ml-16 md:ml-96">
+                                                    <h1 className="classA text-1xl font-bold ml-12 md:ml-96">
                                                         {equipe.secondGpPoints} PTS
                                                     </h1>
                                                 </header>
@@ -342,7 +342,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                     <h1 className="classA font-bold text-center -ml-72 hidden md:block">
                                                         {matchName(piloto.team)}
                                                     </h1>
-                                                    <h1 className="classA text-1xl ml-16 md:ml-64 font-bold">
+                                                    <h1 className="classA text-1xl text-center ml-4 md:ml-64 font-bold">
                                                         {piloto.secondBestLap}
                                                     </h1>
                                                 </header>
