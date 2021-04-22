@@ -81,8 +81,9 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                     numa tentativa de dar espaço ao seu companheiro Fabio, acabou escapando pra fora da pista e rodando, entregando de bandeija três posições... uma delas
                     recuperada graças ao acidente envolvendo o piloto Alexandre, Fernando (McLaren) e Marcos (Ferrari)!<br /> Acidente esse que não só custou ao Alexandre
                     TRÊS posições, como também custou uma posição ao Marcos, já que Lucas (Red Bull) aproveitou a confusão e os ultrapassou!!<br />
-                    Você pode conferir a matéria completa no nosso canal do
-                    Youtube <b><a className="classA" href="https://youtu.be/Lunf0yTVlnE" target="_blank">clicando aqui!!</a></b></p>
+                        {/* Você pode conferir a matéria completa no nosso canal do
+                    Youtube <b><a className="classA" href="https://youtu.be/Lunf0yTVlnE" target="_blank">clicando aqui!!</a></b> */}
+                    </p>
 
                     <ThemeProvider theme={theme}>
                         <AppBar position="relative" color="primary">
