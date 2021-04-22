@@ -17,16 +17,15 @@ const Classificacao = ({ pilotos, equipe }) => {
         <Layout>
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
-                    <h1 className="text-center my-4 text-4xl md:text-6xl">CLASSIFICAÇÃO GERAL</h1>
+                    <h1 className="text-center my-4 text-4xl md:text-6xl">CLASSIFICAÇÃO GERAL DO CAMPEONATO</h1>
                     <p className="text-center text-xl">Confira aqui a tabela completa de classificação!</p>
-                    <h1 className="text-center mt-4 -mb-3 text-4xl">NOSSO TOP 3</h1>
-                    <div className="my-4 md:grid grid-cols-3 items-center">
-                        {pilotos.slice(0, 3).map((pilots) => (
-                            <div key={pilots._id} className="px-4 md:px-12 -mt-2 mb-4">
-                                <div className="my-1 lg:my-4">
+                    <div className="md:grid grid-cols-3 items-center">
+                        {pilotos.slice(0, 3).map((pilots, index) => (
+                            <div key={pilots._id} className="px-4 md:px-12">
+                                <div className="my-1 md:my-2">
                                     <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                                         <header className="p-2 md:p-4">
-                                            <div className="grid-rows-2">
+                                            <div className="grid grid-rows-2">
                                                 <Link href={`/pilotos/${pilots.pilot._id}`}>
                                                     <a className="underline text-black">
                                                         <h1 className="text-xl font-bold">
@@ -41,23 +40,23 @@ const Classificacao = ({ pilotos, equipe }) => {
                                                         </h1>
                                                     </a>
                                                 </Link>
-                                                <h1 className="text-3xl font-bold">Com {pilots.punctuation} pontos</h1>
+                                                <h1 className="text-3xl font-bold">{index + 1}º com {pilots.punctuation} pts</h1>
                                             </div>
                                         </header>
-                                        <img key={pilots._id} className="flex flex-auto rounded-3xl mb-4" src={pilots.pilot.gridUrl} />
+                                        <img className="flex flex-auto rounded-3xl" src={pilots.pilot.gridUrl} />
                                     </article>
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <h1 className="text-center mt-4 -mb-3 text-4xl">O RESTANTE DO GRID</h1>
-                    <div className="my-4 md:grid grid-cols-4 items-center pb-0.5">
-                        {pilotos.slice(3).map((pilots) => (
-                            <div className="px-4 md:px-12 -mt-2 mb-4">
-                                <div key={pilots._id} className="my-1 lg:my-4">
+                    <h1 className="text-center text-4xl my-4">O RESTANTE DO GRID</h1>
+                    <div className="md:grid grid-cols-4 items-center">
+                        {pilotos.slice(3).map((pilots, index) => (
+                            <div key={pilots._id} className="px-4 md:px-12">
+                                <div className="my-1 md:my-2">
                                     <article className="rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                                         <header className="p-2 md:p-4">
-                                            <div className="grid-rows-2">
+                                            <div className="grid grid-rows-2">
                                                 <Link href={`/pilotos/${pilots.pilot._id}`}>
                                                     <a className="underline text-black">
                                                         <h1 className="text-xl font-bold">
@@ -72,10 +71,10 @@ const Classificacao = ({ pilotos, equipe }) => {
                                                         </h1>
                                                     </a>
                                                 </Link>
-                                                <h1 className="text-3xl font-bold">Com {pilots.punctuation} pontos</h1>
+                                                <h1 className="text-3xl font-bold">{index + 4}º com {pilots.punctuation} pts</h1>
                                             </div>
                                         </header>
-                                        <img key={pilots._id} className="flex flex-auto rounded-3xl mb-4" src={pilots.pilot.profileUrl} />
+                                        <img className="flex flex-auto rounded-3xl" src={pilots.pilot.profileUrl} />
                                     </article>
                                 </div>
                             </div>
