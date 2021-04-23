@@ -13,9 +13,9 @@ export default function Equipe({ equipes }) {
                         Aqui você pode conferir as equipes que estão disputando a primeira temporada do Campeonato Pilotos da Vila.<br />
                         Lembrando que esta temporada é composta por apenas <strong>seis</strong> provas!
                     </p>
-                    <div className="my-4 md:grid grid-cols-3 items-center">
+                    <div className="md:grid grid-cols-3 items-center">
                         {equipes.map((teams) => (
-                            <div key={teams._id} className="p-1">
+                            <div key={teams._id} className="p-4">
                                 <article className="overflow-hidden rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
                                     <Link href={`/equipes/${teams._id}`}>
                                         <a className="no-underline hover:underline ">

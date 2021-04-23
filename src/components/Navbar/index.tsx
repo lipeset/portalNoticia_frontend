@@ -24,7 +24,8 @@ const DropDownContent = styled.div`
   position: absolute;
   background-color: #111827;
   min-width: 1250px;
-  z-index: 1;
+  z-index: 5000;
+  border-radius: 24px;
 `;
 
 const DropDownLi = styled(StyledLi)`
