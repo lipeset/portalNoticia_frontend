@@ -6,37 +6,30 @@ import Layout from '../../components/Layout'
 export default function Equipe({ equipes }) {
     return (
         <Layout>
-            {/* CABEÇALHO */}
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
-                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl">
-                    <div className="rounded-lg shadow-lg">
-                        <h1 className="flex leading-tight p-2 md:p-4 text-5xl md:text-6xl font-bold">
-                            PV - EQUIPES DE 2021
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            {/* EQUIPES */}
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-2 -mt-2 items-center">
-                {equipes.slice(0, 9).map((teams) => (
-                    <div key={teams._id} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
-                        <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                            border-black border-t-2 border-r-2 rounded-r-3xl px-2">
-                            <Link href={`/equipes/${teams._id}`}>
-                                <a className="no-underline text-black">
-                                    <header className="flex items-center justify-between leading-tight p-2 md:p-4">
-                                        <div className="grid-rows-2">
-                                            <h1 className="text-4xl font-bold">
+            <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
+                <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                    <h1 className="text-center my-4 text-4xl md:text-6xl">AS EQUIPES DE 2021 - PRIMEIRA TEMPORADA</h1>
+                    <p className="text-center text-xl">
+                        Aqui você pode conferir as equipes que estão disputando a primeira temporada do Campeonato Pilotos da Vila.<br />
+                        Lembrando que esta temporada é composta por apenas <strong>seis</strong> provas!
+                    </p>
+                    <div className="my-4 md:grid grid-cols-3 items-center">
+                        {equipes.map((teams) => (
+                            <div key={teams._id} className="p-1">
+                                <article className="overflow-hidden rounded-lg shadow-lg border-black border-t-2 border-r-2 rounded-r-3xl px-2">
+                                    <Link href={`/equipes/${teams._id}`}>
+                                        <a className="no-underline hover:underline ">
+                                            <h1 className="text-2xl font-bold p-2 md:p-4">
                                                 {teams.fullName}
                                             </h1>
-                                        </div>
-                                    </header>
-                                    <img key={teams._id} className="flex flex-none mb-6" src={teams.gridUrl} />
-                                </a>
-                            </Link>
-                        </article>
+                                            <img src={teams.gridUrl} />
+                                        </a>
+                                    </Link>
+                                </article>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
             </div>
         </Layout >
     )
