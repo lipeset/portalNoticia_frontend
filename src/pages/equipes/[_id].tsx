@@ -1,33 +1,83 @@
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import React from 'react';
 import Layout from '../../components/Layout'
 
 export default function Equipe({ equipe }) {
+    console.log(equipe)
     const { isFallback } = useRouter();
-
     if (isFallback) {
         return <p>Carregando...</p>;
     }
 
     return (
         <Layout>
-            <div>
-                <h1>Nome: {equipe.fullName}</h1>
-                <p>Títulos: {equipe.champCamp}</p>
-                <p>Maior colocação numa corrida: {equipe.teamHighRaceFinish}</p>
-                <p>Pole positions: {equipe.teamPolePositions}</p>
-                <p>Voltas rápidas:{equipe.teamFastLaps}</p>
-                <h3>
-                    <Link href={`/`}>
-                        <button><a>Home</a></button>
-                    </Link>
-                    <Link href={`/equipes`}>
-                        <button><a>Todas as equipes</a></button>
-                    </Link>
-                </h3>
-            </div>
-        </Layout>
+            <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
+                <div className="my-6 px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg md:grid grid-cols-2">
+                    <div className="ml-3 md:ml-0">
+                        <h1 className="my-4 text-4xl md:text-6xl text-center">{equipe.fullName}</h1>
+                        <img className="rounded-2xl w-12/12" src={equipe.gridUrl} />
+                    </div>
+                    <div className="grid grid-flow-row">
+                        <div className="justify-between grid grid-cols-2 mt-6">
+                            <div>
+                                <Link href={`/pilotos/${equipe.pilots[0]._id}`}>
+                                    <a>
+                                        <img className="rounded-2xl p-1" src={equipe.pilots[0].profileUrl} />
+                                        <p className="-mt-2 mb-4 p-1 text-1xl md:text-4xl font-bold">{equipe.pilots[0].name}</p>
+                                    </a>
+                                </Link>
+                            </div>
+                            <div>
+                                <Link href={`/pilotos/${equipe.pilots[1]._id}`}>
+                                    <a>
+                                        <img className="rounded-2xl p-1" src={equipe.pilots[1].profileUrl} />
+                                        <p className="-mt-2 mb-4 p-1 text-1xl md:text-4xl font-bold">{equipe.pilots[1].name}</p>
+                                    </a>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="grid grid-cols-2 p-1 text-lg md:text-2xl">
+                            <div className="font-bold">
+                                <h1>NOME CURTO:</h1>
+                                <h1>TÍTULOS:</h1>
+                                <h1>PONTOS 1º GP:</h1>
+                                <h1>MP 1º GP:</h1>
+                                <h1>PONTOS 2º GP:</h1>
+                                <h1>MP 2º GP:</h1>
+                                {/* <h1>PONTOS 3º GP:</h1>
+                                <h1>PONTOS 4º GP:</h1>
+                                <h1>PONTOS 5º GP:</h1>
+                                <h1>PONTOS 6º GP:</h1> */}
+                                <h1>MELHOR POSIÇÃO:</h1>
+                                <h1>POLE POSITIONS:</h1>
+                                <h1>VOLTAS RÁPIDAS:</h1>
+                                <h1>MV ALDEIA:</h1>
+                            </div>
+                            <div className="flex justify-end">
+                                <div className="text-center">
+                                    <h1>{equipe.alias}</h1>
+                                    <h1>{equipe.champCamp}</h1>
+                                    <h1>{equipe.firstGpPoints}</h1>
+                                    <h1>{equipe.firstGpFinish}</h1>
+                                    <h1>{equipe.secondGpPoints}</h1>
+                                    <h1>{equipe.secondGpFinish}</h1>
+                                    {/* <h1>{equipe.thirdGpPoints}</h1>
+                                    <h1>{equipe.fourthGpPoints}</h1>
+                                    <h1>{equipe.fifithGpPoints}</h1>
+                                    <h1>{equipe.sixthGpPoints}</h1> */}
+                                    <h1>{equipe.teamHighRaceFinish}</h1>
+                                    <h1>{equipe.teamPolePositions}</h1>
+                                    <h1>{equipe.teamFastLaps}</h1>
+                                    <h1>{equipe.bestAldeiaLap}</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div >
+        </Layout >
     )
 }
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL TEAMS
@@ -43,7 +93,6 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
         fallback: true,
     }
 }
-
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A TEAM BY ID
     const { _id } = context.params;
 
