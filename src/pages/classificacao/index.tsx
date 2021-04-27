@@ -8,7 +8,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
-import styled from "styled-components";
 
 const theme = createMuiTheme({
     palette: {
