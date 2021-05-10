@@ -54,6 +54,7 @@ export default function Equipe({ equipe }) {
                                 <h1>POLE POSITIONS:</h1>
                                 <h1>VOLTAS RÁPIDAS:</h1>
                                 <h1>MV ALDEIA:</h1>
+                                <h1>MV SAN MARINO:</h1>
                             </div>
                             <div className="flex justify-end">
                                 <div className="text-center">
@@ -72,6 +73,7 @@ export default function Equipe({ equipe }) {
                                     <h1>{equipe.teamPolePositions}</h1>
                                     <h1>{equipe.teamFastLaps}</h1>
                                     <h1>{equipe.bestAldeiaLap}</h1>
+                                    <h1>{equipe.bestSanMarinoLap}</h1>
                                 </div>
                             </div>
                         </div>
