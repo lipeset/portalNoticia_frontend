@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import styled from "styled-components";
 
-// SEGUNDA ETAPA FINALIZADA
+// TERCEIRA ETAPA FINALIZADA
 
 const Background = styled.label`
     background-color: #ff51f1;
@@ -27,7 +27,7 @@ const theme = createMuiTheme({
     }
 });
 
-const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestlap }) => {
+const Corrida = ({ reorder_piloto, reorder_equipe, terceira_etapa, reorder_bestlap }) => {
     function matchName(id) {
         for (var i = 0; i < 10; i++) {
             if (id == reorder_equipe[i]._id) {
@@ -73,18 +73,19 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
         <Layout>
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
-                    <h1 className="text-center my-4 text-4xl md:text-6xl">{segunda_etapa.granprix}</h1>
-                    <p className="text-center text-xl mb-5">Os principais acontecimentos: Numa prova marcada pelo equilíbrio e uma apresentação de pilotagem de alto nível
-                    de todos os pilotos, tivemos um acidente grave envolvendo Maurício (Alfa Romeo) e Rafael (Aston Martin), que infelizmente tirou Mauricio da prova.<br />
-                    Também tivemos uma perda material do piloto Pedro (Aston Martin), onde seu celular escapou do bolso e caiu no meio da pista, sendo atropelado por vários
-                    karts.<br /> Tivemos grandes surpresas com as atuações de Bruno (McLaren) e Alexandre (Haas) mostrando que não estão satisfeitos com o meio do pelotão
-                    e estão buscando cada vez mais estarem no topo da tabela!<br /> Destaque também para o trabalho em equipe da Williams que conseguiu desenvolver uma
-                    estratégia no decorrer da prova, aproveitando-se do seu novo sistema de comunicação. Mas também vale ressaltar que, na última volta o piloto Felipe,
-                    numa tentativa de dar espaço ao seu companheiro Fabio, acabou escapando pra fora da pista e rodando, entregando de bandeija três posições... uma delas
-                    recuperada graças ao acidente envolvendo o piloto Alexandre, Fernando (McLaren) e Marcos (Ferrari)!<br /> Acidente esse que não só custou ao Alexandre
-                    TRÊS posições, como também custou uma posição ao Marcos, já que Lucas (Red Bull) aproveitou a confusão e os ultrapassou!!<br />
-                    Você pode conferir a matéria completa no nosso canal do
-                    Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b>
+                    <h1 className="text-center my-4 text-4xl md:text-6xl">{terceira_etapa.granprix}</h1>
+                    <p className="text-center text-xl mb-5">Os principais acontecimentos: Sem duvidas o destaque da terceira etapa foi a dupla de pilotos da
+                    Ferrari, que marcaram uma dobradinha na qualificação, pintando de vermelho a primeira fila do grid! Provando que com treino e foco,
+                    podem atingir o topo da tabela.<br /> Já como destaque negativo, mais uma vez, numa maré de azar sem final a Williams decepciona e termina
+                    em posições nada favoráveis para a disputa do campeonato de equipes (nem o de pilotos, diga-se de passagem). Fernando (McLaren) e Robson (Red Bull)
+                    tiveram que abandonar a prova por questões pessoais.<br /> Lucas (Red Bull) e Rodrigo (Renault) conseguiram ótimos pontos para suas respectivas equipes,
+                    mesmo correndo sozinhos.<br /> Uma pequena queda de rendimento acabou rondando os boxes da Mercedes. Lucas Santos e Davi terminaram em posições que não
+                    condizem com os níveis em que eles têm demonstrado. Devemos ver uma Mercedes mais agressiva na próxima etapa. <br />O mesmo aplica-se ao Alexandre
+                    (Haas), depois de uma incrível segunda etapa, acabou apenas em 13º. Pedro (Haas) acabou fazendo a lição de casa e trouxe ótimos pontos para equipe,
+                    terminando na 6ª posição. <br /> Leonardo (Alfa Romeo) fez o que pode para pontuar, mas correu sem seu parceiro nesta etapa, isso complica e muito
+                    a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas.
+                    {/* Você pode conferir a matéria completa no nosso canal do
+                    Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b> */}
                     </p>
 
                     <ThemeProvider theme={theme}>
@@ -104,14 +105,14 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[1].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[1]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[1].name}</b><br />
-                                                    Ficou em <b>SEGUNDO</b> e marcou {reorder_piloto[1].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_piloto[1].secondBestLap}</Background>
+                                                    Ficou em <b>SEGUNDO</b> e marcou {reorder_piloto[1].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_piloto[1].thirdBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -121,14 +122,14 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[0].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[0]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[0].name}</b><br />
-                                                    Ficou em <b>PRIMEIRO</b> e marcou {reorder_piloto[0].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white"></Background>{reorder_piloto[0].secondBestLap}
+                                                    Ficou em <b>PRIMEIRO</b> e marcou {reorder_piloto[0].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_piloto[0].thirdBestLap}</Background>
                                                 </h3>
                                             </a>
                                         </Link>
@@ -138,14 +139,14 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[2].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[2]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[2].name}</b><br />
-                                                    Ficou em <b>TERCEIRO</b> e marcou {reorder_piloto[2].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_piloto[2].secondBestLap}
+                                                    Ficou em <b>TERCEIRO</b> e marcou {reorder_piloto[2].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_piloto[2].thirdBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -174,7 +175,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                         {matchName(piloto.team)}
                                                     </h1>
                                                     <h1 className="classA text-1xl ml-12 md:ml-64 font-bold">
-                                                        {piloto.secondGpPoints} PTS
+                                                        {piloto.thirdGpPoints} PTS
                                                     </h1>
                                                 </header>
                                             </a>
@@ -198,8 +199,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[1].alias}</b><br />
-                                                    Ficou em <b>SEGUNDO</b> faturando {reorder_equipe[1].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_equipe[1].secondBestLap}</Background>
+                                                    Ficou em <b>SEGUNDO</b> faturando {reorder_equipe[1].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_equipe[1].thirdBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -209,14 +210,14 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_equipe[0].gridUrl} />
                                         <Link href={`/equipes/${reorder_equipe[0]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[0].alias}</b><br />
-                                                    Ficou em <b>PRIMEIRO</b> faturando {reorder_equipe[0].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_equipe[0].secondBestLap}
+                                                    Ficou em <b>PRIMEIRO</b> faturando {reorder_equipe[0].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_equipe[0].thirdBestLap}</Background>
                                                 </h3>
                                             </a>
                                         </Link>
@@ -232,8 +233,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[2].alias}</b><br />
-                                                    Ficou em <b>TERCEIRO</b> faturando {reorder_equipe[2].secondGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_equipe[2].secondBestLap}
+                                                    Ficou em <b>TERCEIRO</b> faturando {reorder_equipe[2].thirdGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_equipe[2].thirdBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -259,7 +260,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                         <h1>{equipe.alias}</h1>
                                                     </h1>
                                                     <h1 className="classA text-1xl font-bold ml-12 md:ml-96">
-                                                        {equipe.secondGpPoints} PTS
+                                                        {equipe.thirdGpPoints} PTS
                                                     </h1>
                                                 </header>
                                             </a>
@@ -277,13 +278,13 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_bestlap[1].gridUrl} />
                                         <Link href={`/pilotos/${reorder_bestlap[1]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[1].name}</b><br />
-                                                    Teve a <b>SEGUNDA</b> melhor volta: {reorder_bestlap[1].secondBestLap}<br />
+                                                    Teve a <b>SEGUNDA</b> melhor volta: {reorder_bestlap[1].thirdBestLap}<br />
                                                 </h3>
                                             </a>
                                         </Link>
@@ -293,13 +294,13 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_bestlap[0].gridUrl} />
                                         <Link href={`/pilotos/${reorder_bestlap[0]._id}`}>
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[0].name}</b><br />
-                                                    Teve a <b>MELHOR VOLTA</b>: <Background className="font-bold text-white">{reorder_bestlap[0].secondBestLap}</Background><br />
+                                                    Teve a <b>MELHOR VOLTA</b>: <Background className="font-bold text-white">{reorder_bestlap[0].thirdBestLap}</Background><br />
                                                     Conquistando assim o ponto extra!
                                                 </h3>
                                             </a>
@@ -316,7 +317,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[2].name}</b><br />
-                                                    Teve a <b>TERCEIRA</b> melhor volta: {reorder_bestlap[2].secondBestLap}<br />
+                                                    Teve a <b>TERCEIRA</b> melhor volta: {reorder_bestlap[2].thirdBestLap}<br />
                                                 </h3>
                                             </a>
                                         </Link>
@@ -345,7 +346,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                                                         {matchName(piloto.team)}
                                                     </h1>
                                                     <h1 className="classA text-1xl text-center ml-4 md:ml-64 font-bold">
-                                                        {piloto.secondBestLap}
+                                                        {piloto.thirdBestLap}
                                                     </h1>
                                                 </header>
                                             </a>
@@ -361,37 +362,37 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
     )
 }
 Corrida.getInitialProps = async () => {
-    const { data: segunda_etapa } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/607edb4e24ac4300045069f3');
-    const { data: segunda_etapaLap } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/607edb4e24ac4300045069f3');
-    const reorder_piloto = segunda_etapa.pilot
-    const reorder_equipe = segunda_etapa.team
-    const reorder_bestlap = segunda_etapaLap.pilot
+    const { data: terceira_etapa } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/6098a041ec3ce40004ed9bd4');
+    const { data: terceira_etapaLap } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/6098a041ec3ce40004ed9bd4');
+    const reorder_piloto = terceira_etapa.pilot
+    const reorder_equipe = terceira_etapa.team
+    const reorder_bestlap = terceira_etapaLap.pilot
 
     reorder_piloto.sort(comparePoints);
     reorder_equipe.sort(comparePoints);
     reorder_bestlap.sort(compareLaps);
 
     function comparePoints(a, b) {
-        if (a.secondGpPoints > b.secondGpPoints) {
+        if (a.thirdGpPoints > b.thirdGpPoints) {
             return -1;
         }
-        if (a.secondGpPoints > b.secondGpPoints) {
+        if (a.thirdGpPoints > b.thirdGpPoints) {
             return 1;
         }
-        if (a.secondGpPoints > b.secondGpPoints) {
-            if (a.secondGpFinish > b.secondGpFinish) {
+        if (a.thirdGpPoints > b.thirdGpPoints) {
+            if (a.thirdGpFinish > b.thirdGpFinish) {
                 return -1;
             }
-            if (a.secondGpFinish > b.secondGpFinish) {
+            if (a.thirdGpFinish > b.thirdGpFinish) {
                 return 1;
             }
         }
     }
     function compareLaps(a, b) {
-        if (a.secondBestLap > b.secondBestLap) {
+        if (a.thirdBestLap > b.thirdBestLap) {
             return -1;
         }
-        if (a.secondBestLap > b.secondBestLap) {
+        if (a.thirdBestLap > b.thirdBestLap) {
             return 1;
         }
         return 0
@@ -399,7 +400,7 @@ Corrida.getInitialProps = async () => {
     reorder_bestlap.reverse();
 
     return {
-        segunda_etapa,
+        terceira_etapa,
         reorder_piloto,
         reorder_equipe,
         reorder_bestlap

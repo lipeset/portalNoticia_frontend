@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 
+// CALENDÁRIO FINALIZADO
+
 export default function Calendario() {
     return (
         <Layout>
@@ -24,16 +26,24 @@ export default function Calendario() {
                             </a>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="rounded-lg" src="https://i.imgur.com/NRcTfQt.png" />
+                            <a href="/calendario/terceira_etapa">
+                                <img className="rounded-lg" src="https://i.imgur.com/oyABzRb.png" />
+                            </a>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="rounded-lg" src="https://i.imgur.com/XK4uNTt.png" />
+                            <a href="/calendario/quarta_etapa">
+                                <img className="rounded-lg" src="https://i.imgur.com/XK4uNTt.png" />
+                            </a>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="flex flex-none rounded-lg" src="https://i.imgur.com/figZBt4.png" />
+                            <a href="/calendario/quinta_etapa">
+                                <img className="flex flex-none rounded-lg" src="https://i.imgur.com/figZBt4.png" />
+                            </a>
                         </div>
                         <div className="flex justify-center my-1">
-                            <img className="rounded-lg mb-4 md:mb-0" src="https://i.imgur.com/TWQEVkz.png" />
+                            <a href="/calendario/sexta_etapa">
+                                <img className="rounded-lg mb-4 md:mb-0" src="https://i.imgur.com/TWQEVkz.png" />
+                            </a>
                         </div>
                     </div>
                 </div>

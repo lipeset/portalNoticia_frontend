@@ -10,26 +10,30 @@ function Races() {
     return (
         <DivBg className="container mx-auto md:grid grid-cols-6 grid-flow-col mt-28 max-w-full content-center">
             <a href="/calendario/primeira_etapa">
-                <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 1*/}
+                <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 1*/}
                     <div className="flex flex-wrap content-center justify-center">
                         <img className="flex flex-wrap content-center justify-center"
                             src="https://i.imgur.com/NnvOIlJ.png" />
                     </div>
                 </div>
             </a>
-            <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 2*/}
-                <div className="flex flex-wrap content-center justify-center">
-                    <img className="flex flex-wrap content-center justify-center"
-                        src="https://i.imgur.com/AWm2noq.png" />
+            <a href="/calendario/segunda_etapa">
+                <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 2*/}
+                    <div className="flex flex-wrap content-center justify-center">
+                        <img className="flex flex-wrap content-center justify-center"
+                            src="https://i.imgur.com/AWm2noq.png" />
+                    </div>
                 </div>
-            </div>
-            <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 3*/}
-                <div className="flex flex-wrap content-center justify-center">
-                    <img className="flex flex-wrap content-center justify-center"
-                        src="https://i.imgur.com/NRcTfQt.png" />
+            </a>
+            <a href="/calendario/terceira_etapa">
+                <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 3*/}
+                    <div className="flex flex-wrap content-center justify-center">
+                        <img className="flex flex-wrap content-center justify-center"
+                            src="https://i.imgur.com/oyABzRb.png" />
+                    </div>
                 </div>
-            </div>
-            <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 4*/}
+            </a>
+            <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 4*/}
                 <div className="flex flex-wrap content-center justify-center">
                     <img className="flex flex-wrap content-center justify-center"
                         src="https://i.imgur.com/XK4uNTt.png" />

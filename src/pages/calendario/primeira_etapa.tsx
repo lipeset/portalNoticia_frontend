@@ -10,6 +10,8 @@ import Box from '@material-ui/core/Box';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import styled from "styled-components";
 
+// PRIMEIRA ETAPA FINALIZADA
+
 const Background = styled.label`
     background-color: #ff51f1;
 `;
