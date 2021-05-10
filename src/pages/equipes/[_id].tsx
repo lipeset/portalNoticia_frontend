@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Layout from '../../components/Layout'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Equipe({ equipe }) {
     const { isFallback } = useRouter();
@@ -14,9 +16,17 @@ export default function Equipe({ equipe }) {
         <Layout>
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
                 <div className="my-6 px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg md:grid grid-cols-2">
-                    <div className="ml-3 md:ml-0">
+                    <div>
                         <h1 className="my-4 text-4xl md:text-6xl text-center">{equipe.fullName}</h1>
                         <img className="rounded-2xl w-12/12" src={equipe.gridUrl} />
+                        <p className="text-xl text-center bg-gray-300 rounded-xl">{equipe.biography}</p>
+                        <Carousel autoPlay infiniteLoop className="p-1">
+                            {equipe.teamPics.map((equipe) => (
+                                <div>
+                                    <img key={equipe} src={equipe} />
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                     <div className="grid grid-flow-row">
                         <div className="justify-between grid grid-cols-2 mt-6">

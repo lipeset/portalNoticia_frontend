@@ -9,6 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 
+// CLASSIFCAÇÃO FINALIZADA
+
 const theme = createMuiTheme({
     palette: {
         primary: {
