@@ -8,7 +8,7 @@ export default function RegistroNoticia({ pilotos }) {
 
         const data_array = event.target.newsPicCarousel.value.split(',');
 
-        const res = await fetch('http://portalnoticia-backend.herokuapp.com/news/register', {
+        const res = await fetch('https://portalnoticia-backend.herokuapp.com/news/register', {
             body: JSON.stringify({
                 title: event.target.title.value,
                 newsContent: event.target.newsContent.value,
