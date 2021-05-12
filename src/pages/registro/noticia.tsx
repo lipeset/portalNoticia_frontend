@@ -26,7 +26,7 @@ export default function RegistroNoticia({ pilotos }) {
 
         if (res.status == 200) {
             alert("Notícia cadastrada com sucesso");
-            window.location.href = "https://pilotosdavila.herokuapp.com/";
+            window.location.href = "https://www.pilotosdavila.com.br/";
         } else {
             alert("Falha no registro");;
         }
