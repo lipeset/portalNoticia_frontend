@@ -41,10 +41,8 @@ function Races() {
             </div>
             <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 5*/}
                 <div className="flex flex-wrap content-center justify-center">
-                    {/* <img className="flex flex-wrap content-center justify-center"
-                        src="https://i.imgur.com/4nS8BRU.png" /> */}
-                    <p className="text-center text-3xl text-white">SERÁ EM <strong>INTERLAGOS</strong><br />
-                    PORÉM A DATA ESTÁ INDEFINIDA</p>
+                    <img className="flex flex-wrap content-center justify-center"
+                        src="https://i.imgur.com/figZBt4.png" />
                 </div>
             </div>
             <div className="hidden md:grid grid-flow-col justify-center border-b-2 border-white"> {/*CORRIDA 6*/}
