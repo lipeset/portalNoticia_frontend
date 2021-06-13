@@ -26,8 +26,8 @@ export default function Piloto({ piloto }) {
                                 <h1>PONTOS 1º GP:</h1>
                                 <h1>PONTOS 2º GP:</h1>
                                 <h1>PONTOS 3º GP:</h1>
-                                {/* <h1>PONTOS 4º GP:</h1>
-                                <h1>PONTOS 5º GP:</h1>
+                                <h1>PONTOS 4º GP:</h1>
+                                {/* <h1>PONTOS 5º GP:</h1>
                                 <h1>PONTOS 6º GP:</h1> */}
                                 <h1>MELHOR CHEGADA:</h1>
                                 <h1>MELHOR LARGADA:</h1>
@@ -35,6 +35,7 @@ export default function Piloto({ piloto }) {
                                 <h1>VOLTAS RÁPIDAS:</h1>
                                 <h1>MV ALDEIA:</h1>
                                 <h1>MV SAN MARINO:</h1>
+                                <h1>MV GRANJA VIANA:</h1>
                                 <h1>PESO:</h1><br />
                             </div>
                             <div className="flex justify-end mr-4">
@@ -44,8 +45,8 @@ export default function Piloto({ piloto }) {
                                     <h1>{piloto.firstGpPoints}</h1>
                                     <h1>{piloto.secondGpPoints}</h1>
                                     <h1>{piloto.thirdGpPoints}</h1>
-                                    {/* <h1>{piloto.fourthGpPoints}</h1>
-                                    <h1>{piloto.fifithGpPoints}</h1>
+                                    <h1>{piloto.fourthGpPoints}</h1>
+                                    {/* <h1>{piloto.fifithGpPoints}</h1>
                                     <h1>{piloto.sixthGpPoints}</h1> */}
                                     <h1>{piloto.highRaceFinish}</h1>
                                     <h1>{piloto.highGridPosition}</h1>
@@ -53,6 +54,7 @@ export default function Piloto({ piloto }) {
                                     <h1>{piloto.fastLaps}</h1>
                                     <h1>{piloto.bestAldeiaLap}</h1>
                                     <h1>{piloto.bestSanMarinoLap}</h1>
+                                    <h1>{piloto.bestKgvLap}</h1>
                                     <h1>{piloto.weight} KG</h1>
                                 </div>
                             </div>
