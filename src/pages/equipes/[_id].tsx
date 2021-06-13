@@ -57,14 +57,15 @@ export default function Equipe({ equipe }) {
                                 <h1>MP 2º GP:</h1>
                                 <h1>PONTOS 3º GP:</h1>
                                 <h1>MP 3º GP:</h1>
-                                {/* <h1>PONTOS 4º GP:</h1>
-                                <h1>PONTOS 5º GP:</h1>
+                                <h1>PONTOS 4º GP:</h1>
+                                {/* <h1>PONTOS 5º GP:</h1>
                                 <h1>PONTOS 6º GP:</h1> */}
                                 <h1>MELHOR POSIÇÃO:</h1>
                                 <h1>POLE POSITIONS:</h1>
                                 <h1>VOLTAS RÁPIDAS:</h1>
                                 <h1>MV ALDEIA:</h1>
                                 <h1>MV SAN MARINO:</h1>
+                                <h1>MV GRANJA VIANA:</h1>
                             </div>
                             <div className="flex justify-end">
                                 <div className="text-center">
@@ -76,14 +77,15 @@ export default function Equipe({ equipe }) {
                                     <h1>{equipe.secondGpFinish}</h1>
                                     <h1>{equipe.thirdGpPoints}</h1>
                                     <h1>{equipe.thirdGpFinish}</h1>
-                                    {/* <h1>{equipe.fourthGpPoints}</h1>
-                                    <h1>{equipe.fifithGpPoints}</h1>
+                                    <h1>{equipe.fourthGpPoints}</h1>
+                                    {/* <h1>{equipe.fifithGpPoints}</h1>
                                     <h1>{equipe.sixthGpPoints}</h1> */}
                                     <h1>{equipe.teamHighRaceFinish}</h1>
                                     <h1>{equipe.teamPolePositions}</h1>
                                     <h1>{equipe.teamFastLaps}</h1>
                                     <h1>{equipe.bestAldeiaLap}</h1>
                                     <h1>{equipe.bestSanMarinoLap}</h1>
+                                    <h1>{equipe.bestKgvLap}</h1>
                                 </div>
                             </div>
                         </div>
