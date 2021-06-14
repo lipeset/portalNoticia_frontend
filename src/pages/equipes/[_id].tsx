@@ -79,6 +79,7 @@ export default function Equipe({ equipe }) {
                                     <h1>{equipe.thirdGpPoints}</h1>
                                     <h1>{equipe.thirdGpFinish}</h1>
                                     <h1>{equipe.fourthGpPoints}</h1>
+                                    <h1>{equipe.fourthGpFinish}</h1>
                                     {/* <h1>{equipe.fifithGpPoints}</h1>
                                     <h1>{equipe.sixthGpPoints}</h1> */}
                                     <h1>{equipe.teamHighRaceFinish}</h1>
