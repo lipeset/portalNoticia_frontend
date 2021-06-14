@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 import styled from "styled-components";
 
-// TERCEIRA ETAPA FINALIZADA
+// QUARTA ETAPA FINALIZADA
 
 const Background = styled.label`
     background-color: #ff51f1;
@@ -133,7 +133,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[0].name}</b><br />
                                                     Ficou em <b>PRIMEIRO</b> e marcou {reorder_piloto[0].fourthGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_piloto[0].fourthBestLap}</Background>
+                                                    Sua melhor volta foi: {reorder_piloto[0].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -221,7 +221,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[0].alias}</b><br />
                                                     Ficou em <b>PRIMEIRO</b> faturando {reorder_equipe[0].fourthGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_equipe[0].fourthBestLap}</Background>
+                                                    Sua melhor volta foi: {reorder_equipe[0].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
