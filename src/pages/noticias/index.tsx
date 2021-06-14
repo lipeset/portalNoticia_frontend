@@ -38,6 +38,6 @@ export const getStaticProps: GetStaticProps = async () => {
         props: {
             noticias: data,
         },
-        revalidate: 1000
+        revalidate: 100
     }
 };

@@ -88,6 +88,6 @@ export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILO
         props: {
             piloto: data,
         },
-        revalidate: 1000,
+        revalidate: 100,
     }
 }
