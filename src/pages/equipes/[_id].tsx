@@ -58,6 +58,7 @@ export default function Equipe({ equipe }) {
                                 <h1>PONTOS 3º GP:</h1>
                                 <h1>MP 3º GP:</h1>
                                 <h1>PONTOS 4º GP:</h1>
+                                <h1>MP 4º GP:</h1>
                                 {/* <h1>PONTOS 5º GP:</h1>
                                 <h1>PONTOS 6º GP:</h1> */}
                                 <h1>MELHOR POSIÇÃO:</h1>
