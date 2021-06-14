@@ -353,8 +353,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
     )
 }
 Corrida.getInitialProps = async () => {
-    const { data: quarta_etapa } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c6a98bc0d4860004b89705');
-    const { data: quarta_etapaLap } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c6a98bc0d4860004b89705');
+    const { data: quarta_etapa } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c74665c900e200048d25a1');
+    const { data: quarta_etapaLap } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c74665c900e200048d25a1');
     const reorder_piloto = quarta_etapa.pilot
     const reorder_equipe = quarta_etapa.team
     const reorder_bestlap = quarta_etapaLap.pilot
