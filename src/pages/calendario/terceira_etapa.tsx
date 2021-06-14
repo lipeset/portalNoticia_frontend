@@ -75,17 +75,17 @@ const Corrida = ({ reorder_piloto, reorder_equipe, terceira_etapa, reorder_bestl
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
                     <h1 className="text-center my-4 text-4xl md:text-6xl">{terceira_etapa.granprix}</h1>
                     <p className="text-center text-xl mb-5">Os principais acontecimentos: Sem duvidas o destaque da terceira etapa foi a dupla de pilotos da
-                    Ferrari, que marcaram uma dobradinha na qualificação, pintando de vermelho a primeira fila do grid! Provando que com treino e foco,
-                    podem atingir o topo da tabela.<br /> Já como destaque negativo, mais uma vez, numa maré de azar sem final a Williams decepciona e termina
-                    em posições nada favoráveis para a disputa do campeonato de equipes (nem o de pilotos, diga-se de passagem). Fernando (McLaren) e Robson (Red Bull)
-                    tiveram que abandonar a prova por questões pessoais.<br /> Lucas (Red Bull) e Rodrigo (Renault) conseguiram ótimos pontos para suas respectivas equipes,
-                    mesmo correndo sozinhos.<br /> Uma pequena queda de rendimento acabou rondando os boxes da Mercedes. Lucas Santos e Davi terminaram em posições que não
-                    condizem com os níveis em que eles têm demonstrado. Devemos ver uma Mercedes mais agressiva na próxima etapa. <br />O mesmo aplica-se ao Alexandre
-                    (Haas), depois de uma incrível segunda etapa, acabou apenas em 13º. Pedro (Haas) acabou fazendo a lição de casa e trouxe ótimos pontos para equipe,
-                    terminando na 6ª posição. <br /> Leonardo (Alfa Romeo) fez o que pode para pontuar, mas correu sem seu parceiro nesta etapa, isso complica e muito
-                    a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas.
-                    {/* Você pode conferir a matéria completa no nosso canal do
-                    Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b> */}
+                        Ferrari, que marcaram uma dobradinha na qualificação, pintando de vermelho a primeira fila do grid! Provando que com treino e foco,
+                        podem atingir o topo da tabela.<br /> Já como destaque negativo, mais uma vez, numa maré de azar sem final a Williams decepciona e termina
+                        em posições nada favoráveis para a disputa do campeonato de equipes (nem o de pilotos, diga-se de passagem). Fernando (McLaren) e Robson (Red Bull)
+                        tiveram que abandonar a prova por questões pessoais.<br /> Lucas (Red Bull) e Rodrigo (Renault) conseguiram ótimos pontos para suas respectivas equipes,
+                        mesmo correndo sozinhos.<br /> Uma pequena queda de rendimento acabou rondando os boxes da Mercedes. Lucas Santos e Davi terminaram em posições que não
+                        condizem com os níveis em que eles têm demonstrado. Devemos ver uma Mercedes mais agressiva na próxima etapa. <br />O mesmo aplica-se ao Alexandre
+                        (Haas), depois de uma incrível segunda etapa, acabou apenas em 13º. Pedro (Haas) acabou fazendo a lição de casa e trouxe ótimos pontos para equipe,
+                        terminando na 6ª posição. <br /> Leonardo (Alfa Romeo) fez o que pode para pontuar, mas correu sem seu parceiro nesta etapa, isso complica e muito
+                        a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas.
+                        Você pode conferir a matéria completa no nosso canal do
+                        Youtube <b><a className="classA" href="https://youtu.be/67Tw_tUC14A" target="_blank">clicando aqui!!</a></b>
                     </p>
 
                     <ThemeProvider theme={theme}>

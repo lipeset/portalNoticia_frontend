@@ -74,16 +74,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
                     <h1 className="text-center my-4 text-4xl md:text-6xl">{quarta_etapa.granprix}</h1>
-                    <p className="text-center text-xl mb-5">Os principais acontecimentos: Sem duvidas o destaque da terceira etapa foi a dupla de pilotos da
-                        Ferrari, que marcaram uma dobradinha na qualificação, pintando de vermelho a primeira fila do grid! Provando que com treino e foco,
-                        podem atingir o topo da tabela.<br /> Já como destaque negativo, mais uma vez, numa maré de azar sem final a Williams decepciona e termina
-                        em posições nada favoráveis para a disputa do campeonato de equipes (nem o de pilotos, diga-se de passagem). Fernando (McLaren) e Robson (Red Bull)
-                        tiveram que abandonar a prova por questões pessoais.<br /> Lucas (Red Bull) e Rodrigo (Renault) conseguiram ótimos pontos para suas respectivas equipes,
-                        mesmo correndo sozinhos.<br /> Uma pequena queda de rendimento acabou rondando os boxes da Mercedes. Lucas Santos e Davi terminaram em posições que não
-                        condizem com os níveis em que eles têm demonstrado. Devemos ver uma Mercedes mais agressiva na próxima etapa. <br />O mesmo aplica-se ao Alexandre
-                        (Haas), depois de uma incrível segunda etapa, acabou apenas em 13º. Pedro (Haas) acabou fazendo a lição de casa e trouxe ótimos pontos para equipe,
-                        terminando na 6ª posição. <br /> Leonardo (Alfa Romeo) fez o que pode para pontuar, mas correu sem seu parceiro nesta etapa, isso complica e muito
-                        a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas.
+                    <p className="text-center text-xl mb-5">Os principais acontecimentos:
                         {/* Você pode conferir a matéria completa no nosso canal do
                     Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b> */}
                     </p>
@@ -111,8 +102,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[1].name}</b><br />
-                                                    Ficou em <b>SEGUNDO</b> e marcou {reorder_piloto[1].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_piloto[1].thirdBestLap}
+                                                    Ficou em <b>SEGUNDO</b> e marcou {reorder_piloto[1].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_piloto[1].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -128,8 +119,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[0].name}</b><br />
-                                                    Ficou em <b>PRIMEIRO</b> e marcou {reorder_piloto[0].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_piloto[0].thirdBestLap}</Background>
+                                                    Ficou em <b>PRIMEIRO</b> e marcou {reorder_piloto[0].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_piloto[0].fourthBestLap}</Background>
                                                 </h3>
                                             </a>
                                         </Link>
@@ -145,8 +136,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_piloto[2].name}</b><br />
-                                                    Ficou em <b>TERCEIRO</b> e marcou {reorder_piloto[2].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_piloto[2].thirdBestLap}
+                                                    Ficou em <b>TERCEIRO</b> e marcou {reorder_piloto[2].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_piloto[2].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -175,7 +166,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                                         {matchName(piloto.team)}
                                                     </h1>
                                                     <h1 className="classA text-1xl ml-12 md:ml-64 font-bold">
-                                                        {piloto.thirdGpPoints} PTS
+                                                        {piloto.fourthGpPoints} PTS
                                                     </h1>
                                                 </header>
                                             </a>
@@ -199,8 +190,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[1].alias}</b><br />
-                                                    Ficou em <b>SEGUNDO</b> faturando {reorder_equipe[1].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_equipe[1].thirdBestLap}
+                                                    Ficou em <b>SEGUNDO</b> faturando {reorder_equipe[1].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_equipe[1].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -216,8 +207,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[0].alias}</b><br />
-                                                    Ficou em <b>PRIMEIRO</b> faturando {reorder_equipe[0].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_equipe[0].thirdBestLap}</Background>
+                                                    Ficou em <b>PRIMEIRO</b> faturando {reorder_equipe[0].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: <Background className="font-bold text-white">{reorder_equipe[0].fourthBestLap}</Background>
                                                 </h3>
                                             </a>
                                         </Link>
@@ -233,8 +224,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_equipe[2].alias}</b><br />
-                                                    Ficou em <b>TERCEIRO</b> faturando {reorder_equipe[2].thirdGpPoints} pontos<br />
-                                                    Sua melhor volta foi: {reorder_equipe[2].thirdBestLap}
+                                                    Ficou em <b>TERCEIRO</b> faturando {reorder_equipe[2].fourthGpPoints} pontos<br />
+                                                    Sua melhor volta foi: {reorder_equipe[2].fourthBestLap}
                                                 </h3>
                                             </a>
                                         </Link>
@@ -260,7 +251,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                                         <h1>{equipe.alias}</h1>
                                                     </h1>
                                                     <h1 className="classA text-1xl font-bold ml-12 md:ml-96">
-                                                        {equipe.thirdGpPoints} PTS
+                                                        {equipe.fourthGpPoints} PTS
                                                     </h1>
                                                 </header>
                                             </a>
@@ -284,7 +275,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[1].name}</b><br />
-                                                    Teve a <b>SEGUNDA</b> melhor volta: {reorder_bestlap[1].thirdBestLap}<br />
+                                                    Teve a <b>SEGUNDA</b> melhor volta: {reorder_bestlap[1].fourthBestLap}<br />
                                                 </h3>
                                             </a>
                                         </Link>
@@ -300,7 +291,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[0].name}</b><br />
-                                                    Teve a <b>MELHOR VOLTA</b>: <Background className="font-bold text-white">{reorder_bestlap[0].thirdBestLap}</Background><br />
+                                                    Teve a <b>MELHOR VOLTA</b>: <Background className="font-bold text-white">{reorder_bestlap[0].fourthBestLap}</Background><br />
                                                     Conquistando assim o ponto extra!
                                                 </h3>
                                             </a>
@@ -317,7 +308,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                             <a className="no-underline hover:underline">
                                                 <h3 className="leading-tight p-2 md:p-4" >
                                                     <b className="text-lg">{reorder_bestlap[2].name}</b><br />
-                                                    Teve a <b>TERCEIRA</b> melhor volta: {reorder_bestlap[2].thirdBestLap}<br />
+                                                    Teve a <b>TERCEIRA</b> melhor volta: {reorder_bestlap[2].fourthBestLap}<br />
                                                 </h3>
                                             </a>
                                         </Link>
@@ -346,7 +337,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                                                         {matchName(piloto.team)}
                                                     </h1>
                                                     <h1 className="classA text-1xl text-center ml-4 md:ml-64 font-bold">
-                                                        {piloto.thirdBestLap}
+                                                        {piloto.fourthBestLap}
                                                     </h1>
                                                 </header>
                                             </a>
@@ -362,8 +353,8 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
     )
 }
 Corrida.getInitialProps = async () => {
-    const { data: quarta_etapa } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/6098a041ec3ce40004ed9bd4');
-    const { data: quarta_etapaLap } = await axios.get('https://portalnoticia-backend.herokuapp.com/lastrace/6098a041ec3ce40004ed9bd4');
+    const { data: quarta_etapa } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c6a98bc0d4860004b89705');
+    const { data: quarta_etapaLap } = await axios.get('http://portalnoticia-backend.herokuapp.com/lastrace/60c6a98bc0d4860004b89705');
     const reorder_piloto = quarta_etapa.pilot
     const reorder_equipe = quarta_etapa.team
     const reorder_bestlap = quarta_etapaLap.pilot
@@ -373,26 +364,26 @@ Corrida.getInitialProps = async () => {
     reorder_bestlap.sort(compareLaps);
 
     function comparePoints(a, b) {
-        if (a.thirdGpPoints > b.thirdGpPoints) {
+        if (a.fourthGpPoints > b.fourthGpPoints) {
             return -1;
         }
-        if (a.thirdGpPoints > b.thirdGpPoints) {
+        if (a.fourthGpPoints > b.fourthGpPoints) {
             return 1;
         }
-        if (a.thirdGpPoints > b.thirdGpPoints) {
-            if (a.thirdGpFinish > b.thirdGpFinish) {
+        if (a.fourthGpPoints > b.fourthGpPoints) {
+            if (a.fourthGpFinish > b.fourthGpFinish) {
                 return -1;
             }
-            if (a.thirdGpFinish > b.thirdGpFinish) {
+            if (a.fourthGpFinish > b.fourthGpFinish) {
                 return 1;
             }
         }
     }
     function compareLaps(a, b) {
-        if (a.thirdBestLap > b.thirdBestLap) {
+        if (a.fourthBestLap > b.fourthBestLap) {
             return -1;
         }
-        if (a.thirdBestLap > b.thirdBestLap) {
+        if (a.fourthBestLap > b.fourthBestLap) {
             return 1;
         }
         return 0
