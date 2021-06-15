@@ -109,7 +109,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                             <div className="my-2 mx-auto md:px-12 w-11/12">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[1].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[1]._id}`}>
                                             <a className="no-underline hover:underline">
@@ -126,7 +126,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[0].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[0]._id}`}>
                                             <a className="no-underline hover:underline">
@@ -143,7 +143,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                             <div className="my-2 mx-auto md:px-12 w-11/12">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_piloto[2].gridUrl} />
                                         <Link href={`/pilotos/${reorder_piloto[2]._id}`}>
                                             <a className="no-underline hover:underline">
@@ -214,7 +214,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-blue-800 hover:border-red-500 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_equipe[0].gridUrl} />
                                         <Link href={`/equipes/${reorder_equipe[0]._id}`}>
                                             <a className="no-underline hover:underline">
@@ -298,7 +298,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
                             <div className="my-2 mx-auto md:px-12 w-11/12 md:w-full">
                                 <div className="flex justify-end -mx-1 md:-mx-4">
                                     <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-red-500 hover:border-white border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                         <img className="flex flex-none rounded-3xl" src={reorder_bestlap[0].gridUrl} />
                                         <Link href={`/pilotos/${reorder_bestlap[0]._id}`}>
                                             <a className="no-underline hover:underline">

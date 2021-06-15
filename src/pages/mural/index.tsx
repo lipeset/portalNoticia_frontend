@@ -1,43 +1,79 @@
 import axios from 'axios';
 import React from 'react';
 import Layout from '../../components/Layout';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
-export default function Mural({ picUrl }) {
+export default function Mural({ primeiraProva, segundaProva, terceiraaProva, quartaProva }) {
     return (
         <Layout>
-            <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-flow-col -mt-2">
-                <div className="container my-6 mx-auto px-1 md:px-3 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
-                    <div className="ml-3 md:ml-0">
-                        <h1 className="text-center my-4 text-4xl md:text-6xl">MURAL DE FOTOS</h1>
-                        <p className="my-4 text-center text-xl px-4">
-                            Algumas de nossas melhores fotos para você conferir!
-                        </p>
-                        <p className="my-4 text-center text-xl px-4">
-                            Lembrando que todas as fotos aqui publicadas, foram feitas pelo excelente profissional <strong>João Rosatelli (
-                            <a href="https://www.instagram.com/jlrosatelli/" className="underline" target="_blank">@jlrosatelli</a>)</strong>! Sigam ele no Instagram!!
-                        </p>
-                    </div>
-                    <div className="container my-6 mx-auto px-4 md:px-12 md:grid grid-cols-4 -mt-2 items-center">
-                        {picUrl.reverse().map((pics) => (
-                            <div key={pics} className="my-1 px-1 w-full lg:my-4 lg:px-4 container md:px-12 flex-wrap -mx-1 lg:-mx-4">
-                                <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-black border-t-2 border-r-2 rounded-r-3xl px-2">
-                                    <a className="no-underline">
-                                        <img key={pics._id} className="flex flex-none" src={pics.muralPics} />
-                                    </a>
-                                </article>
-                            </div>
-                        ))}
+            <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
+                <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg">
+                    <h1 className="text-center my-4 text-4xl md:text-6xl">MURAL DE FOTOS</h1>
+                    <p className="text-center text-xl">
+                        Algumas de nossas melhores fotos para você conferir!
+                    </p>
+                    <p className="my-4 text-center text-xl px-4">
+                        Lembrando que todas as fotos aqui publicadas, foram feitas pelo excelente profissional <strong>João Rosatelli (
+                            <a href="https://www.instagram.com/jlrosatelli/" className="underline" target="_blank">@jlrosatelli</a>)</strong>! Sigam-no no Instagram!!
+                    </p>
+                    <div className="my-4 md:grid grid-cols-2 items-center">
+                        <div>
+                            <p className="text-center text-3xl">Quarta Etapa - Granja Viana (101) - 06/06/2021</p>
+                            <Carousel autoPlay infiniteLoop className="p-1" showThumbs={false}>
+                                {quartaProva.muralPics.map((fotos4) => (
+                                    <div>
+                                        <iframe key={fotos4} src={fotos4} width="700" height="445" />
+                                    </div>
+                                ))}
+                            </Carousel>
+                        </div>
+                        <div>
+                            <p className="text-center text-3xl">Terceira Etapa - San Marino (T6) - 08/05/2021</p>
+                            <Carousel autoPlay infiniteLoop className="p-1" showThumbs={false}>
+                                {terceiraaProva.muralPics.map((fotos3) => (
+                                    <div>
+                                        <iframe key={fotos3} src={fotos3} width="700" height="445" />
+                                    </div>
+                                ))}
+                            </Carousel>
+                        </div>
+                        <div>
+                            <p className="text-center text-3xl">Segunda Etapa - Aldeia da Serra - 18/04/2021</p>
+                            <Carousel autoPlay infiniteLoop className="p-1" showThumbs={false}>
+                                {segundaProva.muralPics.map((fotos2) => (
+                                    <div>
+                                        <iframe key={fotos2} src={fotos2} width="700" height="445" />
+                                    </div>
+                                ))}
+                            </Carousel>
+                        </div>
+                        <div>
+                            <p className="text-center text-3xl">Primeira Etapa - Aldeia da Serra - 20/02/2021</p>
+                            <Carousel autoPlay infiniteLoop className="p-1" showThumbs={false}>
+                                {primeiraProva.muralPics.map((fotos1) => (
+                                    <div>
+                                        <iframe key={fotos1} src={fotos1} width="700" height="445" />
+                                    </div>
+                                ))}
+                            </Carousel>
+                        </div>
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Layout >
     )
 }
 Mural.getInitialProps = async () => {
-    const { data: picUrl } = await axios.get('https://portalnoticia-backend.herokuapp.com/pics');
+    const { data: primeiraProva } = await axios.get('https://portalnoticia-backend.herokuapp.com/pics/60c79932a0bd6f0004740ce6');
+    const { data: segundaProva } = await axios.get('https://portalnoticia-backend.herokuapp.com/pics/60c8dc64a0bd6f0004740ce7');
+    const { data: terceiraaProva } = await axios.get('https://portalnoticia-backend.herokuapp.com/pics/60c8defea0bd6f0004740ce8');
+    const { data: quartaProva } = await axios.get('https://portalnoticia-backend.herokuapp.com/pics/60c8dfaaa0bd6f0004740ce9');
 
     return {
-        picUrl
+        primeiraProva,
+        segundaProva,
+        terceiraaProva,
+        quartaProva
     }
 }

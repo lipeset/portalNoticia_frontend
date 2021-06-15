@@ -75,16 +75,16 @@ const Corrida = ({ reorder_piloto, reorder_equipe, segunda_etapa, reorder_bestla
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
                     <h1 className="text-center my-4 text-4xl md:text-6xl">{segunda_etapa.granprix}</h1>
                     <p className="text-center text-xl mb-5">Os principais acontecimentos: Numa prova marcada pelo equilíbrio e uma apresentação de pilotagem de alto nível
-                    de todos os pilotos, tivemos um acidente grave envolvendo Maurício (Alfa Romeo) e Rafael (Aston Martin), que infelizmente tirou Mauricio da prova.<br />
-                    Também tivemos uma perda material do piloto Pedro (Aston Martin), onde seu celular escapou do bolso e caiu no meio da pista, sendo atropelado por vários
-                    karts.<br /> Tivemos grandes surpresas com as atuações de Bruno (McLaren) e Alexandre (Haas) mostrando que não estão satisfeitos com o meio do pelotão
-                    e estão buscando cada vez mais estarem no topo da tabela!<br /> Destaque também para o trabalho em equipe da Williams que conseguiu desenvolver uma
-                    estratégia no decorrer da prova, aproveitando-se do seu novo sistema de comunicação. Mas também vale ressaltar que, na última volta o piloto Felipe,
-                    numa tentativa de dar espaço ao seu companheiro Fabio, acabou escapando pra fora da pista e rodando, entregando de bandeija três posições... uma delas
-                    recuperada graças ao acidente envolvendo o piloto Alexandre, Fernando (McLaren) e Marcos (Ferrari)!<br /> Acidente esse que não só custou ao Alexandre
-                    TRÊS posições, como também custou uma posição ao Marcos, já que Lucas (Red Bull) aproveitou a confusão e os ultrapassou!!<br />
-                    Você pode conferir a matéria completa no nosso canal do
-                    Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b>
+                        de todos os pilotos, tivemos um acidente grave envolvendo Maurício (Alfa Romeo) e Rafael (Aston Martin), que infelizmente tirou Mauricio da prova.<br />
+                        Também tivemos uma perda material do piloto Pedro (Aston Martin), onde seu celular escapou do bolso e caiu no meio da pista, sendo atropelado por vários
+                        karts.<br /> Tivemos grandes surpresas com as atuações de Bruno (McLaren) e Alexandre (Haas) mostrando que não estão satisfeitos com o meio do pelotão
+                        e estão buscando cada vez mais estarem no topo da tabela!<br /> Destaque também para o trabalho em equipe da Williams que conseguiu desenvolver uma
+                        estratégia no decorrer da prova, aproveitando-se do seu novo sistema de comunicação. Mas também vale ressaltar que, na última volta o piloto Felipe,
+                        numa tentativa de dar espaço ao seu companheiro Fabio, acabou escapando pra fora da pista e rodando, entregando de bandeija três posições... uma delas
+                        recuperada graças ao acidente envolvendo o piloto Alexandre, Fernando (McLaren) e Marcos (Ferrari)!<br /> Acidente esse que não só custou ao Alexandre
+                        TRÊS posições, como também custou uma posição ao Marcos, já que Lucas (Red Bull) aproveitou a confusão e os ultrapassou!!<br />
+                        Você pode conferir a matéria completa no nosso canal do
+                        Youtube <b><a className="classA" href="https://youtu.be/hUJ2ZHyABHM" target="_blank">clicando aqui!!</a></b>
                     </p>
 
                     <ThemeProvider theme={theme}>

@@ -75,13 +75,13 @@ const Corrida = ({ reorder_piloto, reorder_equipe, primeira_etapa, reorder_bestl
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
                     <h1 className="text-center my-4 text-4xl md:text-6xl">{primeira_etapa.granprix}</h1>
                     <p className="text-center text-xl mb-5">Os principais acontecimentos: Com uma corrida conturbada e rodeada de polêmicas, alguns pilotos
-                    foram prejudicados por diversos fatores. Felipe (Williams), Maurício (Alfa Romeo), Robson (Red Bull) foram obrigados a trocarem seus karts
-                    pois apresentavam problemas graves.<br /> Durante a corrida, dois acidentes acabaram prejudicando o rendimento de alguns pilotos... Marcos (Ferrari)
-                    acabou colidindo com Leonardo (Alfa Romeo) e foi para grama, perdendo posições importantes... Felipe (Williams) chocou-se de "frente" com o mesmo
-                    Leonardo e acabou indo para o muro, também perdendo posições...<br /> Lucas Santos (Mercedes) e Robson deram um show a parte (Robson conquistou o ponto
-                    extra de melhor volta), liderando isolados do início ao fim! Lucas Poquiviqui (Red Bull) garantiu a pontuação pra equipe com um ótimo terceiro
-                    lugar.<br /> Leonardo sofreu uma punição por desrespeito a bandeira azul. <br /> Você pode conferir a matéria completa no nosso canal do
-                    Youtube <b><a className="classA" href="https://youtu.be/Lunf0yTVlnE" target="_blank">clicando aqui!!</a></b></p>
+                        foram prejudicados por diversos fatores. Felipe (Williams), Maurício (Alfa Romeo), Robson (Red Bull) foram obrigados a trocarem seus karts
+                        pois apresentavam problemas graves.<br /> Durante a corrida, dois acidentes acabaram prejudicando o rendimento de alguns pilotos... Marcos (Ferrari)
+                        acabou colidindo com Leonardo (Alfa Romeo) e foi para grama, perdendo posições importantes... Felipe (Williams) chocou-se de "frente" com o mesmo
+                        Leonardo e acabou indo para o muro, também perdendo posições...<br /> Lucas Santos (Mercedes) e Robson deram um show a parte (Robson conquistou o ponto
+                        extra de melhor volta), liderando isolados do início ao fim! Lucas Poquiviqui (Red Bull) garantiu a pontuação pra equipe com um ótimo terceiro
+                        lugar.<br /> Leonardo sofreu uma punição por desrespeito a bandeira azul. <br /> Você pode conferir a matéria completa no nosso canal do
+                        Youtube <b><a className="classA" href="https://youtu.be/Lunf0yTVlnE" target="_blank">clicando aqui!!</a></b></p>
 
                     <ThemeProvider theme={theme}>
                         <AppBar position="relative" color="primary">

@@ -6,6 +6,8 @@ import Layout from '../../components/Layout'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
+// EQUIPE ID FINALIZADA
+
 export default function Equipe({ equipe }) {
     const { isFallback } = useRouter();
     if (isFallback) {

@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 import Layout from '../../components/Layout'
 
+// EQUIPE ALL FINALIZADA
+
 export default function Equipe({ equipes }) {
     return (
         <Layout>
