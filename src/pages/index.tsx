@@ -91,7 +91,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <a className="classA flex items-center no-underline hover:text-red-500 hover:underline">
                                             <img key={reverse[0].author._id} alt="Placeholder" className="block mr-2 rounded-full" src={reverse[0].author.avatarUrl} />
                                             <p>Autor: {reverse[0].author.name}<br />
-                                            Data: {format(new Date(reverse[0].newsDate), 'dd/MM/yyyy')}</p>
+                                                Data: {format(new Date(reverse[0].newsDate), 'dd/MM/yyyy')}</p>
                                         </a>
                                     </Link>
                                 </footer>
@@ -153,7 +153,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <a className="classA flex items-center no-underline hover:text-red-500 hover:underline">
                                             <img key={reverse[2].author._id} alt="Placeholder" className="block mr-2 rounded-full" src={reverse[2].author.avatarUrl} />
                                             <p>Autor: {reverse[2].author.name}<br />
-                                            Data: {format(new Date(reverse[2].newsDate), 'dd/MM/yyyy')}
+                                                Data: {format(new Date(reverse[2].newsDate), 'dd/MM/yyyy')}
                                             </p>
                                         </a>
                                     </Link>
@@ -229,14 +229,13 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <div className="flex justify-end -mx-1 md:-mx-4">
                             <div key={limiteClassificacaoPilotos[1].pilot._id} className="my-1 px-1 w-full">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                    border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                    border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                     <img key={limiteClassificacaoPilotos[1].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[1].pilot.gridUrl} />
                                     <Link href={`/pilotos/${limiteClassificacaoPilotos[1].pilot._id}`}>
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                {limiteClassificacaoPilotos[1].pilot.name}<br />
-                                                    Está em segundo com {limiteClassificacaoPilotos[1].punctuation} pontos
-                                                </h3>
+                                                {limiteClassificacaoPilotos[1].pilot.name}<br /> Está em segundo com {limiteClassificacaoPilotos[1].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
@@ -247,14 +246,13 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <div className="flex justify-center -mx-1 md:-mx-4">
                             <div key={limiteClassificacaoPilotos[0].pilot._id} className="my-1 px-1 w-full">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-green-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                border-yellow-300 hover:border-black border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                     <img key={limiteClassificacaoPilotos[0].pilot._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoPilotos[0].pilot.gridUrl} />
                                     <Link href={`/pilotos/${limiteClassificacaoPilotos[0].pilot._id}`}>
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                {limiteClassificacaoPilotos[0].pilot.name}<br />
-                                                    Está em primeiro com {limiteClassificacaoPilotos[0].punctuation} pontos
-                                                </h3>
+                                                {limiteClassificacaoPilotos[0].pilot.name}<br /> Está em primeiro com {limiteClassificacaoPilotos[0].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
@@ -270,9 +268,8 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                     <Link href={`/pilotos/${limiteClassificacaoPilotos[2].pilot._id}`}>
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
-                                                {limiteClassificacaoPilotos[2].pilot.name}<br />
-                                                    Está em terceiro com {limiteClassificacaoPilotos[2].punctuation} pontos
-                                                </h3>
+                                                {limiteClassificacaoPilotos[2].pilot.name}<br /> Está em terceiro com {limiteClassificacaoPilotos[2].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
@@ -302,7 +299,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                                     </h1>
                                                     <h1 className="classA text-1xl ml-8 md:ml-52 font-bold justify-end">
                                                         {classif.punctuation} PTS
-                                                        </h1>
+                                                    </h1>
                                                 </header>
                                             </a>
                                         </Link>
@@ -327,8 +324,8 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
                                                 {limiteClassificacaoEquipes[1].team.alias}<br />
-                                                    Está em segundo com {limiteClassificacaoEquipes[1].punctuation} pontos
-                                                </h3>
+                                                Está em segundo com {limiteClassificacaoEquipes[1].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
@@ -345,8 +342,8 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                         <a className="no-underline hover:underline text-black">
                                             <h3 className="flex items-center justify-between leading-tight p-2 md:p-4" >
                                                 {limiteClassificacaoEquipes[0].team.alias}<br />
-                                                    Está em primeiro com {limiteClassificacaoEquipes[0].punctuation} pontos
-                                                </h3>
+                                                Está em primeiro com {limiteClassificacaoEquipes[0].punctuation} pontos
+                                            </h3>
                                         </a>
                                     </Link>
                                 </article>
@@ -357,7 +354,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                         <div className="flex justify-start -mx-1 md:-mx-4">
                             <div key={limiteClassificacaoEquipes[2].team._id} className="my-1 px-1 w-full">
                                 <article className="transform hover:scale-105 transition duration-300 ease-in-out overflow-hidden rounded-lg shadow-lg
-                                border-black hover:border-yellow-300 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
+                                border-red-800 hover:border-red-800 border-b-2 border-l-2 border-r-2 rounded-l-3xl rounded-r-3xl px-2">
                                     <img key={limiteClassificacaoEquipes[2].team._id} className="flex flex-none rounded-3xl" src={limiteClassificacaoEquipes[2].team.gridUrl} />
                                     <Link href={`/equipes/${limiteClassificacaoEquipes[2].team._id}`}>
                                         <a className="no-underline hover:underline text-black">
@@ -392,7 +389,7 @@ const Noticia = ({ reverse, maxNews, limiteClassificacaoPilotos, limiteClassific
                                                     <h1 className="hidden md:block"></h1>
                                                     <h1 className="classA text-1xl ml-8 md:ml-52 font-bold justify-end">
                                                         {classif.punctuation} PTS
-                                                        </h1>
+                                                    </h1>
                                                 </header>
                                             </a>
                                         </Link>

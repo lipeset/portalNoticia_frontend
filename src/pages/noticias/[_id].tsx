@@ -6,6 +6,8 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 
+// NOTÍCIA ID FINALIZADA
+
 export default function Noticia({ noticia }) {
     const { isFallback } = useRouter();
     if (isFallback) {
@@ -63,6 +65,7 @@ export default function Noticia({ noticia }) {
         </Layout>
     )
 }
+
 export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE ALL PILOTS
     const response = await fetch(`https://portalnoticia-backend.herokuapp.com/news`);
     const data = await response.json();
@@ -76,6 +79,7 @@ export const getStaticPaths: GetStaticPaths = async () => { //READ AND PREPARE A
         fallback: true,
     }
 }
+
 export const getStaticProps: GetStaticProps = async (context) => { //FIND A PILOT BY ID
     const { _id } = context.params;
     const response = await fetch(`https://portalnoticia-backend.herokuapp.com/news/${_id}`);
