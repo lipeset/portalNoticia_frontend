@@ -62,7 +62,9 @@ export default function Equipe({ equipe }) {
                                 <h1>PONTOS 4º GP:</h1>
                                 <h1>MP 4º GP:</h1>
                                 <h1>PONTOS 5º GP:</h1>
+                                <h1>MP 5º GP:</h1>
                                 <h1>PONTOS 6º GP:</h1>
+                                <h1>MP 6º GP:</h1>
                                 <h1>MELHOR POSIÇÃO:</h1>
                                 <h1>POLE POSITIONS:</h1>
                                 <h1>VOLTAS RÁPIDAS:</h1>
@@ -84,7 +86,9 @@ export default function Equipe({ equipe }) {
                                     <h1>{equipe.fourthGpPoints}</h1>
                                     <h1>{equipe.fourthGpFinish}</h1>
                                     <h1>{equipe.fifithGpPoints}</h1>
+                                    <h1>{equipe.fifithGpFinish}</h1>
                                     <h1>{equipe.sixthGpPoints}</h1>
+                                    <h1>{equipe.sixthGpFinish}</h1>
                                     <h1>{equipe.teamHighRaceFinish}</h1>
                                     <h1>{equipe.teamPolePositions}</h1>
                                     <h1>{equipe.teamFastLaps}</h1>
