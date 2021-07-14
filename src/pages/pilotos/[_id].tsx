@@ -28,7 +28,7 @@ export default function Piloto({ piloto }) {
                                 <h1>PONTOS 3º GP:</h1>
                                 <h1>PONTOS 4º GP:</h1>
                                 <h1>PONTOS 5º GP:</h1>
-                                {/* <h1>PONTOS 6º GP:</h1> */}
+                                <h1>PONTOS 6º GP:</h1>
                                 <h1>MELHOR CHEGADA:</h1>
                                 <h1>MELHOR LARGADA:</h1>
                                 <h1>POLE POSITIONS:</h1>
@@ -48,7 +48,7 @@ export default function Piloto({ piloto }) {
                                     <h1>{piloto.thirdGpPoints}</h1>
                                     <h1>{piloto.fourthGpPoints}</h1>
                                     <h1>{piloto.fifithGpPoints}</h1>
-                                    {/* <h1>{piloto.sixthGpPoints}</h1> */}
+                                    <h1>{piloto.sixthGpPoints}</h1>
                                     <h1>{piloto.highRaceFinish}</h1>
                                     <h1>{piloto.highGridPosition}</h1>
                                     <h1>{piloto.polePosition}</h1>
