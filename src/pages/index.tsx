@@ -436,6 +436,11 @@ Noticia.getInitialProps = async () => {
     const maxNews = reverseSlice.slice(0, 2);
 
     function compare(a, b) {
+        if (a.punctuation == b.punctuation) {
+            if (a.win > b.win) {
+                return -1;
+            }
+        }
         if (a.punctuation > b.punctuation) {
             return -1;
         }

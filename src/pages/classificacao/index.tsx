@@ -204,6 +204,11 @@ Classificacao.getInitialProps = async () => {
     const { data: equipePoints } = await axios.get('https://portalnoticia-backend.herokuapp.com/teamclassification');
 
     function compare(a, b) {
+        if (a.punctuation == b.punctuation) {
+            if (a.win > b.win) {
+                return -1;
+            }
+        }
         if (a.punctuation > b.punctuation) {
             return -1;
         }
