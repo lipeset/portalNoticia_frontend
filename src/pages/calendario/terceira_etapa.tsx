@@ -83,7 +83,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, terceira_etapa, reorder_bestl
                         condizem com os níveis em que eles têm demonstrado. Devemos ver uma Mercedes mais agressiva na próxima etapa. <br />O mesmo aplica-se ao Alexandre
                         (Haas), depois de uma incrível segunda etapa, acabou apenas em 13º. Pedro (Haas) acabou fazendo a lição de casa e trouxe ótimos pontos para equipe,
                         terminando na 6ª posição. <br /> Leonardo (Alfa Romeo) fez o que pode para pontuar, mas correu sem seu parceiro nesta etapa, isso complica e muito
-                        a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas.
+                        a Alfa Romeo no campeonato, amargando a lanterna e com poucas corridas para o final, a equipe terá de se provar e muito dentro das pistas. <br />
                         Você pode conferir a matéria completa no nosso canal do
                         Youtube <b><a className="classA" href="https://youtu.be/67Tw_tUC14A" target="_blank">clicando aqui!!</a></b>
                     </p>

@@ -74,7 +74,7 @@ const Corrida = ({ reorder_piloto, reorder_equipe, quarta_etapa, reorder_bestlap
             <div className="container mx-auto px-2 md:grid grid-flow-col -mt-2">
                 <div className="my-6 border-black border-t-8 border-r-8 rounded-r-3xl shadow-lg pb-1">
                     <h1 className="text-center my-4 text-4xl md:text-6xl">{quarta_etapa.granprix}</h1>
-                    <p className="text-center text-xl mb-5">Os principais acontecimentos: Os principais acontecimentos: Mais uma vez a festa vai para a gigante francesa Renault!
+                    <p className="text-center text-xl mb-5">Os principais acontecimentos: Mais uma vez a festa vai para a gigante francesa Renault!
                         Rodrigo, que largou em 2º, levou a melhor sobre os adversários! Já seu companheiro de equipe Igor, pegou dois karts danificados, acabou por nem competir de
                         fato, apenas “curtiu a viagem”.<br /> A Mercedes apesar de ter perdido a vitória, conseguiu faturar 29 pontos para o campeonato de equipes, que está muito
                         acirrado com a Red Bull. Lucas Santos, que foi o grande destaque da prova, largando em 15º e chegando em 2º e Davi chegando em 9º.<br /> Já a Red Bull
