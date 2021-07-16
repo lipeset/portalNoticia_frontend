@@ -26,7 +26,7 @@ function Races() {
                 </div>
             </a>
             <a href="/calendario/terceira_etapa">
-                <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 3*/}
+                <div className="hidden grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 3*/}
                     <div className="flex flex-wrap content-center justify-center">
                         <img className="flex flex-wrap content-center justify-center"
                             src="https://i.imgur.com/oyABzRb.png" />
@@ -34,7 +34,7 @@ function Races() {
                 </div>
             </a>
             <a href="/calendario/quarta_etapa">
-                <div className="grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 4*/}
+                <div className="hidden grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 4*/}
                     <div className="flex flex-wrap content-center justify-center">
                         <img className="flex flex-wrap content-center justify-center"
                             src="https://i.imgur.com/XK4uNTt.png" />
@@ -42,7 +42,7 @@ function Races() {
                 </div>
             </a>
             <a href="/calendario/quinta_etapa">
-                <div className="hidden md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 5*/}
+                <div className="md:grid grid-flow-col justify-center md:border-r-2 border-b-2 border-white"> {/*CORRIDA 5*/}
                     <div className="flex flex-wrap content-center justify-center">
                         <img className="flex flex-wrap content-center justify-center"
                             src="https://i.imgur.com/figZBt4.png" />
@@ -50,7 +50,7 @@ function Races() {
                 </div>
             </a>
             <a href="/calendario/sexta_etapa">
-                <div className="hidden md:grid grid-flow-col justify-center border-b-2 border-white"> {/*CORRIDA 6*/}
+                <div className="md:grid grid-flow-col justify-center border-b-2 border-white"> {/*CORRIDA 6*/}
                     <div className="flex flex-wrap content-center justify-center">
                         <img className="flex flex-wrap content-center justify-center"
                             src="https://i.imgur.com/TWQEVkz.png" />
